@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QLSachDataSet" targetNamespace="http://tempuri.org/QLSachDataSet.xsd" xmlns:mstns="http://tempuri.org/QLSachDataSet.xsd" xmlns="http://tempuri.org/QLSachDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLNhaSachConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLNhaSachConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QuanLyMuaBanSach.Properties.Settings.GlobalReference.Default.QLNhaSachConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="list_SachTableAdapter" GeneratorDataComponentClassName="list_SachTableAdapter" Name="list_Sach" UserDataComponentName="list_SachTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLNhaSachConnectionString (Settings)" DbObjectName="QLNhaSach.dbo.list_Sach" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT maSach, tenSach, soLuongTon, doTuoi, tenTL, moTa, tenNXB FROM dbo.list_Sach</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="maSach" DataSetColumn="maSach" />
+              <Mapping SourceColumn="tenSach" DataSetColumn="tenSach" />
+              <Mapping SourceColumn="soLuongTon" DataSetColumn="soLuongTon" />
+              <Mapping SourceColumn="doTuoi" DataSetColumn="doTuoi" />
+              <Mapping SourceColumn="tenTL" DataSetColumn="tenTL" />
+              <Mapping SourceColumn="moTa" DataSetColumn="moTa" />
+              <Mapping SourceColumn="tenNXB" DataSetColumn="tenNXB" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QLSachDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="QLSachDataSet" msprop:Generator_DataSetName="QLSachDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="list_Sach" msprop:Generator_RowEvHandlerName="list_SachRowChangeEventHandler" msprop:Generator_RowDeletedName="list_SachRowDeleted" msprop:Generator_RowDeletingName="list_SachRowDeleting" msprop:Generator_RowEvArgName="list_SachRowChangeEvent" msprop:Generator_TablePropName="list_Sach" msprop:Generator_RowChangedName="list_SachRowChanged" msprop:Generator_RowChangingName="list_SachRowChanging" msprop:Generator_TableClassName="list_SachDataTable" msprop:Generator_RowClassName="list_SachRow" msprop:Generator_TableVarName="tablelist_Sach" msprop:Generator_UserTableName="list_Sach">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="maSach" msprop:Generator_ColumnPropNameInRow="maSach" msprop:Generator_ColumnPropNameInTable="maSachColumn" msprop:Generator_ColumnVarNameInTable="columnmaSach" msprop:Generator_UserColumnName="maSach">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tenSach" msprop:Generator_ColumnPropNameInRow="tenSach" msprop:Generator_ColumnPropNameInTable="tenSachColumn" msprop:Generator_ColumnVarNameInTable="columntenSach" msprop:Generator_UserColumnName="tenSach">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="soLuongTon" msprop:Generator_ColumnPropNameInRow="soLuongTon" msprop:Generator_ColumnPropNameInTable="soLuongTonColumn" msprop:Generator_ColumnVarNameInTable="columnsoLuongTon" msprop:Generator_UserColumnName="soLuongTon" type="xs:int" minOccurs="0" />
+              <xs:element name="doTuoi" msprop:Generator_ColumnPropNameInRow="doTuoi" msprop:Generator_ColumnPropNameInTable="doTuoiColumn" msprop:Generator_ColumnVarNameInTable="columndoTuoi" msprop:Generator_UserColumnName="doTuoi" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tenTL" msprop:Generator_ColumnPropNameInRow="tenTL" msprop:Generator_ColumnPropNameInTable="tenTLColumn" msprop:Generator_ColumnVarNameInTable="columntenTL" msprop:Generator_UserColumnName="tenTL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="moTa" msprop:Generator_ColumnPropNameInRow="moTa" msprop:Generator_ColumnPropNameInTable="moTaColumn" msprop:Generator_ColumnVarNameInTable="columnmoTa" msprop:Generator_UserColumnName="moTa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tenNXB" msprop:Generator_ColumnPropNameInRow="tenNXB" msprop:Generator_ColumnPropNameInTable="tenNXBColumn" msprop:Generator_ColumnVarNameInTable="columntenNXB" msprop:Generator_UserColumnName="tenNXB">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:list_Sach" />
+      <xs:field xpath="mstns:maSach" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

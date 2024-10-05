@@ -52,22 +52,44 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmNhapSach.cs">
+    <Compile Include="frmNhapSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmNhapSach.Designer.cs">
-      <DependentUpon>FrmNhapSach.cs</DependentUpon>
+    <Compile Include="frmNhapSach.Designer.cs">
+      <DependentUpon>frmNhapSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSach.cs">
+    <Compile Include="frmQuanLyPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSach.Designer.cs">
+    <Compile Include="frmQuanLyPhieuNhap.Designer.cs">
+      <DependentUpon>frmQuanLyPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sach\FrmSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sach\FrmSach.Designer.cs">
       <DependentUpon>FrmSach.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmNhapSach.resx">
-      <DependentUpon>FrmNhapSach.cs</DependentUpon>
+    <Compile Include="QLPhieuNhapSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLPhieuNhapSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSachDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSachDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmNhapSach.resx">
+      <DependentUpon>frmNhapSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyPhieuNhap.resx">
+      <DependentUpon>frmQuanLyPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sach\FrmSach.resx">
+      <DependentUpon>FrmSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,6 +109,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLPhieuNhapSet.xsc">
+      <DependentUpon>QLPhieuNhapSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLPhieuNhapSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLPhieuNhapSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLPhieuNhapSet.xss">
+      <DependentUpon>QLPhieuNhapSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLSachDataSet.xsc">
+      <DependentUpon>QLSachDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLSachDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSachDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSachDataSet.xss">
+      <DependentUpon>QLSachDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

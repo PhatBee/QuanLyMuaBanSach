@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QLPhieuNhapSet" targetNamespace="http://tempuri.org/QLPhieuNhapSet.xsd" xmlns:mstns="http://tempuri.org/QLPhieuNhapSet.xsd" xmlns="http://tempuri.org/QLPhieuNhapSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLNhaSachConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLNhaSachConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QuanLyMuaBanSach.Properties.Settings.GlobalReference.Default.QLNhaSachConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="list_PhieuNhapTableAdapter" GeneratorDataComponentClassName="list_PhieuNhapTableAdapter" Name="list_PhieuNhap" UserDataComponentName="list_PhieuNhapTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLNhaSachConnectionString (Settings)" DbObjectName="QLNhaSach.dbo.list_PhieuNhap" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT soPN, ngayNhap, tenNV, tenNXB FROM dbo.list_PhieuNhap</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="soPN" DataSetColumn="soPN" />
+              <Mapping SourceColumn="ngayNhap" DataSetColumn="ngayNhap" />
+              <Mapping SourceColumn="tenNV" DataSetColumn="tenNV" />
+              <Mapping SourceColumn="tenNXB" DataSetColumn="tenNXB" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QLPhieuNhapSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="QLPhieuNhapSet" msprop:Generator_DataSetName="QLPhieuNhapSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="list_PhieuNhap" msprop:Generator_RowEvHandlerName="list_PhieuNhapRowChangeEventHandler" msprop:Generator_RowDeletedName="list_PhieuNhapRowDeleted" msprop:Generator_RowDeletingName="list_PhieuNhapRowDeleting" msprop:Generator_RowEvArgName="list_PhieuNhapRowChangeEvent" msprop:Generator_TablePropName="list_PhieuNhap" msprop:Generator_RowChangedName="list_PhieuNhapRowChanged" msprop:Generator_RowChangingName="list_PhieuNhapRowChanging" msprop:Generator_TableClassName="list_PhieuNhapDataTable" msprop:Generator_RowClassName="list_PhieuNhapRow" msprop:Generator_TableVarName="tablelist_PhieuNhap" msprop:Generator_UserTableName="list_PhieuNhap">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="soPN" msprop:Generator_ColumnPropNameInRow="soPN" msprop:Generator_ColumnPropNameInTable="soPNColumn" msprop:Generator_ColumnVarNameInTable="columnsoPN" msprop:Generator_UserColumnName="soPN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ngayNhap" msprop:Generator_ColumnPropNameInRow="ngayNhap" msprop:Generator_ColumnPropNameInTable="ngayNhapColumn" msprop:Generator_ColumnVarNameInTable="columnngayNhap" msprop:Generator_UserColumnName="ngayNhap" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="tenNV" msprop:Generator_ColumnPropNameInRow="tenNV" msprop:Generator_ColumnPropNameInTable="tenNVColumn" msprop:Generator_ColumnVarNameInTable="columntenNV" msprop:Generator_UserColumnName="tenNV">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tenNXB" msprop:Generator_ColumnPropNameInRow="tenNXB" msprop:Generator_ColumnPropNameInTable="tenNXBColumn" msprop:Generator_ColumnVarNameInTable="columntenNXB" msprop:Generator_UserColumnName="tenNXB">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:list_PhieuNhap" />
+      <xs:field xpath="mstns:soPN" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
