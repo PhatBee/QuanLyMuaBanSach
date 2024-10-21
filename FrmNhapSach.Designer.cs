@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.colTenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxNXB = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,10 +46,6 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
-            this.colTenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuongNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numGiaNhap)).BeginInit();
@@ -66,6 +66,30 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(941, 381);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // colTenSach
+            // 
+            this.colTenSach.HeaderText = "Tên sách";
+            this.colTenSach.MinimumWidth = 6;
+            this.colTenSach.Name = "colTenSach";
+            // 
+            // colSoLuong
+            // 
+            this.colSoLuong.HeaderText = "Số lượng";
+            this.colSoLuong.MinimumWidth = 6;
+            this.colSoLuong.Name = "colSoLuong";
+            // 
+            // GiaNhap
+            // 
+            this.GiaNhap.HeaderText = "Giá nhập";
+            this.GiaNhap.MinimumWidth = 6;
+            this.GiaNhap.Name = "GiaNhap";
+            // 
+            // colThanhTien
+            // 
+            this.colThanhTien.HeaderText = "Thành tiền";
+            this.colThanhTien.MinimumWidth = 6;
+            this.colThanhTien.Name = "colThanhTien";
             // 
             // label1
             // 
@@ -180,30 +204,6 @@
             this.lblTongTien.TabIndex = 13;
             this.lblTongTien.Text = ".";
             // 
-            // colTenSach
-            // 
-            this.colTenSach.HeaderText = "Tên sách";
-            this.colTenSach.MinimumWidth = 6;
-            this.colTenSach.Name = "colTenSach";
-            // 
-            // colSoLuong
-            // 
-            this.colSoLuong.HeaderText = "Số lượng";
-            this.colSoLuong.MinimumWidth = 6;
-            this.colSoLuong.Name = "colSoLuong";
-            // 
-            // GiaNhap
-            // 
-            this.GiaNhap.HeaderText = "Giá nhập";
-            this.GiaNhap.MinimumWidth = 6;
-            this.GiaNhap.Name = "GiaNhap";
-            // 
-            // colThanhTien
-            // 
-            this.colThanhTien.HeaderText = "Thành tiền";
-            this.colThanhTien.MinimumWidth = 6;
-            this.colThanhTien.Name = "colThanhTien";
-            // 
             // frmNhapSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -224,7 +224,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNhapSach";
             this.Text = "frmNhapSach";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
