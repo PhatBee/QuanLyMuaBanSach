@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.qLSachDataSet = new QuanLyMuaBanSach.QLSachDataSet();
-            this.listSachBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.list_SachTableAdapter = new QuanLyMuaBanSach.QLSachDataSetTableAdapters.list_SachTableAdapter();
             this.maSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenSachDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongTonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,9 +37,12 @@
             this.tenTLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.moTaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNXBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listSachBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLSachDataSet = new QuanLyMuaBanSach.QLSachDataSet();
+            this.list_SachTableAdapter = new QuanLyMuaBanSach.QLSachDataSetTableAdapters.list_SachTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLSachDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listSachBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLSachDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -64,20 +64,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(888, 426);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // qLSachDataSet
-            // 
-            this.qLSachDataSet.DataSetName = "QLSachDataSet";
-            this.qLSachDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // listSachBindingSource
-            // 
-            this.listSachBindingSource.DataMember = "list_Sach";
-            this.listSachBindingSource.DataSource = this.qLSachDataSet;
-            // 
-            // list_SachTableAdapter
-            // 
-            this.list_SachTableAdapter.ClearBeforeFill = true;
             // 
             // maSachDataGridViewTextBoxColumn
             // 
@@ -135,20 +121,34 @@
             this.tenNXBDataGridViewTextBoxColumn.Name = "tenNXBDataGridViewTextBoxColumn";
             this.tenNXBDataGridViewTextBoxColumn.Width = 125;
             // 
+            // listSachBindingSource
+            // 
+            this.listSachBindingSource.DataMember = "list_Sach";
+            this.listSachBindingSource.DataSource = this.qLSachDataSet;
+            // 
+            // qLSachDataSet
+            // 
+            this.qLSachDataSet.DataSetName = "QLSachDataSet";
+            this.qLSachDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // list_SachTableAdapter
+            // 
+            this.list_SachTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 619);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmSach";
             this.Text = "FrmSach";
             this.Load += new System.EventHandler(this.FrmSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLSachDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listSachBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLSachDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
