@@ -118,7 +118,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 22);
+            this.label1.Size = new System.Drawing.Size(214, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin phiếu nhập";
             // 
@@ -131,14 +131,15 @@
             this.btnThemPN.AutoSize = true;
             this.btnThemPN.Location = new System.Drawing.Point(4, 341);
             this.btnThemPN.Name = "btnThemPN";
-            this.btnThemPN.Size = new System.Drawing.Size(75, 32);
+            this.btnThemPN.Size = new System.Drawing.Size(77, 36);
             this.btnThemPN.TabIndex = 1;
             this.btnThemPN.Text = "Thêm";
             this.btnThemPN.UseVisualStyleBackColor = true;
+            this.btnThemPN.Click += new System.EventHandler(this.btnThemPN_Click);
             // 
             // frmQuanLyPhieuNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 619);
             this.Controls.Add(this.btnThemPN);

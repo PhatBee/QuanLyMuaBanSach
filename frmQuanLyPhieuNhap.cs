@@ -23,5 +23,10 @@ namespace QuanLyMuaBanSach
             this.list_PhieuNhapTableAdapter.Fill(this.qLPhieuNhapSet.list_PhieuNhap);
 
         }
+
+        private void btnThemPN_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
