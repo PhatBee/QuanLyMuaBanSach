@@ -16,5 +16,16 @@ namespace QuanLyMuaBanSach
         {
             InitializeComponent();
         }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            frmChinh frmChinh = new frmChinh();
+            frmChinh.Show();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
