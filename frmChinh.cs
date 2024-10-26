@@ -36,5 +36,21 @@ namespace QuanLyMuaBanSach
         {
 
         }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmNhapSach());
+        }
+        private void OpenChildForm(Form childForm)
+        {
+            mainPanel.Controls.Clear();
+
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            mainPanel.Controls.Add(childForm);
+            childForm.Show();
+        }
     }
 }

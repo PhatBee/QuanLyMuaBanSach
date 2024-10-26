@@ -34,43 +34,44 @@ namespace QuanLyMuaBanSach
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabelDangXuat = new System.Windows.Forms.LinkLabel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelMenu = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelNhanVien = new System.Windows.Forms.Panel();
             this.lblNhanVien = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelKhachHang = new System.Windows.Forms.Panel();
             this.lblKhachHang = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelNhapSach = new System.Windows.Forms.Panel();
             this.lblNhapSach = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelBanSach = new System.Windows.Forms.Panel();
             this.lblBanSach = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panelQlSach = new System.Windows.Forms.Panel();
             this.lblQLSach = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.panelThongKe = new System.Windows.Forms.Panel();
             this.lblThongKe = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.panelHoaDon = new System.Windows.Forms.Panel();
             this.lblHoaDon = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelMenu.SuspendLayout();
+            this.panelNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.panelKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.panelNhapSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel5.SuspendLayout();
+            this.panelBanSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel6.SuspendLayout();
+            this.panelQlSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel7.SuspendLayout();
+            this.panelThongKe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.panel8.SuspendLayout();
+            this.panelHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,38 +105,39 @@ namespace QuanLyMuaBanSach
             this.linkLabelDangXuat.Location = new System.Drawing.Point(1559, 80);
             this.linkLabelDangXuat.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.linkLabelDangXuat.Name = "linkLabelDangXuat";
-            this.linkLabelDangXuat.Size = new System.Drawing.Size(125, 29);
+            this.linkLabelDangXuat.Size = new System.Drawing.Size(105, 25);
             this.linkLabelDangXuat.TabIndex = 0;
             this.linkLabelDangXuat.TabStop = true;
             this.linkLabelDangXuat.Text = "Đăng Xuất";
             this.linkLabelDangXuat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelDangXuat_LinkClicked);
             // 
-            // flowLayoutPanel1
+            // panelMenu
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(221)))), ((int)(((byte)(228)))));
-            this.flowLayoutPanel1.Controls.Add(this.panel2);
-            this.flowLayoutPanel1.Controls.Add(this.panel3);
-            this.flowLayoutPanel1.Controls.Add(this.panel4);
-            this.flowLayoutPanel1.Controls.Add(this.panel5);
-            this.flowLayoutPanel1.Controls.Add(this.panel6);
-            this.flowLayoutPanel1.Controls.Add(this.panel7);
-            this.flowLayoutPanel1.Controls.Add(this.panel8);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 128);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(293, 736);
-            this.flowLayoutPanel1.TabIndex = 2;
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(221)))), ((int)(((byte)(228)))));
+            this.panelMenu.Controls.Add(this.panelNhanVien);
+            this.panelMenu.Controls.Add(this.panelKhachHang);
+            this.panelMenu.Controls.Add(this.panelNhapSach);
+            this.panelMenu.Controls.Add(this.panelBanSach);
+            this.panelMenu.Controls.Add(this.panelQlSach);
+            this.panelMenu.Controls.Add(this.panelThongKe);
+            this.panelMenu.Controls.Add(this.panelHoaDon);
+            this.panelMenu.Location = new System.Drawing.Point(4, 128);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(293, 736);
+            this.panelMenu.TabIndex = 2;
             // 
-            // panel2
+            // panelNhanVien
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.lblNhanVien);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(5, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(282, 79);
-            this.panel2.TabIndex = 0;
+            this.panelNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelNhanVien.Controls.Add(this.lblNhanVien);
+            this.panelNhanVien.Controls.Add(this.pictureBox1);
+            this.panelNhanVien.Location = new System.Drawing.Point(5, 4);
+            this.panelNhanVien.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelNhanVien.Name = "panelNhanVien";
+            this.panelNhanVien.Size = new System.Drawing.Size(282, 79);
+            this.panelNhanVien.TabIndex = 0;
+            this.panelNhanVien.Click += new System.EventHandler(this.panel2_Click);
             // 
             // lblNhanVien
             // 
@@ -144,7 +146,7 @@ namespace QuanLyMuaBanSach
             this.lblNhanVien.Location = new System.Drawing.Point(119, 26);
             this.lblNhanVien.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNhanVien.Name = "lblNhanVien";
-            this.lblNhanVien.Size = new System.Drawing.Size(124, 29);
+            this.lblNhanVien.Size = new System.Drawing.Size(104, 25);
             this.lblNhanVien.TabIndex = 1;
             this.lblNhanVien.Text = "Nhân Viên";
             this.lblNhanVien.Click += new System.EventHandler(this.lblNhanVien_Click);
@@ -160,16 +162,27 @@ namespace QuanLyMuaBanSach
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel3
+            // panelKhachHang
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.lblKhachHang);
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(5, 91);
-            this.panel3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(282, 84);
-            this.panel3.TabIndex = 1;
+            this.panelKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelKhachHang.Controls.Add(this.lblKhachHang);
+            this.panelKhachHang.Controls.Add(this.pictureBox2);
+            this.panelKhachHang.Location = new System.Drawing.Point(5, 91);
+            this.panelKhachHang.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelKhachHang.Name = "panelKhachHang";
+            this.panelKhachHang.Size = new System.Drawing.Size(282, 84);
+            this.panelKhachHang.TabIndex = 1;
+            // 
+            // lblKhachHang
+            // 
+            this.lblKhachHang.AutoSize = true;
+            this.lblKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKhachHang.Location = new System.Drawing.Point(119, 29);
+            this.lblKhachHang.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblKhachHang.Name = "lblKhachHang";
+            this.lblKhachHang.Size = new System.Drawing.Size(121, 25);
+            this.lblKhachHang.TabIndex = 1;
+            this.lblKhachHang.Text = "Khách Hàng";
             // 
             // pictureBox2
             // 
@@ -183,27 +196,16 @@ namespace QuanLyMuaBanSach
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // lblKhachHang
+            // panelNhapSach
             // 
-            this.lblKhachHang.AutoSize = true;
-            this.lblKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKhachHang.Location = new System.Drawing.Point(119, 29);
-            this.lblKhachHang.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblKhachHang.Name = "lblKhachHang";
-            this.lblKhachHang.Size = new System.Drawing.Size(143, 29);
-            this.lblKhachHang.TabIndex = 1;
-            this.lblKhachHang.Text = "Khách Hàng";
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.lblNhapSach);
-            this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(5, 183);
-            this.panel4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(282, 84);
-            this.panel4.TabIndex = 2;
+            this.panelNhapSach.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelNhapSach.Controls.Add(this.lblNhapSach);
+            this.panelNhapSach.Controls.Add(this.pictureBox3);
+            this.panelNhapSach.Location = new System.Drawing.Point(5, 183);
+            this.panelNhapSach.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelNhapSach.Name = "panelNhapSach";
+            this.panelNhapSach.Size = new System.Drawing.Size(282, 84);
+            this.panelNhapSach.TabIndex = 2;
             // 
             // lblNhapSach
             // 
@@ -212,7 +214,7 @@ namespace QuanLyMuaBanSach
             this.lblNhapSach.Location = new System.Drawing.Point(119, 29);
             this.lblNhapSach.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNhapSach.Name = "lblNhapSach";
-            this.lblNhapSach.Size = new System.Drawing.Size(131, 29);
+            this.lblNhapSach.Size = new System.Drawing.Size(110, 25);
             this.lblNhapSach.TabIndex = 1;
             this.lblNhapSach.Text = "Nhập Sách";
             // 
@@ -227,16 +229,16 @@ namespace QuanLyMuaBanSach
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // panel5
+            // panelBanSach
             // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.lblBanSach);
-            this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Location = new System.Drawing.Point(5, 275);
-            this.panel5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(282, 84);
-            this.panel5.TabIndex = 3;
+            this.panelBanSach.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelBanSach.Controls.Add(this.lblBanSach);
+            this.panelBanSach.Controls.Add(this.pictureBox4);
+            this.panelBanSach.Location = new System.Drawing.Point(5, 275);
+            this.panelBanSach.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelBanSach.Name = "panelBanSach";
+            this.panelBanSach.Size = new System.Drawing.Size(282, 84);
+            this.panelBanSach.TabIndex = 3;
             // 
             // lblBanSach
             // 
@@ -245,7 +247,7 @@ namespace QuanLyMuaBanSach
             this.lblBanSach.Location = new System.Drawing.Point(119, 29);
             this.lblBanSach.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblBanSach.Name = "lblBanSach";
-            this.lblBanSach.Size = new System.Drawing.Size(115, 29);
+            this.lblBanSach.Size = new System.Drawing.Size(98, 25);
             this.lblBanSach.TabIndex = 1;
             this.lblBanSach.Text = "Bán Sách";
             // 
@@ -260,16 +262,16 @@ namespace QuanLyMuaBanSach
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
-            // panel6
+            // panelQlSach
             // 
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.lblQLSach);
-            this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(5, 367);
-            this.panel6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(282, 84);
-            this.panel6.TabIndex = 4;
+            this.panelQlSach.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelQlSach.Controls.Add(this.lblQLSach);
+            this.panelQlSach.Controls.Add(this.pictureBox5);
+            this.panelQlSach.Location = new System.Drawing.Point(5, 367);
+            this.panelQlSach.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelQlSach.Name = "panelQlSach";
+            this.panelQlSach.Size = new System.Drawing.Size(282, 84);
+            this.panelQlSach.TabIndex = 4;
             // 
             // lblQLSach
             // 
@@ -278,7 +280,7 @@ namespace QuanLyMuaBanSach
             this.lblQLSach.Location = new System.Drawing.Point(119, 29);
             this.lblQLSach.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblQLSach.Name = "lblQLSach";
-            this.lblQLSach.Size = new System.Drawing.Size(161, 29);
+            this.lblQLSach.Size = new System.Drawing.Size(138, 25);
             this.lblQLSach.TabIndex = 1;
             this.lblQLSach.Text = "Quản Lý Sách";
             // 
@@ -293,16 +295,16 @@ namespace QuanLyMuaBanSach
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
             // 
-            // panel7
+            // panelThongKe
             // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.lblThongKe);
-            this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Location = new System.Drawing.Point(5, 459);
-            this.panel7.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(282, 84);
-            this.panel7.TabIndex = 5;
+            this.panelThongKe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelThongKe.Controls.Add(this.lblThongKe);
+            this.panelThongKe.Controls.Add(this.pictureBox6);
+            this.panelThongKe.Location = new System.Drawing.Point(5, 459);
+            this.panelThongKe.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelThongKe.Name = "panelThongKe";
+            this.panelThongKe.Size = new System.Drawing.Size(282, 84);
+            this.panelThongKe.TabIndex = 5;
             // 
             // lblThongKe
             // 
@@ -311,7 +313,7 @@ namespace QuanLyMuaBanSach
             this.lblThongKe.Location = new System.Drawing.Point(119, 29);
             this.lblThongKe.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblThongKe.Name = "lblThongKe";
-            this.lblThongKe.Size = new System.Drawing.Size(119, 29);
+            this.lblThongKe.Size = new System.Drawing.Size(99, 25);
             this.lblThongKe.TabIndex = 1;
             this.lblThongKe.Text = "Thống Kê";
             // 
@@ -326,16 +328,16 @@ namespace QuanLyMuaBanSach
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
             // 
-            // panel8
+            // panelHoaDon
             // 
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.lblHoaDon);
-            this.panel8.Controls.Add(this.pictureBox7);
-            this.panel8.Location = new System.Drawing.Point(5, 551);
-            this.panel8.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(282, 84);
-            this.panel8.TabIndex = 6;
+            this.panelHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelHoaDon.Controls.Add(this.lblHoaDon);
+            this.panelHoaDon.Controls.Add(this.pictureBox7);
+            this.panelHoaDon.Location = new System.Drawing.Point(5, 551);
+            this.panelHoaDon.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.panelHoaDon.Name = "panelHoaDon";
+            this.panelHoaDon.Size = new System.Drawing.Size(282, 84);
+            this.panelHoaDon.TabIndex = 6;
             // 
             // lblHoaDon
             // 
@@ -344,7 +346,7 @@ namespace QuanLyMuaBanSach
             this.lblHoaDon.Location = new System.Drawing.Point(119, 29);
             this.lblHoaDon.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblHoaDon.Name = "lblHoaDon";
-            this.lblHoaDon.Size = new System.Drawing.Size(107, 29);
+            this.lblHoaDon.Size = new System.Drawing.Size(89, 25);
             this.lblHoaDon.TabIndex = 1;
             this.lblHoaDon.Text = "Hoá Đơn";
             // 
@@ -359,41 +361,52 @@ namespace QuanLyMuaBanSach
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
             // 
+            // mainPanel
+            // 
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.Location = new System.Drawing.Point(476, 128);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1223, 736);
+            this.mainPanel.TabIndex = 3;
+            // 
             // frmChinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1711, 869);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "frmChinh";
             this.Text = "frmChinh";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelMenu.ResumeLayout(false);
+            this.panelNhanVien.ResumeLayout(false);
+            this.panelNhanVien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panelKhachHang.ResumeLayout(false);
+            this.panelKhachHang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panelNhapSach.ResumeLayout(false);
+            this.panelNhapSach.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panelBanSach.ResumeLayout(false);
+            this.panelBanSach.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.panelQlSach.ResumeLayout(false);
+            this.panelQlSach.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.panelThongKe.ResumeLayout(false);
+            this.panelThongKe.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.panelHoaDon.ResumeLayout(false);
+            this.panelHoaDon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
@@ -404,27 +417,28 @@ namespace QuanLyMuaBanSach
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabelDangXuat;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.FlowLayoutPanel panelMenu;
+        private System.Windows.Forms.Panel panelNhanVien;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblNhanVien;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelKhachHang;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblKhachHang;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelNhapSach;
         private System.Windows.Forms.Label lblNhapSach;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panelBanSach;
         private System.Windows.Forms.Label lblBanSach;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panelQlSach;
         private System.Windows.Forms.Label lblQLSach;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panelThongKe;
         private System.Windows.Forms.Label lblThongKe;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panelHoaDon;
         private System.Windows.Forms.Label lblHoaDon;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Panel mainPanel;
     }
 }
