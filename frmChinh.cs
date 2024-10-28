@@ -37,10 +37,6 @@ namespace QuanLyMuaBanSach
 
         }
 
-        private void panel2_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new frmNhapSach());
-        }
         private void OpenChildForm(Form childForm)
         {
             mainPanel.Controls.Clear();
@@ -51,6 +47,21 @@ namespace QuanLyMuaBanSach
 
             mainPanel.Controls.Add(childForm);
             childForm.Show();
+        }
+
+        private void panelNhanVien_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmQuanLyNhanVien());
+        }
+
+        private void panelNhapSach_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmNhapSach());
+        }
+
+        private void panelQlSach_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmSach());
         }
     }
 }

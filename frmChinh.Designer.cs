@@ -137,7 +137,7 @@ namespace QuanLyMuaBanSach
             this.panelNhanVien.Name = "panelNhanVien";
             this.panelNhanVien.Size = new System.Drawing.Size(282, 79);
             this.panelNhanVien.TabIndex = 0;
-            this.panelNhanVien.Click += new System.EventHandler(this.panel2_Click);
+            this.panelNhanVien.Click += new System.EventHandler(this.panelNhanVien_Click);
             // 
             // lblNhanVien
             // 
@@ -206,6 +206,7 @@ namespace QuanLyMuaBanSach
             this.panelNhapSach.Name = "panelNhapSach";
             this.panelNhapSach.Size = new System.Drawing.Size(282, 84);
             this.panelNhapSach.TabIndex = 2;
+            this.panelNhapSach.Click += new System.EventHandler(this.panelNhapSach_Click);
             // 
             // lblNhapSach
             // 
@@ -272,6 +273,7 @@ namespace QuanLyMuaBanSach
             this.panelQlSach.Name = "panelQlSach";
             this.panelQlSach.Size = new System.Drawing.Size(282, 84);
             this.panelQlSach.TabIndex = 4;
+            this.panelQlSach.Click += new System.EventHandler(this.panelQlSach_Click);
             // 
             // lblQLSach
             // 
