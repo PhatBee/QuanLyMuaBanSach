@@ -74,7 +74,7 @@ namespace QuanLyMuaBanSach
         {
             try
             {
-                string maTL = txtBoxTheLoai.Text;
+                string maTL = txtBoxMaTheLoai.Text;
                 string tenTL = txtBoxTenTheLoai.Text;
 
 
@@ -105,8 +105,8 @@ namespace QuanLyMuaBanSach
         {
             try
             {
-                txtBoxTheLoai.Text = dataTheLoai.CurrentRow.Cells[0].Value.ToString();
-                string maTL = txtBoxTheLoai.Text;
+                txtBoxMaTheLoai.Text = dataTheLoai.CurrentRow.Cells[0].Value.ToString();
+                string maTL = txtBoxMaTheLoai.Text;
 
                 mydb.openConection();
 
@@ -140,7 +140,7 @@ namespace QuanLyMuaBanSach
             // MaTL, tenTL
             try
             {
-                txtBoxTheLoai.Text = dataTheLoai.CurrentRow.Cells[0].Value.ToString();
+                txtBoxMaTheLoai.Text = dataTheLoai.CurrentRow.Cells[0].Value.ToString();
                 txtBoxTenTheLoai.Text = dataTheLoai.CurrentRow.Cells[1].Value.ToString();
             }
             catch (Exception ex)

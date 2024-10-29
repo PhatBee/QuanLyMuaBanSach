@@ -155,7 +155,5 @@ namespace QuanLyMuaBanSach
             }
             finally { mydb.closeConection(); }
         }
-
-        
     }
 }
