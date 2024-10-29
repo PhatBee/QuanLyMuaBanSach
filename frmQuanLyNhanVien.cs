@@ -187,5 +187,25 @@ namespace QuanLyMuaBanSach
             }
 
         }
+
+        private void btnXacNhanNV_Click(object sender, EventArgs e)
+        {
+            string tenNV = txtBoxTimKiem.Text;
+            dataNV.DataSource = timKiemNhanVien(tenNV);
+        }
+
+        private DataTable timKiemNhanVien(string text)
+        {
+            mydb.openConection();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("proc_TimKiemNhanVienTheoTen", mydb.getConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@tenNV",text);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            mydb.closeConection();
+            return dt;
+        }
+
     }
 }

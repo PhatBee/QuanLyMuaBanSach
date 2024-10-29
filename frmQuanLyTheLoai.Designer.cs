@@ -97,15 +97,7 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // lblMaTheLoai
-            // 
-            this.lblMaTheLoai.AutoSize = true;
-            this.lblMaTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaTheLoai.Location = new System.Drawing.Point(270, 33);
-            this.lblMaTheLoai.Name = "lblMaTheLoai";
-            this.lblMaTheLoai.Size = new System.Drawing.Size(118, 26);
-            this.lblMaTheLoai.TabIndex = 13;
-            this.lblMaTheLoai.Text = "Mã thể loại";
+            
             // 
             // lblTenTheLoai
             // 
@@ -117,13 +109,7 @@
             this.lblTenTheLoai.TabIndex = 13;
             this.lblTenTheLoai.Text = "Tên thể loại";
             // 
-            // txtBoxTheLoai
-            // 
-            this.txtBoxTheLoai.Location = new System.Drawing.Point(420, 33);
-            this.txtBoxTheLoai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtBoxTheLoai.Name = "txtBoxTheLoai";
-            this.txtBoxTheLoai.Size = new System.Drawing.Size(298, 26);
-            this.txtBoxTheLoai.TabIndex = 10;
+            
             // 
             // txtBoxTenTheLoai
             // 
