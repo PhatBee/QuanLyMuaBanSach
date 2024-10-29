@@ -78,9 +78,9 @@
             this.lblTenTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenTheLoai.Location = new System.Drawing.Point(273, 41);
             this.lblTenTheLoai.Name = "lblTenTheLoai";
-            this.lblTenTheLoai.Size = new System.Drawing.Size(129, 26);
+            this.lblTenTheLoai.Size = new System.Drawing.Size(124, 26);
             this.lblTenTheLoai.TabIndex = 13;
-            this.lblTenTheLoai.Text = "Tên Tác Giả";
+            this.lblTenTheLoai.Text = "Tên thể loại";
             // 
             // btnXoa
             // 
