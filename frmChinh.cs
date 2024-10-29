@@ -70,5 +70,10 @@ namespace QuanLyMuaBanSach
         {
             OpenChildForm(new frmQuanLyKhachHang());
         }
+
+        private void frmChinh_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
