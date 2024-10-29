@@ -207,7 +207,7 @@
             // 
             this.btnQLTheLoai.AccessibleDescription = "";
             this.btnQLTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLTheLoai.Location = new System.Drawing.Point(532, 193);
+            this.btnQLTheLoai.Location = new System.Drawing.Point(532, 191);
             this.btnQLTheLoai.Name = "btnQLTheLoai";
             this.btnQLTheLoai.Size = new System.Drawing.Size(192, 41);
             this.btnQLTheLoai.TabIndex = 10;
@@ -218,7 +218,7 @@
             // btnQLNXB
             // 
             this.btnQLNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLNXB.Location = new System.Drawing.Point(532, 269);
+            this.btnQLNXB.Location = new System.Drawing.Point(532, 267);
             this.btnQLNXB.Name = "btnQLNXB";
             this.btnQLNXB.Size = new System.Drawing.Size(192, 41);
             this.btnQLNXB.TabIndex = 10;
@@ -228,7 +228,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(920, 34);
+            this.textBox4.Location = new System.Drawing.Point(910, 34);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(446, 187);
@@ -238,7 +238,7 @@
             // 
             this.lblMoTa.AutoSize = true;
             this.lblMoTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoTa.Location = new System.Drawing.Point(816, 35);
+            this.lblMoTa.Location = new System.Drawing.Point(806, 35);
             this.lblMoTa.Name = "lblMoTa";
             this.lblMoTa.Size = new System.Drawing.Size(82, 29);
             this.lblMoTa.TabIndex = 18;
@@ -248,7 +248,7 @@
             // 
             this.btnQLTacGia.AccessibleDescription = "";
             this.btnQLTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLTacGia.Location = new System.Drawing.Point(532, 116);
+            this.btnQLTacGia.Location = new System.Drawing.Point(532, 112);
             this.btnQLTacGia.Name = "btnQLTacGia";
             this.btnQLTacGia.Size = new System.Drawing.Size(192, 41);
             this.btnQLTacGia.TabIndex = 10;

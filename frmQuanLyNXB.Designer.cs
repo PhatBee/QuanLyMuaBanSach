@@ -48,7 +48,7 @@
             // 
             this.lblThongTinNXB.AutoSize = true;
             this.lblThongTinNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongTinNXB.Location = new System.Drawing.Point(339, 8);
+            this.lblThongTinNXB.Location = new System.Drawing.Point(441, 27);
             this.lblThongTinNXB.Name = "lblThongTinNXB";
             this.lblThongTinNXB.Size = new System.Drawing.Size(238, 37);
             this.lblThongTinNXB.TabIndex = 0;
@@ -57,7 +57,7 @@
             // dataGridViewNXB
             // 
             this.dataGridViewNXB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNXB.Location = new System.Drawing.Point(12, 48);
+            this.dataGridViewNXB.Location = new System.Drawing.Point(114, 67);
             this.dataGridViewNXB.Name = "dataGridViewNXB";
             this.dataGridViewNXB.RowHeadersWidth = 62;
             this.dataGridViewNXB.RowTemplate.Height = 28;
@@ -136,7 +136,7 @@
             this.txtBoxNXB.Location = new System.Drawing.Point(634, 41);
             this.txtBoxNXB.Multiline = true;
             this.txtBoxNXB.Name = "txtBoxNXB";
-            this.txtBoxNXB.Size = new System.Drawing.Size(298, 169);
+            this.txtBoxNXB.Size = new System.Drawing.Size(309, 169);
             this.txtBoxNXB.TabIndex = 3;
             // 
             // txtBoxSDT
@@ -157,7 +157,7 @@
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.txtBoxSDT);
             this.panel1.Controls.Add(this.txtBoxTenNXB);
-            this.panel1.Location = new System.Drawing.Point(12, 407);
+            this.panel1.Location = new System.Drawing.Point(114, 426);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(946, 230);
             this.panel1.TabIndex = 5;
@@ -166,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 653);
+            this.ClientSize = new System.Drawing.Size(1176, 687);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridViewNXB);
             this.Controls.Add(this.lblThongTinNXB);
