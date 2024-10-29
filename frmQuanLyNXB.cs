@@ -72,6 +72,7 @@ namespace QuanLyMuaBanSach
             {
                 MessageBox.Show("Thêm nhà xuất bản thất bại. Mã lỗi: " + ex.Message, "Thêm nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            frmQuanLyNXB_Load(sender, e);
         }
 
         private void dataNXB_DoubleClick(object sender, EventArgs e)
@@ -96,13 +97,14 @@ namespace QuanLyMuaBanSach
                 string tenNXB = txtBoxTenNXB.Text;
                 string diaChiNXB = txtBoxNXB.Text;
                 string sdtNXB = txtBoxSDT.Text;
-
+                string maNXB = txtBoxMaNXB.Text;
 
                 mydb.openConection();
 
                 sqlCommand = new SqlCommand("proc_SuaNXB", mydb.getConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
+                sqlCommand.Parameters.AddWithValue("@maNXB", maNXB);
                 sqlCommand.Parameters.AddWithValue("@tenNXB", tenNXB);
                 sqlCommand.Parameters.AddWithValue("@SDT", sdtNXB);
                 sqlCommand.Parameters.AddWithValue("@diaChiNXB", diaChiNXB);
@@ -119,6 +121,42 @@ namespace QuanLyMuaBanSach
             {
                 MessageBox.Show("Sửa thông tin nhà xuất bản thất bại. Mã lỗi: " + ex.Message, "Sửa thông tin nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            frmQuanLyNXB_Load(sender, e);
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                txtBoxMaNXB.Text = dataNXB.CurrentRow.Cells[0].Value.ToString();
+                string maNXB = txtBoxMaNXB.Text;
+
+                mydb.openConection();
+
+                sqlCommand = new SqlCommand("proc_XoaNXB", mydb.getConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                sqlCommand.Parameters.AddWithValue("@maNXB", maNXB);
+
+                int rowsAffected = sqlCommand.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Xóa nhà xuất bản thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy nhà xuất bản cần xóa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                mydb.closeConection();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Xoá nhà xuất bản thất bại, do nhà xuất bản đang được dùng trên hệ thống. Mã lỗi: " + ex.Message, "Thêm nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            frmQuanLyNXB_Load(sender, e);
         }
     }
 }
