@@ -12,6 +12,7 @@ namespace QuanLyMuaBanSach
 {
     public partial class Form1 : Form
     {
+        private string maNV;
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +20,7 @@ namespace QuanLyMuaBanSach
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            frmChinh frmChinh = new frmChinh();
+            frmChinh frmChinh = new frmChinh(this.maNV);
             frmChinh.Show();
         }
 

@@ -12,9 +12,11 @@ namespace QuanLyMuaBanSach
 {
     public partial class frmChinh : Form
     {
-        public frmChinh()
+        private string maNV;
+        public frmChinh(string maNV)
         {
             InitializeComponent();
+            this.maNV = maNV;
         }
 
         private void linkLabelDangXuat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -56,7 +58,7 @@ namespace QuanLyMuaBanSach
 
         private void panelNhapSach_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmNhapSach());
+            OpenChildForm(new frmNhapSach(this.maNV));
         }
 
         private void panelQlSach_Click(object sender, EventArgs e)
