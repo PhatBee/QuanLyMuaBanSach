@@ -16,7 +16,7 @@ namespace QuanLyMuaBanSach
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmChinh());
+            Application.Run(new frmChinh("NV001"));
         }
     }
 }
