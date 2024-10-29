@@ -40,6 +40,8 @@
             this.txtBoxNXB = new System.Windows.Forms.TextBox();
             this.txtBoxSDT = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBoxMaNXB = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataNXB)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +66,7 @@
             this.dataNXB.RowTemplate.Height = 28;
             this.dataNXB.Size = new System.Drawing.Size(841, 282);
             this.dataNXB.TabIndex = 1;
+            this.dataNXB.DoubleClick += new System.EventHandler(this.dataNXB_DoubleClick);
             // 
             // btnThem
             // 
@@ -87,6 +90,7 @@
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -101,7 +105,7 @@
             // 
             // txtBoxTenNXB
             // 
-            this.txtBoxTenNXB.Location = new System.Drawing.Point(118, 34);
+            this.txtBoxTenNXB.Location = new System.Drawing.Point(118, 41);
             this.txtBoxTenNXB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxTenNXB.Name = "txtBoxTenNXB";
             this.txtBoxTenNXB.Size = new System.Drawing.Size(265, 22);
@@ -111,7 +115,7 @@
             // 
             this.lblTenNXB.AutoSize = true;
             this.lblTenNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenNXB.Location = new System.Drawing.Point(2, 33);
+            this.lblTenNXB.Location = new System.Drawing.Point(1, 40);
             this.lblTenNXB.Name = "lblTenNXB";
             this.lblTenNXB.Size = new System.Drawing.Size(94, 24);
             this.lblTenNXB.TabIndex = 4;
@@ -156,6 +160,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtBoxMaNXB);
             this.panel1.Controls.Add(this.txtBoxNXB);
             this.panel1.Controls.Add(this.lblSDT);
             this.panel1.Controls.Add(this.btnThem);
@@ -170,6 +176,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(841, 184);
             this.panel1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(2, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Mã NXB";
+            // 
+            // txtBoxMaNXB
+            // 
+            this.txtBoxMaNXB.Location = new System.Drawing.Point(118, 8);
+            this.txtBoxMaNXB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxMaNXB.Name = "txtBoxMaNXB";
+            this.txtBoxMaNXB.Size = new System.Drawing.Size(265, 22);
+            this.txtBoxMaNXB.TabIndex = 5;
             // 
             // frmQuanLyNXB
             // 
@@ -205,5 +229,7 @@
         private System.Windows.Forms.TextBox txtBoxNXB;
         private System.Windows.Forms.TextBox txtBoxSDT;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBoxMaNXB;
     }
 }

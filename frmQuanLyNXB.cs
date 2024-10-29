@@ -16,7 +16,6 @@ namespace QuanLyMuaBanSach
         MyDB mydb = new MyDB();
         SqlCommand sqlCommand = new SqlCommand();
         SqlConnection sqlcon = null;
-
         public frmQuanLyNXB()
         {
             InitializeComponent();
@@ -45,7 +44,81 @@ namespace QuanLyMuaBanSach
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string tenNXB = txtBoxTenNXB.Text;
+                string diaChiNXB = txtBoxNXB.Text;
+                string sdtNXB = txtBoxSDT.Text;
+                
 
+                mydb.openConection();
+
+                sqlCommand = new SqlCommand("proc_ThemNXB", mydb.getConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                sqlCommand.Parameters.AddWithValue("@tenNXB", tenNXB);
+                sqlCommand.Parameters.AddWithValue("@SDT", sdtNXB);
+                sqlCommand.Parameters.AddWithValue("@diaChiNXB", diaChiNXB);
+           
+
+                sqlCommand.ExecuteNonQuery();
+
+                mydb.closeConection();
+
+                MessageBox.Show("Đã thêm nhà xuất bản mới thành công!", "Thêm nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Thêm nhà xuất bản thất bại. Mã lỗi: " + ex.Message, "Thêm nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void dataNXB_DoubleClick(object sender, EventArgs e)
+        { // MaNXB, TenNXB, SDT, DiaChi
+            try
+            {
+                txtBoxMaNXB.Text = dataNXB.CurrentRow.Cells[0].Value.ToString();
+                txtBoxTenNXB.Text = dataNXB.CurrentRow.Cells[1].Value.ToString();
+                txtBoxSDT.Text = dataNXB.CurrentRow.Cells[2].Value.ToString();
+                txtBoxNXB.Text = dataNXB.CurrentRow.Cells[3].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string tenNXB = txtBoxTenNXB.Text;
+                string diaChiNXB = txtBoxNXB.Text;
+                string sdtNXB = txtBoxSDT.Text;
+
+
+                mydb.openConection();
+
+                sqlCommand = new SqlCommand("proc_SuaNXB", mydb.getConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                sqlCommand.Parameters.AddWithValue("@tenNXB", tenNXB);
+                sqlCommand.Parameters.AddWithValue("@SDT", sdtNXB);
+                sqlCommand.Parameters.AddWithValue("@diaChiNXB", diaChiNXB);
+
+
+                sqlCommand.ExecuteNonQuery();
+
+                mydb.closeConection();
+
+                MessageBox.Show("Đã thêm nhà xuất bản mới thành công!", "Thêm nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Thêm nhà xuất bản thất bại. Mã lỗi: " + ex.Message, "Thêm nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
