@@ -16,6 +16,7 @@ namespace QuanLyMuaBanSach
         MyDB mydb = new MyDB();
         SqlCommand sqlCommand = new SqlCommand();
         SqlConnection sqlcon = null;
+        int tonsua = 0;
         public FrmSach()
         {
             InitializeComponent();
@@ -145,6 +146,8 @@ namespace QuanLyMuaBanSach
                 comboBoxNXB.Text = dataSach.CurrentRow.Cells[6].Value.ToString();
                 chiTietSangTacSach();
 
+                tonsua = Convert.ToInt32(dataSach.CurrentRow.Cells[2].Value.ToString());
+
             }
             catch (Exception ex)
             {
@@ -228,6 +231,92 @@ namespace QuanLyMuaBanSach
                 MessageBox.Show("Lỗi khi xoá tác giả, mã lỗi: " + ex.Message, "Xoá tác giả", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             chiTietSangTacSach();
+        }
+
+        private void btnThemSach_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string tensach = txtboxTenSach.Text;
+                string mota = txtboxMoTa.Text;
+                string theloai = comboBoxTheLoai.SelectedValue.ToString();
+                int dotuoi = Convert.ToInt32(numericUpDownTuoi.Value);
+                string nxb = comboBoxNXB.SelectedValue.ToString() ;
+
+                mydb.openConection();
+
+                sqlCommand = new SqlCommand("proc_themSach", mydb.getConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                sqlCommand.Parameters.AddWithValue("@tenSach", tensach);
+                sqlCommand.Parameters.AddWithValue("@slTon", 0);
+                sqlCommand.Parameters.AddWithValue("@doTuoi", dotuoi);
+                sqlCommand.Parameters.AddWithValue("@maTL", theloai);
+                sqlCommand.Parameters.AddWithValue("@moTa", mota);
+                sqlCommand.Parameters.AddWithValue("@maNXB", nxb);
+
+                int rowsAffected = sqlCommand.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Đã thêm sách mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Thêm sách thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            mydb.closeConection();
+            FrmSach_Load(sender, e);
+        }
+
+        private void btnSuaSach_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string masach = txtboxMaSach.Text;
+                string tensach = txtboxTenSach.Text;
+                string mota = txtboxMoTa.Text;
+                string theloai = comboBoxTheLoai.SelectedValue.ToString();
+                int dotuoi = Convert.ToInt32(numericUpDownTuoi.Value);
+                string nxb = comboBoxNXB.SelectedValue.ToString();
+
+                mydb.openConection();
+
+                sqlCommand = new SqlCommand("pro_suaSach", mydb.getConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                sqlCommand.Parameters.AddWithValue("@maSach", masach);
+                sqlCommand.Parameters.AddWithValue("@tenSach", tensach);
+                sqlCommand.Parameters.AddWithValue("@slTon", tonsua);
+                sqlCommand.Parameters.AddWithValue("@doTuoi", dotuoi);
+                sqlCommand.Parameters.AddWithValue("@maTL", theloai);
+                sqlCommand.Parameters.AddWithValue("@moTa", mota);
+                sqlCommand.Parameters.AddWithValue("@maNXB", nxb);
+
+                int rowsAffected = sqlCommand.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Sửa thông tin sách thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thông tin sách thất bại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            mydb.closeConection();
+            FrmSach_Load(sender, e);
         }
     }
 }
