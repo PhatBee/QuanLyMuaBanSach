@@ -154,10 +154,5 @@ namespace QuanLyMuaBanSach
             }
             frmQuanLyTacGia_Load(sender, e);
         }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
