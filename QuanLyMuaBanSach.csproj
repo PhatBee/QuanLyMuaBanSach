@@ -191,6 +191,9 @@
     <EmbeddedResource Include="frmQuanLyTacGia.resx">
       <DependentUpon>frmQuanLyTacGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyTheLoai.resx">
+      <DependentUpon>frmQuanLyTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sach\FrmSach.resx">
       <DependentUpon>FrmSach.cs</DependentUpon>
     </EmbeddedResource>
