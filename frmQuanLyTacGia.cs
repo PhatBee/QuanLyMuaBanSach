@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace QuanLyMuaBanSach
 {
@@ -153,6 +154,25 @@ namespace QuanLyMuaBanSach
                 MessageBox.Show("Xoá tác giả thất bại, do tác giả đang được dùng trên hệ thống. Mã lỗi: " + ex.Message, "Xoá tác giả", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             frmQuanLyTacGia_Load(sender, e);
+        }
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            string tenTG = txtBoxMaTG.Text;
+            dataTacGia.DataSource = timKiemTacGia(tenTG);
+        }
+
+        public DataTable timKiemTacGia(string text)
+        {
+            mydb.openConection();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("proc_TimKiemTacGiaTheoTen", mydb.getConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@tenTG", text);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            mydb.closeConection();
+            return dt;
         }
     }
 }
