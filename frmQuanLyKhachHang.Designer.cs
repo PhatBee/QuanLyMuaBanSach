@@ -31,13 +31,15 @@
             this.lblThongTinKhachHang = new System.Windows.Forms.Label();
             this.dataKhachHang = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblSDT = new System.Windows.Forms.Label();
+            this.lblMaKhachHang = new System.Windows.Forms.Label();
+            this.lblTenKhachHang = new System.Windows.Forms.Label();
+            this.txtBoxSDT = new System.Windows.Forms.TextBox();
+            this.txtBoxMaKhanhHang = new System.Windows.Forms.TextBox();
+            this.txtBoxTenKhachHang = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.lblSDT = new System.Windows.Forms.Label();
-            this.lblTenKhachHang = new System.Windows.Forms.Label();
-            this.txtBoxSDT = new System.Windows.Forms.TextBox();
-            this.txtBoxTenKhachHang = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataKhachHang)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -61,12 +63,15 @@
             this.dataKhachHang.RowTemplate.Height = 28;
             this.dataKhachHang.Size = new System.Drawing.Size(1291, 392);
             this.dataKhachHang.TabIndex = 1;
+            this.dataKhachHang.DoubleClick += new System.EventHandler(this.dataKhachHang_DoubleClick);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.lblSDT);
+            this.panel1.Controls.Add(this.lblMaKhachHang);
             this.panel1.Controls.Add(this.lblTenKhachHang);
             this.panel1.Controls.Add(this.txtBoxSDT);
+            this.panel1.Controls.Add(this.txtBoxMaKhanhHang);
             this.panel1.Controls.Add(this.txtBoxTenKhachHang);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnSua);
@@ -75,6 +80,57 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1290, 232);
             this.panel1.TabIndex = 2;
+            // 
+            // lblSDT
+            // 
+            this.lblSDT.AutoSize = true;
+            this.lblSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSDT.Location = new System.Drawing.Point(394, 116);
+            this.lblSDT.Name = "lblSDT";
+            this.lblSDT.Size = new System.Drawing.Size(139, 26);
+            this.lblSDT.TabIndex = 16;
+            this.lblSDT.Text = "Số điện thoại";
+            // 
+            // lblMaKhachHang
+            // 
+            this.lblMaKhachHang.AutoSize = true;
+            this.lblMaKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaKhachHang.Location = new System.Drawing.Point(367, 22);
+            this.lblMaKhachHang.Name = "lblMaKhachHang";
+            this.lblMaKhachHang.Size = new System.Drawing.Size(160, 26);
+            this.lblMaKhachHang.TabIndex = 17;
+            this.lblMaKhachHang.Text = "Mã khách hàng";
+            // 
+            // lblTenKhachHang
+            // 
+            this.lblTenKhachHang.AutoSize = true;
+            this.lblTenKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenKhachHang.Location = new System.Drawing.Point(367, 70);
+            this.lblTenKhachHang.Name = "lblTenKhachHang";
+            this.lblTenKhachHang.Size = new System.Drawing.Size(166, 26);
+            this.lblTenKhachHang.TabIndex = 17;
+            this.lblTenKhachHang.Text = "Tên khách hàng";
+            // 
+            // txtBoxSDT
+            // 
+            this.txtBoxSDT.Location = new System.Drawing.Point(551, 116);
+            this.txtBoxSDT.Name = "txtBoxSDT";
+            this.txtBoxSDT.Size = new System.Drawing.Size(298, 26);
+            this.txtBoxSDT.TabIndex = 14;
+            // 
+            // txtBoxMaKhanhHang
+            // 
+            this.txtBoxMaKhanhHang.Location = new System.Drawing.Point(551, 24);
+            this.txtBoxMaKhanhHang.Name = "txtBoxMaKhanhHang";
+            this.txtBoxMaKhanhHang.Size = new System.Drawing.Size(298, 26);
+            this.txtBoxMaKhanhHang.TabIndex = 15;
+            // 
+            // txtBoxTenKhachHang
+            // 
+            this.txtBoxTenKhachHang.Location = new System.Drawing.Point(551, 72);
+            this.txtBoxTenKhachHang.Name = "txtBoxTenKhachHang";
+            this.txtBoxTenKhachHang.Size = new System.Drawing.Size(298, 26);
+            this.txtBoxTenKhachHang.TabIndex = 15;
             // 
             // btnThem
             // 
@@ -85,6 +141,7 @@
             this.btnThem.TabIndex = 10;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -95,6 +152,7 @@
             this.btnSua.TabIndex = 9;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -105,40 +163,7 @@
             this.btnXoa.TabIndex = 8;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // lblSDT
-            // 
-            this.lblSDT.AutoSize = true;
-            this.lblSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSDT.Location = new System.Drawing.Point(410, 92);
-            this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(139, 26);
-            this.lblSDT.TabIndex = 16;
-            this.lblSDT.Text = "Số điện thoại";
-            // 
-            // lblTenKhachHang
-            // 
-            this.lblTenKhachHang.AutoSize = true;
-            this.lblTenKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenKhachHang.Location = new System.Drawing.Point(383, 37);
-            this.lblTenKhachHang.Name = "lblTenKhachHang";
-            this.lblTenKhachHang.Size = new System.Drawing.Size(166, 26);
-            this.lblTenKhachHang.TabIndex = 17;
-            this.lblTenKhachHang.Text = "Tên khách hàng";
-            // 
-            // txtBoxSDT
-            // 
-            this.txtBoxSDT.Location = new System.Drawing.Point(567, 92);
-            this.txtBoxSDT.Name = "txtBoxSDT";
-            this.txtBoxSDT.Size = new System.Drawing.Size(298, 26);
-            this.txtBoxSDT.TabIndex = 14;
-            // 
-            // txtBoxTenKhachHang
-            // 
-            this.txtBoxTenKhachHang.Location = new System.Drawing.Point(567, 39);
-            this.txtBoxTenKhachHang.Name = "txtBoxTenKhachHang";
-            this.txtBoxTenKhachHang.Size = new System.Drawing.Size(298, 26);
-            this.txtBoxTenKhachHang.TabIndex = 15;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // frmQuanLyKhachHang
             // 
@@ -150,6 +175,7 @@
             this.Controls.Add(this.lblThongTinKhachHang);
             this.Name = "frmQuanLyKhachHang";
             this.Text = "frmQuanLyKhachHang";
+            this.Load += new System.EventHandler(this.frmQuanLyKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataKhachHang)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -170,5 +196,7 @@
         private System.Windows.Forms.Label lblTenKhachHang;
         private System.Windows.Forms.TextBox txtBoxSDT;
         private System.Windows.Forms.TextBox txtBoxTenKhachHang;
+        private System.Windows.Forms.Label lblMaKhachHang;
+        private System.Windows.Forms.TextBox txtBoxMaKhanhHang;
     }
 }

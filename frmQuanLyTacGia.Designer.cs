@@ -80,7 +80,7 @@
             // 
             this.lblTenTG.AutoSize = true;
             this.lblTenTG.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenTG.Location = new System.Drawing.Point(249, 44);
+            this.lblTenTG.Location = new System.Drawing.Point(280, 63);
             this.lblTenTG.Name = "lblTenTG";
             this.lblTenTG.Size = new System.Drawing.Size(114, 24);
             this.lblTenTG.TabIndex = 13;
@@ -96,8 +96,7 @@
             // 
             // txtBoxTenTG
             // 
-            this.txtBoxTenTG.Location = new System.Drawing.Point(380, 46);
-            this.txtBoxTenTG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxTenTG.Location = new System.Drawing.Point(427, 65);
             this.txtBoxTenTG.Name = "txtBoxTenTG";
             this.txtBoxTenTG.Size = new System.Drawing.Size(265, 22);
             this.txtBoxTenTG.TabIndex = 10;

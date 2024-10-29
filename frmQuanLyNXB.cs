@@ -114,12 +114,12 @@ namespace QuanLyMuaBanSach
 
                 mydb.closeConection();
 
-                MessageBox.Show("Đã thêm nhà xuất bản mới thành công!", "Thêm nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Đã sửa thông tin nhà xuất bản thành công!", "Sửa thông tin nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Thêm nhà xuất bản thất bại. Mã lỗi: " + ex.Message, "Thêm nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Sửa thông tin nhà xuất bản thất bại. Mã lỗi: " + ex.Message, "Sửa thông tin nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             frmQuanLyNXB_Load(sender, e);
 
@@ -154,7 +154,7 @@ namespace QuanLyMuaBanSach
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Xoá nhà xuất bản thất bại, do nhà xuất bản đang được dùng trên hệ thống. Mã lỗi: " + ex.Message, "Thêm nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Xoá nhà xuất bản thất bại, do nhà xuất bản đang được dùng trên hệ thống. Mã lỗi: " + ex.Message, "Xoá nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             frmQuanLyNXB_Load(sender, e);
         }
