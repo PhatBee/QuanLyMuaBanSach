@@ -20,18 +20,19 @@ namespace QuanLyMuaBanSach
         private void FrmSach_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'qLSachDataSet.list_Sach' table. You can move, or remove it, as needed.
-            this.list_SachTableAdapter.Fill(this.qLSachDataSet.list_Sach);
 
         }
 
         private void btnQLTheLoai_Click(object sender, EventArgs e)
         {
-            
+            frmQuanLyTheLoai qlTheLoai = new frmQuanLyTheLoai();
+            qlTheLoai.Show();
         }
 
         private void btnQLNXB_Click(object sender, EventArgs e)
         {
-
+            frmQuanLyNXB qlNXB = new frmQuanLyNXB();
+            qlNXB.Show();
         }
     }
 }
