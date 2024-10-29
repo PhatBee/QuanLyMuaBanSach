@@ -39,14 +39,16 @@
             this.lblSDT = new System.Windows.Forms.Label();
             this.txtBoxNXB = new System.Windows.Forms.TextBox();
             this.txtBoxSDT = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNXB)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblThongTinNXB
             // 
             this.lblThongTinNXB.AutoSize = true;
             this.lblThongTinNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongTinNXB.Location = new System.Drawing.Point(275, 13);
+            this.lblThongTinNXB.Location = new System.Drawing.Point(339, 8);
             this.lblThongTinNXB.Name = "lblThongTinNXB";
             this.lblThongTinNXB.Size = new System.Drawing.Size(238, 37);
             this.lblThongTinNXB.TabIndex = 0;
@@ -55,7 +57,7 @@
             // dataGridViewNXB
             // 
             this.dataGridViewNXB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewNXB.Location = new System.Drawing.Point(4, 53);
+            this.dataGridViewNXB.Location = new System.Drawing.Point(12, 48);
             this.dataGridViewNXB.Name = "dataGridViewNXB";
             this.dataGridViewNXB.RowHeadersWidth = 62;
             this.dataGridViewNXB.RowTemplate.Height = 28;
@@ -65,7 +67,7 @@
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(25, 561);
+            this.btnThem.Location = new System.Drawing.Point(7, 168);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(97, 42);
             this.btnThem.TabIndex = 2;
@@ -75,7 +77,7 @@
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(181, 561);
+            this.btnSua.Location = new System.Drawing.Point(163, 168);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(97, 42);
             this.btnSua.TabIndex = 2;
@@ -85,7 +87,7 @@
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(352, 561);
+            this.btnXoa.Location = new System.Drawing.Point(334, 168);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(97, 42);
             this.btnXoa.TabIndex = 2;
@@ -94,7 +96,7 @@
             // 
             // txtBoxTenNXB
             // 
-            this.txtBoxTenNXB.Location = new System.Drawing.Point(151, 436);
+            this.txtBoxTenNXB.Location = new System.Drawing.Point(133, 43);
             this.txtBoxTenNXB.Name = "txtBoxTenNXB";
             this.txtBoxTenNXB.Size = new System.Drawing.Size(298, 26);
             this.txtBoxTenNXB.TabIndex = 3;
@@ -103,7 +105,7 @@
             // 
             this.lblTenNXB.AutoSize = true;
             this.lblTenNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenNXB.Location = new System.Drawing.Point(20, 434);
+            this.lblTenNXB.Location = new System.Drawing.Point(2, 41);
             this.lblTenNXB.Name = "lblTenNXB";
             this.lblTenNXB.Size = new System.Drawing.Size(106, 26);
             this.lblTenNXB.TabIndex = 4;
@@ -113,7 +115,7 @@
             // 
             this.lblDiaChi.AutoSize = true;
             this.lblDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiaChi.Location = new System.Drawing.Point(496, 434);
+            this.lblDiaChi.Location = new System.Drawing.Point(478, 41);
             this.lblDiaChi.Name = "lblDiaChi";
             this.lblDiaChi.Size = new System.Drawing.Size(131, 26);
             this.lblDiaChi.TabIndex = 4;
@@ -123,7 +125,7 @@
             // 
             this.lblSDT.AutoSize = true;
             this.lblSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSDT.Location = new System.Drawing.Point(13, 487);
+            this.lblSDT.Location = new System.Drawing.Point(-5, 94);
             this.lblSDT.Name = "lblSDT";
             this.lblSDT.Size = new System.Drawing.Size(113, 26);
             this.lblSDT.TabIndex = 4;
@@ -131,7 +133,7 @@
             // 
             // txtBoxNXB
             // 
-            this.txtBoxNXB.Location = new System.Drawing.Point(652, 434);
+            this.txtBoxNXB.Location = new System.Drawing.Point(634, 41);
             this.txtBoxNXB.Multiline = true;
             this.txtBoxNXB.Name = "txtBoxNXB";
             this.txtBoxNXB.Size = new System.Drawing.Size(298, 169);
@@ -139,30 +141,40 @@
             // 
             // txtBoxSDT
             // 
-            this.txtBoxSDT.Location = new System.Drawing.Point(151, 487);
+            this.txtBoxSDT.Location = new System.Drawing.Point(133, 94);
             this.txtBoxSDT.Name = "txtBoxSDT";
             this.txtBoxSDT.Size = new System.Drawing.Size(298, 26);
             this.txtBoxSDT.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtBoxNXB);
+            this.panel1.Controls.Add(this.lblSDT);
+            this.panel1.Controls.Add(this.btnThem);
+            this.panel1.Controls.Add(this.lblDiaChi);
+            this.panel1.Controls.Add(this.btnSua);
+            this.panel1.Controls.Add(this.lblTenNXB);
+            this.panel1.Controls.Add(this.btnXoa);
+            this.panel1.Controls.Add(this.txtBoxSDT);
+            this.panel1.Controls.Add(this.txtBoxTenNXB);
+            this.panel1.Location = new System.Drawing.Point(12, 407);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(946, 230);
+            this.panel1.TabIndex = 5;
             // 
             // frmQuanLyNXB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 632);
-            this.Controls.Add(this.lblSDT);
-            this.Controls.Add(this.lblDiaChi);
-            this.Controls.Add(this.lblTenNXB);
-            this.Controls.Add(this.txtBoxSDT);
-            this.Controls.Add(this.txtBoxNXB);
-            this.Controls.Add(this.txtBoxTenNXB);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnThem);
+            this.ClientSize = new System.Drawing.Size(971, 653);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridViewNXB);
             this.Controls.Add(this.lblThongTinNXB);
             this.Name = "frmQuanLyNXB";
             this.Text = "frmQuanLyNXB";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNXB)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +193,6 @@
         private System.Windows.Forms.Label lblSDT;
         private System.Windows.Forms.TextBox txtBoxNXB;
         private System.Windows.Forms.TextBox txtBoxSDT;
+        private System.Windows.Forms.Panel panel1;
     }
 }

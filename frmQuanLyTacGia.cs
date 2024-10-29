@@ -16,5 +16,10 @@ namespace QuanLyMuaBanSach
         {
             InitializeComponent();
         }
+
+        private void frmQuanLyTacGia_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
