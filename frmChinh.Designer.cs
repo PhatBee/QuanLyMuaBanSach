@@ -37,41 +37,41 @@ namespace QuanLyMuaBanSach
             this.panelMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.panelNhanVien = new System.Windows.Forms.Panel();
             this.lblNhanVien = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelKhachHang = new System.Windows.Forms.Panel();
             this.lblKhachHang = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelNhapSach = new System.Windows.Forms.Panel();
             this.lblNhapSach = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelBanSach = new System.Windows.Forms.Panel();
             this.lblBanSach = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelQlSach = new System.Windows.Forms.Panel();
             this.lblQLSach = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panelThongKe = new System.Windows.Forms.Panel();
             this.lblThongKe = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panelHoaDon = new System.Windows.Forms.Panel();
             this.lblHoaDon = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelNhanVien.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelKhachHang.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelNhapSach.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelBanSach.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panelQlSach.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelThongKe.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panelHoaDon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,7 +105,7 @@ namespace QuanLyMuaBanSach
             this.linkLabelDangXuat.Location = new System.Drawing.Point(1559, 80);
             this.linkLabelDangXuat.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.linkLabelDangXuat.Name = "linkLabelDangXuat";
-            this.linkLabelDangXuat.Size = new System.Drawing.Size(105, 25);
+            this.linkLabelDangXuat.Size = new System.Drawing.Size(125, 29);
             this.linkLabelDangXuat.TabIndex = 0;
             this.linkLabelDangXuat.TabStop = true;
             this.linkLabelDangXuat.Text = "Đăng Xuất";
@@ -146,21 +146,10 @@ namespace QuanLyMuaBanSach
             this.lblNhanVien.Location = new System.Drawing.Point(119, 26);
             this.lblNhanVien.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNhanVien.Name = "lblNhanVien";
-            this.lblNhanVien.Size = new System.Drawing.Size(104, 25);
+            this.lblNhanVien.Size = new System.Drawing.Size(124, 29);
             this.lblNhanVien.TabIndex = 1;
             this.lblNhanVien.Text = "Nhân Viên";
             this.lblNhanVien.Click += new System.EventHandler(this.lblNhanVien_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panelKhachHang
             // 
@@ -172,6 +161,7 @@ namespace QuanLyMuaBanSach
             this.panelKhachHang.Name = "panelKhachHang";
             this.panelKhachHang.Size = new System.Drawing.Size(282, 84);
             this.panelKhachHang.TabIndex = 1;
+            this.panelKhachHang.Click += new System.EventHandler(this.panelKhachHang_Click);
             // 
             // lblKhachHang
             // 
@@ -180,21 +170,9 @@ namespace QuanLyMuaBanSach
             this.lblKhachHang.Location = new System.Drawing.Point(119, 29);
             this.lblKhachHang.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblKhachHang.Name = "lblKhachHang";
-            this.lblKhachHang.Size = new System.Drawing.Size(121, 25);
+            this.lblKhachHang.Size = new System.Drawing.Size(143, 29);
             this.lblKhachHang.TabIndex = 1;
             this.lblKhachHang.Text = "Khách Hàng";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(16, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(84, 76);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panelNhapSach
             // 
@@ -215,20 +193,9 @@ namespace QuanLyMuaBanSach
             this.lblNhapSach.Location = new System.Drawing.Point(119, 29);
             this.lblNhapSach.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNhapSach.Name = "lblNhapSach";
-            this.lblNhapSach.Size = new System.Drawing.Size(110, 25);
+            this.lblNhapSach.Size = new System.Drawing.Size(131, 29);
             this.lblNhapSach.TabIndex = 1;
             this.lblNhapSach.Text = "Nhập Sách";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(16, 4);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(84, 76);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
             // 
             // panelBanSach
             // 
@@ -248,20 +215,9 @@ namespace QuanLyMuaBanSach
             this.lblBanSach.Location = new System.Drawing.Point(119, 29);
             this.lblBanSach.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblBanSach.Name = "lblBanSach";
-            this.lblBanSach.Size = new System.Drawing.Size(98, 25);
+            this.lblBanSach.Size = new System.Drawing.Size(115, 29);
             this.lblBanSach.TabIndex = 1;
             this.lblBanSach.Text = "Bán Sách";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(16, 4);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(84, 76);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
             // 
             // panelQlSach
             // 
@@ -282,20 +238,9 @@ namespace QuanLyMuaBanSach
             this.lblQLSach.Location = new System.Drawing.Point(119, 29);
             this.lblQLSach.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblQLSach.Name = "lblQLSach";
-            this.lblQLSach.Size = new System.Drawing.Size(138, 25);
+            this.lblQLSach.Size = new System.Drawing.Size(161, 29);
             this.lblQLSach.TabIndex = 1;
             this.lblQLSach.Text = "Quản Lý Sách";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(16, 4);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(84, 76);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
             // 
             // panelThongKe
             // 
@@ -315,20 +260,9 @@ namespace QuanLyMuaBanSach
             this.lblThongKe.Location = new System.Drawing.Point(119, 29);
             this.lblThongKe.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblThongKe.Name = "lblThongKe";
-            this.lblThongKe.Size = new System.Drawing.Size(99, 25);
+            this.lblThongKe.Size = new System.Drawing.Size(119, 29);
             this.lblThongKe.TabIndex = 1;
             this.lblThongKe.Text = "Thống Kê";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(16, 4);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(84, 76);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
             // 
             // panelHoaDon
             // 
@@ -348,9 +282,85 @@ namespace QuanLyMuaBanSach
             this.lblHoaDon.Location = new System.Drawing.Point(119, 29);
             this.lblHoaDon.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblHoaDon.Name = "lblHoaDon";
-            this.lblHoaDon.Size = new System.Drawing.Size(89, 25);
+            this.lblHoaDon.Size = new System.Drawing.Size(107, 29);
             this.lblHoaDon.TabIndex = 1;
             this.lblHoaDon.Text = "Hoá Đơn";
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainPanel.Location = new System.Drawing.Point(403, 135);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1183, 734);
+            this.mainPanel.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(16, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(84, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(16, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(84, 76);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(16, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(84, 76);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(16, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(84, 76);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(16, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(84, 76);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(16, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(84, 76);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -363,18 +373,9 @@ namespace QuanLyMuaBanSach
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
             // 
-            // mainPanel
-            // 
-            this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel.Location = new System.Drawing.Point(495, 130);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1183, 734);
-            this.mainPanel.TabIndex = 3;
-            // 
             // frmChinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1711, 869);
@@ -391,24 +392,24 @@ namespace QuanLyMuaBanSach
             this.panelMenu.ResumeLayout(false);
             this.panelNhanVien.ResumeLayout(false);
             this.panelNhanVien.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelKhachHang.ResumeLayout(false);
             this.panelKhachHang.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelNhapSach.ResumeLayout(false);
             this.panelNhapSach.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelBanSach.ResumeLayout(false);
             this.panelBanSach.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelQlSach.ResumeLayout(false);
             this.panelQlSach.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panelThongKe.ResumeLayout(false);
             this.panelThongKe.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panelHoaDon.ResumeLayout(false);
             this.panelHoaDon.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
