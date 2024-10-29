@@ -123,10 +123,16 @@
       <DependentUpon>frmQuanLyPhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="MyDB.cs" />
+    <Compile Include="QLNhanVienDataSet.cs">
+      <DependentUpon>QLNhanVienDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QLNhanVienDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLNhanVienDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSachDataSet.cs">
+      <DependentUpon>QLSachDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Sach\FrmSach.cs">
       <SubType>Form</SubType>

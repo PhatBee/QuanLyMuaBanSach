@@ -105,7 +105,7 @@ namespace QuanLyMuaBanSach
             this.linkLabelDangXuat.Location = new System.Drawing.Point(1559, 80);
             this.linkLabelDangXuat.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.linkLabelDangXuat.Name = "linkLabelDangXuat";
-            this.linkLabelDangXuat.Size = new System.Drawing.Size(105, 25);
+            this.linkLabelDangXuat.Size = new System.Drawing.Size(125, 29);
             this.linkLabelDangXuat.TabIndex = 0;
             this.linkLabelDangXuat.TabStop = true;
             this.linkLabelDangXuat.Text = "Đăng Xuất";
@@ -146,7 +146,7 @@ namespace QuanLyMuaBanSach
             this.lblNhanVien.Location = new System.Drawing.Point(119, 26);
             this.lblNhanVien.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNhanVien.Name = "lblNhanVien";
-            this.lblNhanVien.Size = new System.Drawing.Size(104, 25);
+            this.lblNhanVien.Size = new System.Drawing.Size(124, 29);
             this.lblNhanVien.TabIndex = 1;
             this.lblNhanVien.Text = "Nhân Viên";
             this.lblNhanVien.Click += new System.EventHandler(this.lblNhanVien_Click);
@@ -180,7 +180,7 @@ namespace QuanLyMuaBanSach
             this.lblKhachHang.Location = new System.Drawing.Point(119, 29);
             this.lblKhachHang.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblKhachHang.Name = "lblKhachHang";
-            this.lblKhachHang.Size = new System.Drawing.Size(121, 25);
+            this.lblKhachHang.Size = new System.Drawing.Size(143, 29);
             this.lblKhachHang.TabIndex = 1;
             this.lblKhachHang.Text = "Khách Hàng";
             // 
@@ -215,7 +215,7 @@ namespace QuanLyMuaBanSach
             this.lblNhapSach.Location = new System.Drawing.Point(119, 29);
             this.lblNhapSach.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNhapSach.Name = "lblNhapSach";
-            this.lblNhapSach.Size = new System.Drawing.Size(110, 25);
+            this.lblNhapSach.Size = new System.Drawing.Size(131, 29);
             this.lblNhapSach.TabIndex = 1;
             this.lblNhapSach.Text = "Nhập Sách";
             // 
@@ -248,7 +248,7 @@ namespace QuanLyMuaBanSach
             this.lblBanSach.Location = new System.Drawing.Point(119, 29);
             this.lblBanSach.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblBanSach.Name = "lblBanSach";
-            this.lblBanSach.Size = new System.Drawing.Size(98, 25);
+            this.lblBanSach.Size = new System.Drawing.Size(115, 29);
             this.lblBanSach.TabIndex = 1;
             this.lblBanSach.Text = "Bán Sách";
             // 
@@ -282,7 +282,7 @@ namespace QuanLyMuaBanSach
             this.lblQLSach.Location = new System.Drawing.Point(119, 29);
             this.lblQLSach.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblQLSach.Name = "lblQLSach";
-            this.lblQLSach.Size = new System.Drawing.Size(138, 25);
+            this.lblQLSach.Size = new System.Drawing.Size(161, 29);
             this.lblQLSach.TabIndex = 1;
             this.lblQLSach.Text = "Quản Lý Sách";
             // 
@@ -315,7 +315,7 @@ namespace QuanLyMuaBanSach
             this.lblThongKe.Location = new System.Drawing.Point(119, 29);
             this.lblThongKe.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblThongKe.Name = "lblThongKe";
-            this.lblThongKe.Size = new System.Drawing.Size(99, 25);
+            this.lblThongKe.Size = new System.Drawing.Size(119, 29);
             this.lblThongKe.TabIndex = 1;
             this.lblThongKe.Text = "Thống Kê";
             // 
@@ -348,7 +348,7 @@ namespace QuanLyMuaBanSach
             this.lblHoaDon.Location = new System.Drawing.Point(119, 29);
             this.lblHoaDon.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblHoaDon.Name = "lblHoaDon";
-            this.lblHoaDon.Size = new System.Drawing.Size(89, 25);
+            this.lblHoaDon.Size = new System.Drawing.Size(107, 29);
             this.lblHoaDon.TabIndex = 1;
             this.lblHoaDon.Text = "Hoá Đơn";
             // 
@@ -374,7 +374,7 @@ namespace QuanLyMuaBanSach
             // 
             // frmChinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(240)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(1711, 869);
