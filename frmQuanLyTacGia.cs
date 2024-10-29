@@ -150,7 +150,7 @@ namespace QuanLyMuaBanSach
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Xoá tác giả thất bại, do tác giả đang được dùng trên hệ thống. Mã lỗi: " + ex.Message, "Thêm nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Xoá tác giả thất bại, do tác giả đang được dùng trên hệ thống. Mã lỗi: " + ex.Message, "Xoá tác giả", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             frmQuanLyTacGia_Load(sender, e);
         }
