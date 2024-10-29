@@ -29,16 +29,21 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataSach = new System.Windows.Forms.DataGridView();
             this.listSachBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLSachDataSet = new QuanLyMuaBanSach.QLSachDataSet();
             this.list_SachTableAdapter = new QuanLyMuaBanSach.QLSachDataSetTableAdapters.list_SachTableAdapter();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblTacGia = new System.Windows.Forms.Label();
             this.lblTenSach = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtboxTenSach = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btnXoaTacGia = new System.Windows.Forms.Button();
+            this.btnThemTacGia = new System.Windows.Forms.Button();
+            this.txtboxMaSach = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxTacGia = new System.Windows.Forms.ComboBox();
+            this.listBoxTacGia = new System.Windows.Forms.ListBox();
+            this.txtboxMoTa = new System.Windows.Forms.TextBox();
             this.lblMoTa = new System.Windows.Forms.Label();
             this.comboBoxNXB = new System.Windows.Forms.ComboBox();
             this.comboBoxTheLoai = new System.Windows.Forms.ComboBox();
@@ -50,22 +55,23 @@
             this.btnQLTacGia = new System.Windows.Forms.Button();
             this.btnQLTheLoai = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listSachBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLSachDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataSach
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1333, 293);
-            this.dataGridView1.TabIndex = 0;
+            this.dataSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataSach.Location = new System.Drawing.Point(18, 13);
+            this.dataSach.Name = "dataSach";
+            this.dataSach.RowHeadersWidth = 51;
+            this.dataSach.RowTemplate.Height = 24;
+            this.dataSach.Size = new System.Drawing.Size(1333, 293);
+            this.dataSach.TabIndex = 0;
+            this.dataSach.DoubleClick += new System.EventHandler(this.dataSach_DoubleClick);
             // 
             // listSachBindingSource
             // 
@@ -81,20 +87,13 @@
             // 
             this.list_SachTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(141, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(369, 24);
-            this.textBox1.TabIndex = 2;
-            // 
             // lblTacGia
             // 
             this.lblTacGia.AutoSize = true;
             this.lblTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTacGia.Location = new System.Drawing.Point(22, 96);
+            this.lblTacGia.Location = new System.Drawing.Point(590, 31);
             this.lblTacGia.Name = "lblTacGia";
-            this.lblTacGia.Size = new System.Drawing.Size(64, 20);
+            this.lblTacGia.Size = new System.Drawing.Size(81, 25);
             this.lblTacGia.TabIndex = 5;
             this.lblTacGia.Text = "Tác Giả";
             // 
@@ -102,22 +101,28 @@
             // 
             this.lblTenSach.AutoSize = true;
             this.lblTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSach.Location = new System.Drawing.Point(3, 35);
+            this.lblTenSach.Location = new System.Drawing.Point(3, 46);
             this.lblTenSach.Name = "lblTenSach";
-            this.lblTenSach.Size = new System.Drawing.Size(77, 20);
+            this.lblTenSach.Size = new System.Drawing.Size(98, 25);
             this.lblTenSach.TabIndex = 7;
             this.lblTenSach.Text = "Tên Sách";
             // 
-            // textBox2
+            // txtboxTenSach
             // 
-            this.textBox2.Location = new System.Drawing.Point(141, 35);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(369, 24);
-            this.textBox2.TabIndex = 6;
+            this.txtboxTenSach.Location = new System.Drawing.Point(141, 46);
+            this.txtboxTenSach.Name = "txtboxTenSach";
+            this.txtboxTenSach.Size = new System.Drawing.Size(369, 28);
+            this.txtboxTenSach.TabIndex = 6;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.btnXoaTacGia);
+            this.panel1.Controls.Add(this.btnThemTacGia);
+            this.panel1.Controls.Add(this.txtboxMaSach);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.comboBoxTacGia);
+            this.panel1.Controls.Add(this.listBoxTacGia);
+            this.panel1.Controls.Add(this.txtboxMoTa);
             this.panel1.Controls.Add(this.lblMoTa);
             this.panel1.Controls.Add(this.comboBoxNXB);
             this.panel1.Controls.Add(this.comboBoxTheLoai);
@@ -129,56 +134,112 @@
             this.panel1.Controls.Add(this.btnQLTacGia);
             this.panel1.Controls.Add(this.btnQLTheLoai);
             this.panel1.Controls.Add(this.btnThem);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.lblTacGia);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtboxTenSach);
             this.panel1.Controls.Add(this.lblTenSach);
             this.panel1.Location = new System.Drawing.Point(11, 304);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1476, 508);
             this.panel1.TabIndex = 10;
             // 
-            // textBox4
+            // btnXoaTacGia
             // 
-            this.textBox4.Location = new System.Drawing.Point(920, 34);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(422, 187);
-            this.textBox4.TabIndex = 17;
+            this.btnXoaTacGia.AutoSize = true;
+            this.btnXoaTacGia.Location = new System.Drawing.Point(986, 46);
+            this.btnXoaTacGia.Name = "btnXoaTacGia";
+            this.btnXoaTacGia.Size = new System.Drawing.Size(75, 32);
+            this.btnXoaTacGia.TabIndex = 24;
+            this.btnXoaTacGia.Text = "Xoá";
+            this.btnXoaTacGia.UseVisualStyleBackColor = true;
+            this.btnXoaTacGia.Click += new System.EventHandler(this.btnXoaTacGia_Click);
+            // 
+            // btnThemTacGia
+            // 
+            this.btnThemTacGia.AutoSize = true;
+            this.btnThemTacGia.Location = new System.Drawing.Point(906, 46);
+            this.btnThemTacGia.Name = "btnThemTacGia";
+            this.btnThemTacGia.Size = new System.Drawing.Size(75, 32);
+            this.btnThemTacGia.TabIndex = 23;
+            this.btnThemTacGia.Text = "Thêm";
+            this.btnThemTacGia.UseVisualStyleBackColor = true;
+            this.btnThemTacGia.Click += new System.EventHandler(this.btnThemTacGia_Click);
+            // 
+            // txtboxMaSach
+            // 
+            this.txtboxMaSach.Enabled = false;
+            this.txtboxMaSach.Location = new System.Drawing.Point(141, 5);
+            this.txtboxMaSach.Name = "txtboxMaSach";
+            this.txtboxMaSach.Size = new System.Drawing.Size(369, 28);
+            this.txtboxMaSach.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 25);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Mã Sách";
+            // 
+            // comboBoxTacGia
+            // 
+            this.comboBoxTacGia.FormattingEnabled = true;
+            this.comboBoxTacGia.Location = new System.Drawing.Point(906, 8);
+            this.comboBoxTacGia.Name = "comboBoxTacGia";
+            this.comboBoxTacGia.Size = new System.Drawing.Size(155, 30);
+            this.comboBoxTacGia.TabIndex = 20;
+            // 
+            // listBoxTacGia
+            // 
+            this.listBoxTacGia.FormattingEnabled = true;
+            this.listBoxTacGia.ItemHeight = 22;
+            this.listBoxTacGia.Location = new System.Drawing.Point(692, 8);
+            this.listBoxTacGia.Name = "listBoxTacGia";
+            this.listBoxTacGia.Size = new System.Drawing.Size(208, 136);
+            this.listBoxTacGia.TabIndex = 19;
+            // 
+            // txtboxMoTa
+            // 
+            this.txtboxMoTa.Location = new System.Drawing.Point(141, 89);
+            this.txtboxMoTa.Multiline = true;
+            this.txtboxMoTa.Name = "txtboxMoTa";
+            this.txtboxMoTa.Size = new System.Drawing.Size(369, 98);
+            this.txtboxMoTa.TabIndex = 17;
             // 
             // lblMoTa
             // 
             this.lblMoTa.AutoSize = true;
             this.lblMoTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoTa.Location = new System.Drawing.Point(816, 35);
+            this.lblMoTa.Location = new System.Drawing.Point(3, 116);
             this.lblMoTa.Name = "lblMoTa";
-            this.lblMoTa.Size = new System.Drawing.Size(53, 20);
+            this.lblMoTa.Size = new System.Drawing.Size(69, 25);
             this.lblMoTa.TabIndex = 18;
             this.lblMoTa.Text = "Mô Tả";
             // 
             // comboBoxNXB
             // 
             this.comboBoxNXB.FormattingEnabled = true;
-            this.comboBoxNXB.Location = new System.Drawing.Point(141, 227);
+            this.comboBoxNXB.Location = new System.Drawing.Point(141, 267);
             this.comboBoxNXB.Name = "comboBoxNXB";
-            this.comboBoxNXB.Size = new System.Drawing.Size(369, 25);
+            this.comboBoxNXB.Size = new System.Drawing.Size(378, 30);
             this.comboBoxNXB.TabIndex = 16;
             // 
             // comboBoxTheLoai
             // 
             this.comboBoxTheLoai.FormattingEnabled = true;
-            this.comboBoxTheLoai.Location = new System.Drawing.Point(141, 163);
+            this.comboBoxTheLoai.Location = new System.Drawing.Point(141, 207);
             this.comboBoxTheLoai.Name = "comboBoxTheLoai";
-            this.comboBoxTheLoai.Size = new System.Drawing.Size(369, 25);
+            this.comboBoxTheLoai.Size = new System.Drawing.Size(378, 30);
             this.comboBoxTheLoai.TabIndex = 15;
             // 
             // lblNXB
             // 
             this.lblNXB.AutoSize = true;
             this.lblNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNXB.Location = new System.Drawing.Point(50, 232);
+            this.lblNXB.Location = new System.Drawing.Point(3, 267);
             this.lblNXB.Name = "lblNXB";
-            this.lblNXB.Size = new System.Drawing.Size(42, 20);
+            this.lblNXB.Size = new System.Drawing.Size(53, 25);
             this.lblNXB.TabIndex = 13;
             this.lblNXB.Text = "NXB";
             // 
@@ -186,9 +247,9 @@
             // 
             this.lblTheLoai.AutoSize = true;
             this.lblTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTheLoai.Location = new System.Drawing.Point(6, 168);
+            this.lblTheLoai.Location = new System.Drawing.Point(12, 207);
             this.lblTheLoai.Name = "lblTheLoai";
-            this.lblTheLoai.Size = new System.Drawing.Size(70, 20);
+            this.lblTheLoai.Size = new System.Drawing.Size(89, 25);
             this.lblTheLoai.TabIndex = 14;
             this.lblTheLoai.Text = "Thể Loại";
             // 
@@ -205,7 +266,7 @@
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(1033, 269);
+            this.btnSua.Location = new System.Drawing.Point(349, 303);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(109, 41);
             this.btnSua.TabIndex = 11;
@@ -215,7 +276,7 @@
             // btnQLNXB
             // 
             this.btnQLNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLNXB.Location = new System.Drawing.Point(532, 222);
+            this.btnQLNXB.Location = new System.Drawing.Point(553, 251);
             this.btnQLNXB.Name = "btnQLNXB";
             this.btnQLNXB.Size = new System.Drawing.Size(192, 41);
             this.btnQLNXB.TabIndex = 10;
@@ -227,9 +288,9 @@
             // 
             this.btnQLTacGia.AccessibleDescription = "";
             this.btnQLTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLTacGia.Location = new System.Drawing.Point(532, 90);
+            this.btnQLTacGia.Location = new System.Drawing.Point(692, 146);
             this.btnQLTacGia.Name = "btnQLTacGia";
-            this.btnQLTacGia.Size = new System.Drawing.Size(192, 41);
+            this.btnQLTacGia.Size = new System.Drawing.Size(208, 41);
             this.btnQLTacGia.TabIndex = 10;
             this.btnQLTacGia.Text = "Quản lý tác giả";
             this.btnQLTacGia.UseVisualStyleBackColor = true;
@@ -239,7 +300,7 @@
             // 
             this.btnQLTheLoai.AccessibleDescription = "";
             this.btnQLTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQLTheLoai.Location = new System.Drawing.Point(532, 158);
+            this.btnQLTheLoai.Location = new System.Drawing.Point(553, 200);
             this.btnQLTheLoai.Name = "btnQLTheLoai";
             this.btnQLTheLoai.Size = new System.Drawing.Size(192, 41);
             this.btnQLTheLoai.TabIndex = 10;
@@ -250,7 +311,7 @@
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(821, 269);
+            this.btnThem.Location = new System.Drawing.Point(179, 303);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(109, 41);
             this.btnThem.TabIndex = 10;
@@ -259,17 +320,17 @@
             // 
             // FrmSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1390, 823);
+            this.ClientSize = new System.Drawing.Size(1243, 823);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataSach);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmSach";
             this.Text = "FrmSach";
             this.Load += new System.EventHandler(this.FrmSach_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listSachBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLSachDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -280,14 +341,13 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataSach;
         private QLSachDataSet qLSachDataSet;
         private System.Windows.Forms.BindingSource listSachBindingSource;
         private QLSachDataSetTableAdapters.list_SachTableAdapter list_SachTableAdapter;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblTacGia;
         private System.Windows.Forms.Label lblTenSach;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtboxTenSach;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBoxNXB;
         private System.Windows.Forms.ComboBox comboBoxTheLoai;
@@ -298,8 +358,14 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnQLNXB;
         private System.Windows.Forms.Button btnQLTheLoai;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtboxMoTa;
         private System.Windows.Forms.Label lblMoTa;
         private System.Windows.Forms.Button btnQLTacGia;
+        private System.Windows.Forms.ComboBox comboBoxTacGia;
+        private System.Windows.Forms.ListBox listBoxTacGia;
+        private System.Windows.Forms.TextBox txtboxMaSach;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnXoaTacGia;
+        private System.Windows.Forms.Button btnThemTacGia;
     }
 }

@@ -25,7 +25,8 @@ namespace QuanLyMuaBanSach
         {
             napTenNXB();
             napTenTheLoai();
-            dataGridView1.DataSource = layDanhSachSach();
+            napTenTacGia();
+            dataSach.DataSource = layDanhSachSach();
         }
 
         private void btnQLTheLoai_Click(object sender, EventArgs e)
@@ -91,6 +92,21 @@ namespace QuanLyMuaBanSach
             return dt;
         }
 
+        public DataTable layDanhSachTacGia()
+        {
+            DataTable dt = new DataTable();
+            mydb.openConection();
+            sqlCommand = new SqlCommand("proc_LayDanhSachTacGia", mydb.getConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
+            using (SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand))
+            {
+                adapter.Fill(dt);
+            }
+            mydb.closeConection();
+            return dt;
+        }
+
         public void napTenNXB()
         {
             DataTable dt = new DataTable();
@@ -107,6 +123,111 @@ namespace QuanLyMuaBanSach
             comboBoxTheLoai.DataSource = dt;
             comboBoxTheLoai.DisplayMember = "tenTL";
             comboBoxTheLoai.ValueMember = "maTL";
+        }
+
+        public void napTenTacGia()
+        {
+            DataTable dt = new DataTable();
+            dt = layDanhSachTacGia();
+            comboBoxTacGia.DataSource = dt;
+            comboBoxTacGia.DisplayMember = "tenTG";
+            comboBoxTacGia.ValueMember = "maTG";
+        }
+
+        private void dataSach_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                txtboxMaSach.Text = dataSach.CurrentRow.Cells[0].Value.ToString();
+                txtboxTenSach.Text = dataSach.CurrentRow.Cells[1].Value.ToString();
+                comboBoxTheLoai.Text = dataSach.CurrentRow.Cells[4].Value.ToString() ;
+                txtboxMoTa.Text = dataSach.CurrentRow.Cells[5].Value.ToString();
+                comboBoxNXB.Text = dataSach.CurrentRow.Cells[6].Value.ToString();
+                chiTietSangTacSach();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public DataTable layDanhSachChiTietSangTacSach()
+        {
+            string masach = txtboxMaSach.Text;
+            DataTable dt = new DataTable();
+            mydb.openConection();
+            sqlCommand = new SqlCommand("proc_ChiTietSangTacSach", mydb.getConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
+            sqlCommand.Parameters.AddWithValue("@maSach", masach);
+
+            using (SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand))
+            {
+                adapter.Fill(dt);
+            }
+            mydb.closeConection();
+            return dt;
+        }
+
+        public void chiTietSangTacSach()
+        {
+            DataTable dt = new DataTable();
+            dt = layDanhSachChiTietSangTacSach();
+            listBoxTacGia.DataSource = dt;
+            listBoxTacGia.DisplayMember = "tenTG";
+            listBoxTacGia.ValueMember = "maTG";
+        }
+
+        private void btnThemTacGia_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string masach = txtboxMaSach.Text;
+                string matg = comboBoxTacGia.SelectedValue.ToString();
+
+                sqlCommand = new SqlCommand("proc_ThemTacGiaChoSach", mydb.getConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                sqlCommand.Parameters.AddWithValue("MaSach", masach);
+                sqlCommand.Parameters.AddWithValue("MaTG", matg);
+
+                mydb.openConection();
+                sqlCommand.ExecuteNonQuery();
+
+                MessageBox.Show("Thêm tác giả vào sách thành công", "Thêm tác giả", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } catch (Exception ex) 
+            {
+                MessageBox.Show("Lỗi khi thêm tác giả, vui lòng thêm thông tin sách trước khi bổ sung tác giả, mã lỗi: " +  ex.Message, "Thêm tác giả", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            chiTietSangTacSach();
+
+        }
+
+        private void btnXoaTacGia_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string masach = txtboxMaSach.Text;
+                string matg = comboBoxTacGia.SelectedValue.ToString();
+
+                sqlCommand = new SqlCommand("proc_XoaTacGiaKhoiSach", mydb.getConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                sqlCommand.Parameters.AddWithValue("MaSach", masach);
+                sqlCommand.Parameters.AddWithValue("MaTG", matg);
+
+                mydb.openConection();
+                sqlCommand.ExecuteNonQuery();
+
+                MessageBox.Show("Xoá tác giả khỏi sách thành công", "Xoá tác giả", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi xoá tác giả, mã lỗi: " + ex.Message, "Xoá tác giả", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            chiTietSangTacSach();
         }
     }
 }
