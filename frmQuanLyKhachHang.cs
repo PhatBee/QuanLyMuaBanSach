@@ -22,6 +22,41 @@ namespace QuanLyMuaBanSach
             InitializeComponent();
         }
 
+        private void frmQuanLyKhachHang_Load(object sender, EventArgs e)
+        {
+            dataKhachHang.AutoGenerateColumns = true;
+            dataKhachHang.DataSource = layDanhSachKhachHang();
+        }
+
+        public DataTable layDanhSachKhachHang()
+        {
+            DataTable dt = new DataTable();
+            mydb.openConection();
+            sqlCommand = new SqlCommand("proc_layDanhSachKhachHang", mydb.getConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
+            using (SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand))
+            {
+                adapter.Fill(dt);
+            }
+            mydb.closeConection();
+            return dt;
+        }
+
+        private void dataKhachHang_DoubleClick(object sender, EventArgs e)
+        {
+            //MaKH, tenKH, sdt
+            try
+            {
+                txtBoxMaKhanhHang.Text = dataKhachHang.CurrentRow.Cells[0].Value.ToString();
+                txtBoxTenKhachHang.Text = dataKhachHang.CurrentRow.Cells[1].Value.ToString();
+                txtBoxSDT.Text = dataKhachHang.CurrentRow.Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             try
@@ -86,43 +121,37 @@ namespace QuanLyMuaBanSach
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-           
-        }
-
-        private void frmQuanLyKhachHang_Load(object sender, EventArgs e)
-        {
-            dataKhachHang.AutoGenerateColumns = true;
-            dataKhachHang.DataSource = layDanhSachKhachHang();
-        }
-
-        public DataTable layDanhSachKhachHang()
-        {
-            DataTable dt = new DataTable();
-            mydb.openConection();
-            sqlCommand = new SqlCommand("proc_layDanhSachKhachHang", mydb.getConnection);
-            sqlCommand.CommandType = CommandType.StoredProcedure;
-
-            using (SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand))
-            {
-                adapter.Fill(dt);
-            }
-            mydb.closeConection();
-            return dt;
-        }
-
-        private void dataKhachHang_DoubleClick(object sender, EventArgs e)
-        {
-            //MaKH, tenKH, sdt
             try
             {
                 txtBoxMaKhanhHang.Text = dataKhachHang.CurrentRow.Cells[0].Value.ToString();
-                txtBoxMaKhanhHang.Text = dataKhachHang.CurrentRow.Cells[1].Value.ToString();
-                txtBoxMaKhanhHang.Text = dataKhachHang.CurrentRow.Cells[2].Value.ToString();
+                string maKH = txtBoxMaKhanhHang.Text;
+
+                mydb.openConection();
+
+                sqlCommand = new SqlCommand("proc_xoaKhachHang", mydb.getConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                sqlCommand.Parameters.AddWithValue("@maKH", maKH);
+
+                int rowsAffected = sqlCommand.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Xóa khách hàng thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy khách hàng cần xóa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                mydb.closeConection();
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Xoá khách hàng thất bại, do khách hàng đang được dùng trên hệ thống. Mã lỗi: " + ex.Message, "Xoá khách hàng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            frmQuanLyKhachHang_Load(sender, e);
         }
     }
+
 }

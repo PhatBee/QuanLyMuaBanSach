@@ -154,7 +154,7 @@ namespace QuanLyMuaBanSach
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Xoá nhà xuất bản thất bại, do nhà xuất bản đang được dùng trên hệ thống. Mã lỗi: " + ex.Message, "Thêm nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Xoá nhà xuất bản thất bại, do nhà xuất bản đang được dùng trên hệ thống. Mã lỗi: " + ex.Message, "Xoá nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             frmQuanLyNXB_Load(sender, e);
         }
