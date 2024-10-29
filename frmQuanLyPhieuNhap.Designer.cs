@@ -40,6 +40,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.list_PhieuNhapTableAdapter = new QuanLyMuaBanSach.QLPhieuNhapSetTableAdapters.list_PhieuNhapTableAdapter();
             this.btnThemPN = new System.Windows.Forms.Button();
+            this.txtBoxTimKiem = new System.Windows.Forms.TextBox();
+            this.lblTimKiem = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listPhieuNhapBindingSource)).BeginInit();
@@ -50,7 +52,7 @@
             // 
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Location = new System.Drawing.Point(4, 86);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(990, 331);
             this.panel1.TabIndex = 0;
@@ -129,7 +131,7 @@
             // btnThemPN
             // 
             this.btnThemPN.AutoSize = true;
-            this.btnThemPN.Location = new System.Drawing.Point(4, 341);
+            this.btnThemPN.Location = new System.Drawing.Point(4, 423);
             this.btnThemPN.Name = "btnThemPN";
             this.btnThemPN.Size = new System.Drawing.Size(77, 36);
             this.btnThemPN.TabIndex = 1;
@@ -137,11 +139,29 @@
             this.btnThemPN.UseVisualStyleBackColor = true;
             this.btnThemPN.Click += new System.EventHandler(this.btnThemPN_Click);
             // 
+            // txtBoxTimKiem
+            // 
+            this.txtBoxTimKiem.Location = new System.Drawing.Point(454, 48);
+            this.txtBoxTimKiem.Name = "txtBoxTimKiem";
+            this.txtBoxTimKiem.Size = new System.Drawing.Size(540, 32);
+            this.txtBoxTimKiem.TabIndex = 9;
+            // 
+            // lblTimKiem
+            // 
+            this.lblTimKiem.AutoSize = true;
+            this.lblTimKiem.Location = new System.Drawing.Point(347, 51);
+            this.lblTimKiem.Name = "lblTimKiem";
+            this.lblTimKiem.Size = new System.Drawing.Size(101, 26);
+            this.lblTimKiem.TabIndex = 8;
+            this.lblTimKiem.Text = "Tìm kiếm";
+            // 
             // frmQuanLyPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 619);
+            this.Controls.Add(this.txtBoxTimKiem);
+            this.Controls.Add(this.lblTimKiem);
             this.Controls.Add(this.btnThemPN);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,5 +193,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tenNVDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenNXBDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnThemPN;
+        private System.Windows.Forms.TextBox txtBoxTimKiem;
+        private System.Windows.Forms.Label lblTimKiem;
     }
 }

@@ -40,6 +40,8 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.txtBoxTimKiem = new System.Windows.Forms.TextBox();
+            this.lblTimKiem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataKhachHang)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +50,7 @@
             // 
             this.lblThongTinKhachHang.AutoSize = true;
             this.lblThongTinKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongTinKhachHang.Location = new System.Drawing.Point(483, 35);
+            this.lblThongTinKhachHang.Location = new System.Drawing.Point(12, 28);
             this.lblThongTinKhachHang.Name = "lblThongTinKhachHang";
             this.lblThongTinKhachHang.Size = new System.Drawing.Size(349, 37);
             this.lblThongTinKhachHang.TabIndex = 0;
@@ -165,11 +167,30 @@
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
+            // txtBoxTimKiem
+            // 
+            this.txtBoxTimKiem.Location = new System.Drawing.Point(759, 43);
+            this.txtBoxTimKiem.Name = "txtBoxTimKiem";
+            this.txtBoxTimKiem.Size = new System.Drawing.Size(540, 26);
+            this.txtBoxTimKiem.TabIndex = 9;
+            // 
+            // lblTimKiem
+            // 
+            this.lblTimKiem.AutoSize = true;
+            this.lblTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimKiem.Location = new System.Drawing.Point(640, 40);
+            this.lblTimKiem.Name = "lblTimKiem";
+            this.lblTimKiem.Size = new System.Drawing.Size(113, 29);
+            this.lblTimKiem.TabIndex = 8;
+            this.lblTimKiem.Text = "Tìm kiếm";
+            // 
             // frmQuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1311, 716);
+            this.Controls.Add(this.txtBoxTimKiem);
+            this.Controls.Add(this.lblTimKiem);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataKhachHang);
             this.Controls.Add(this.lblThongTinKhachHang);
@@ -198,5 +219,7 @@
         private System.Windows.Forms.TextBox txtBoxTenKhachHang;
         private System.Windows.Forms.Label lblMaKhachHang;
         private System.Windows.Forms.TextBox txtBoxMaKhanhHang;
+        private System.Windows.Forms.TextBox txtBoxTimKiem;
+        private System.Windows.Forms.Label lblTimKiem;
     }
 }
