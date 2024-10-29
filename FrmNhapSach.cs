@@ -20,7 +20,7 @@ namespace QuanLyMuaBanSach
             InitializeComponent();
             this.maNV = maNV;
         }
-        SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=QLNhaSach;User ID=sa;Password=1234;Encrypt=False");
+        MyDB mydb = new MyDB();
         string maPN = "PN0014";
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -30,8 +30,8 @@ namespace QuanLyMuaBanSach
             int gia = Convert.ToInt32(txtGiaNhap.Text);
             try
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("ThemChiTietPhieuNhap", conn);
+                mydb.openConection();
+                SqlCommand cmd = new SqlCommand("ThemChiTietPhieuNhap", mydb.getConnection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@maSach", maSach);
                 cmd.Parameters.AddWithValue("@soPN", maPN);
@@ -48,7 +48,7 @@ namespace QuanLyMuaBanSach
             {
                 MessageBox.Show(ex.Message);
 
-            }finally { conn.Close(); }
+            }finally { mydb.closeConection(); }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -67,8 +67,8 @@ namespace QuanLyMuaBanSach
             string sql = "Select * from list_Sach";
             try
             {
-                conn.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+                mydb.openConection();
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, mydb.getConnection);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
                 cboTenSach.DataSource = dataTable;
@@ -79,15 +79,15 @@ namespace QuanLyMuaBanSach
             {
                 MessageBox.Show(ex.Message);
             }
-            finally { conn.Close(); }
+            finally {mydb.closeConection(); }
         }
         private void LoadNXB() 
         {
             string sql = "Select * from v_LayDanhSachNhaXuatBan";
             try
             {
-                conn.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+                mydb.openConection();
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, mydb.getConnection);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
                 cboNXB.DataSource = dataTable;
@@ -98,15 +98,15 @@ namespace QuanLyMuaBanSach
             {
                 MessageBox.Show(ex.Message);
             }
-            finally { conn.Close(); }
+            finally { mydb.closeConection(); }
         }
 
         private void LoadChiTiet()
         {
             try
             {
-                //conn.Open();
-                SqlCommand cmd = new SqlCommand("proc_getChiTietPhieuNhap", conn);
+                mydb.openConection();
+                SqlCommand cmd = new SqlCommand("proc_getChiTietPhieuNhap", mydb.getConnection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@soPN", maPN);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -121,7 +121,7 @@ namespace QuanLyMuaBanSach
             {
                 MessageBox.Show(ex.Message);
             }
-            finally { conn.Close(); }
+            finally { mydb.closeConection(); }
         }
 
         private void btnThemPN_Click(object sender, EventArgs e)
@@ -129,8 +129,8 @@ namespace QuanLyMuaBanSach
             string maNXB = cboNXB.SelectedValue.ToString();
             try
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("proc_themPhieuNhap", conn);
+                mydb.openConection();
+                SqlCommand cmd = new SqlCommand("proc_themPhieuNhap", mydb.getConnection);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add(new SqlParameter("@ngayNhap", SqlDbType.Date) { Value = DateTime.Now });
                 cmd.Parameters.Add(new SqlParameter("@maNXB", SqlDbType.NVarChar, 10) { Value = maNXB });
@@ -153,9 +153,7 @@ namespace QuanLyMuaBanSach
             {
                 MessageBox.Show(ex.Message);
             }
-            finally { conn.Close(); }
+            finally { mydb.closeConection(); }
         }
-
-        
     }
 }

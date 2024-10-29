@@ -57,6 +57,8 @@
             this.qLNhanVienDataSet = new QuanLyMuaBanSach.QLNhanVienDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblTimKiem = new System.Windows.Forms.Label();
+            this.txtBoxTimKiem = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -275,17 +277,18 @@
             // btnXacNhanNV
             // 
             this.btnXacNhanNV.AutoSize = true;
-            this.btnXacNhanNV.Location = new System.Drawing.Point(420, 611);
+            this.btnXacNhanNV.Location = new System.Drawing.Point(420, 627);
             this.btnXacNhanNV.Name = "btnXacNhanNV";
             this.btnXacNhanNV.Size = new System.Drawing.Size(114, 36);
             this.btnXacNhanNV.TabIndex = 5;
             this.btnXacNhanNV.Text = "Xác nhận";
             this.btnXacNhanNV.UseVisualStyleBackColor = true;
+            this.btnXacNhanNV.Click += new System.EventHandler(this.btnXacNhanNV_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dataNV);
-            this.panel2.Location = new System.Drawing.Point(420, 55);
+            this.panel2.Location = new System.Drawing.Point(420, 88);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(633, 533);
             this.panel2.TabIndex = 1;
@@ -331,11 +334,29 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Danh sách nhân viên";
             // 
+            // lblTimKiem
+            // 
+            this.lblTimKiem.AutoSize = true;
+            this.lblTimKiem.Location = new System.Drawing.Point(407, 55);
+            this.lblTimKiem.Name = "lblTimKiem";
+            this.lblTimKiem.Size = new System.Drawing.Size(82, 22);
+            this.lblTimKiem.TabIndex = 6;
+            this.lblTimKiem.Text = "Tìm kiếm";
+            // 
+            // txtBoxTimKiem
+            // 
+            this.txtBoxTimKiem.Location = new System.Drawing.Point(514, 52);
+            this.txtBoxTimKiem.Name = "txtBoxTimKiem";
+            this.txtBoxTimKiem.Size = new System.Drawing.Size(540, 28);
+            this.txtBoxTimKiem.TabIndex = 7;
+            // 
             // frmQuanLyNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 712);
+            this.ClientSize = new System.Drawing.Size(1066, 670);
+            this.Controls.Add(this.txtBoxTimKiem);
+            this.Controls.Add(this.lblTimKiem);
             this.Controls.Add(this.btnXacNhanNV);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -389,5 +410,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.BindingSource qLNhanVienDataSetBindingSource;
         private QLNhanVienDataSet qLNhanVienDataSet;
+        private System.Windows.Forms.Label lblTimKiem;
+        private System.Windows.Forms.TextBox txtBoxTimKiem;
     }
 }

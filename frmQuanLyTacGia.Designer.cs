@@ -40,6 +40,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxMaTG = new System.Windows.Forms.TextBox();
+            this.txtBoxTimKiem = new System.Windows.Forms.TextBox();
+            this.lblTimKiem = new System.Windows.Forms.Label();
+            this.btn_TimKiem = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataTacGia)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +51,7 @@
             // 
             this.lblThongTinTG.AutoSize = true;
             this.lblThongTinTG.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongTinTG.Location = new System.Drawing.Point(307, 13);
+            this.lblThongTinTG.Location = new System.Drawing.Point(11, 14);
             this.lblThongTinTG.Name = "lblThongTinTG";
             this.lblThongTinTG.Size = new System.Drawing.Size(238, 31);
             this.lblThongTinTG.TabIndex = 0;
@@ -172,11 +175,42 @@
             this.txtBoxMaTG.Size = new System.Drawing.Size(265, 22);
             this.txtBoxMaTG.TabIndex = 14;
             // 
+            // txtBoxTimKiem
+            // 
+            this.txtBoxTimKiem.Location = new System.Drawing.Point(427, 17);
+            this.txtBoxTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxTimKiem.Name = "txtBoxTimKiem";
+            this.txtBoxTimKiem.Size = new System.Drawing.Size(328, 22);
+            this.txtBoxTimKiem.TabIndex = 16;
+            // 
+            // lblTimKiem
+            // 
+            this.lblTimKiem.AutoSize = true;
+            this.lblTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimKiem.Location = new System.Drawing.Point(310, 14);
+            this.lblTimKiem.Name = "lblTimKiem";
+            this.lblTimKiem.Size = new System.Drawing.Size(91, 25);
+            this.lblTimKiem.TabIndex = 15;
+            this.lblTimKiem.Text = "Tìm kiếm";
+            // 
+            // btn_TimKiem
+            // 
+            this.btn_TimKiem.Location = new System.Drawing.Point(794, 12);
+            this.btn_TimKiem.Name = "btn_TimKiem";
+            this.btn_TimKiem.Size = new System.Drawing.Size(75, 23);
+            this.btn_TimKiem.TabIndex = 17;
+            this.btn_TimKiem.Text = "Tìm kiếm";
+            this.btn_TimKiem.UseVisualStyleBackColor = true;
+            this.btn_TimKiem.Click += new System.EventHandler(this.btn_TimKiem_Click);
+            // 
             // frmQuanLyTacGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(905, 585);
+            this.Controls.Add(this.btn_TimKiem);
+            this.Controls.Add(this.txtBoxTimKiem);
+            this.Controls.Add(this.lblTimKiem);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataTacGia);
             this.Controls.Add(this.lblThongTinTG);
@@ -206,5 +240,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoxMaTG;
+        private System.Windows.Forms.TextBox txtBoxTimKiem;
+        private System.Windows.Forms.Label lblTimKiem;
+        private System.Windows.Forms.Button btn_TimKiem;
     }
 }
