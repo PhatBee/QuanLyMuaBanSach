@@ -9,7 +9,9 @@ namespace QuanLyMuaBanSach
 {
     internal class MyDB
     {
-        private static string sqlcon = "Data Source=TAMA\\TAMA;Integrated Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        // private static string sqlcon = "Data Source=TAMA\\TAMA;Integrated Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        private static string sqlcon = "Data Source=LAPTOP-1BLCIFVL\\PHATBEE;Initial Catalog=QLNhaSach;Integrated Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
         SqlConnection conn = new SqlConnection(sqlcon);
         public SqlConnection getConnection
         {
