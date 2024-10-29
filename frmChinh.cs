@@ -80,5 +80,10 @@ namespace QuanLyMuaBanSach
         {
             OpenChildForm(new frmBanSach("NV001"));
         }
+
+        private void panelThongKe_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmThongKe());
+        }
     }
 }
