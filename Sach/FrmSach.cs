@@ -24,6 +24,7 @@ namespace QuanLyMuaBanSach
         private void FrmSach_Load(object sender, EventArgs e)
         {
             napTenNXB();
+            napTenTheLoai();
             dataGridView1.DataSource = layDanhSachSach();
         }
 
@@ -75,6 +76,21 @@ namespace QuanLyMuaBanSach
             return dt;
         }
 
+        public DataTable layDanhSachTheLoai() 
+        {
+            DataTable dt = new DataTable();
+            mydb.openConection();
+            sqlCommand = new SqlCommand("proc_LayDanhSachTheLoai", mydb.getConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
+            using (SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand))
+            {
+                adapter.Fill(dt);
+            }
+            mydb.closeConection();
+            return dt;
+        }
+
         public void napTenNXB()
         {
             DataTable dt = new DataTable();
@@ -82,6 +98,15 @@ namespace QuanLyMuaBanSach
             comboBoxNXB.DataSource = dt;
             comboBoxNXB.DisplayMember = "tenNXB";
             comboBoxNXB.ValueMember = "maNXB";
+        }
+
+        public void napTenTheLoai()
+        {
+            DataTable dt = new DataTable();
+            dt = layDanhSachTheLoai();
+            comboBoxTheLoai.DataSource = dt;
+            comboBoxTheLoai.DisplayMember = "tenTL";
+            comboBoxTheLoai.ValueMember = "maTL";
         }
     }
 }
