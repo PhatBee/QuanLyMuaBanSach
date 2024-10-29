@@ -64,5 +64,9 @@ namespace QuanLyMuaBanSach
             OpenChildForm(new FrmSach());
         }
 
+        private void panelKhachHang_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmQuanLyKhachHang());
+        }
     }
 }
