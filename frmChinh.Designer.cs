@@ -290,7 +290,7 @@ namespace QuanLyMuaBanSach
             // 
             this.mainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mainPanel.Location = new System.Drawing.Point(495, 130);
+            this.mainPanel.Location = new System.Drawing.Point(403, 135);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1183, 734);
             this.mainPanel.TabIndex = 3;
