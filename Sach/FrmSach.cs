@@ -24,6 +24,7 @@ namespace QuanLyMuaBanSach
         private void FrmSach_Load(object sender, EventArgs e)
         {
             napTenNXB();
+            dataGridView1.DataSource = layDanhSachSach();
         }
 
         private void btnQLTheLoai_Click(object sender, EventArgs e)
@@ -49,6 +50,21 @@ namespace QuanLyMuaBanSach
             DataTable dt = new DataTable();
             mydb.openConection();
             sqlCommand = new SqlCommand("proc_LayDanhSachNhaXuatBan", mydb.getConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
+            using (SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand))
+            {
+                adapter.Fill(dt);
+            }
+            mydb.closeConection();
+            return dt;
+        }
+
+        public DataTable layDanhSachSach()
+        {
+            DataTable dt = new DataTable();
+            mydb.openConection();
+            sqlCommand = new SqlCommand("proc_LayDanhSachSach", mydb.getConnection);
             sqlCommand.CommandType = CommandType.StoredProcedure;
 
             using (SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand))

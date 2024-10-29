@@ -58,12 +58,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(11, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1372, 413);
+            this.dataGridView1.Size = new System.Drawing.Size(1333, 293);
             this.dataGridView1.TabIndex = 0;
             // 
             // listSachBindingSource
@@ -84,7 +85,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(141, 95);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(369, 28);
+            this.textBox1.Size = new System.Drawing.Size(369, 24);
             this.textBox1.TabIndex = 2;
             // 
             // lblTacGia
@@ -93,7 +94,7 @@
             this.lblTacGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTacGia.Location = new System.Drawing.Point(22, 96);
             this.lblTacGia.Name = "lblTacGia";
-            this.lblTacGia.Size = new System.Drawing.Size(81, 25);
+            this.lblTacGia.Size = new System.Drawing.Size(64, 20);
             this.lblTacGia.TabIndex = 5;
             this.lblTacGia.Text = "Tác Giả";
             // 
@@ -103,7 +104,7 @@
             this.lblTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSach.Location = new System.Drawing.Point(3, 35);
             this.lblTenSach.Name = "lblTenSach";
-            this.lblTenSach.Size = new System.Drawing.Size(98, 25);
+            this.lblTenSach.Size = new System.Drawing.Size(77, 20);
             this.lblTenSach.TabIndex = 7;
             this.lblTenSach.Text = "Tên Sách";
             // 
@@ -111,7 +112,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(141, 35);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(369, 28);
+            this.textBox2.Size = new System.Drawing.Size(369, 24);
             this.textBox2.TabIndex = 6;
             // 
             // panel1
@@ -134,7 +135,7 @@
             this.panel1.Controls.Add(this.lblTenSach);
             this.panel1.Location = new System.Drawing.Point(11, 304);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1372, 508);
+            this.panel1.Size = new System.Drawing.Size(1476, 508);
             this.panel1.TabIndex = 10;
             // 
             // textBox4
@@ -142,7 +143,7 @@
             this.textBox4.Location = new System.Drawing.Point(920, 34);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(446, 187);
+            this.textBox4.Size = new System.Drawing.Size(422, 187);
             this.textBox4.TabIndex = 17;
             // 
             // lblMoTa
@@ -151,7 +152,7 @@
             this.lblMoTa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMoTa.Location = new System.Drawing.Point(816, 35);
             this.lblMoTa.Name = "lblMoTa";
-            this.lblMoTa.Size = new System.Drawing.Size(69, 25);
+            this.lblMoTa.Size = new System.Drawing.Size(53, 20);
             this.lblMoTa.TabIndex = 18;
             this.lblMoTa.Text = "Mô Tả";
             // 
@@ -160,7 +161,7 @@
             this.comboBoxNXB.FormattingEnabled = true;
             this.comboBoxNXB.Location = new System.Drawing.Point(141, 227);
             this.comboBoxNXB.Name = "comboBoxNXB";
-            this.comboBoxNXB.Size = new System.Drawing.Size(369, 30);
+            this.comboBoxNXB.Size = new System.Drawing.Size(369, 25);
             this.comboBoxNXB.TabIndex = 16;
             // 
             // comboBoxTheLoai
@@ -168,7 +169,7 @@
             this.comboBoxTheLoai.FormattingEnabled = true;
             this.comboBoxTheLoai.Location = new System.Drawing.Point(141, 163);
             this.comboBoxTheLoai.Name = "comboBoxTheLoai";
-            this.comboBoxTheLoai.Size = new System.Drawing.Size(369, 30);
+            this.comboBoxTheLoai.Size = new System.Drawing.Size(369, 25);
             this.comboBoxTheLoai.TabIndex = 15;
             // 
             // lblNXB
@@ -177,7 +178,7 @@
             this.lblNXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNXB.Location = new System.Drawing.Point(50, 232);
             this.lblNXB.Name = "lblNXB";
-            this.lblNXB.Size = new System.Drawing.Size(53, 25);
+            this.lblNXB.Size = new System.Drawing.Size(42, 20);
             this.lblNXB.TabIndex = 13;
             this.lblNXB.Text = "NXB";
             // 
@@ -187,7 +188,7 @@
             this.lblTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTheLoai.Location = new System.Drawing.Point(6, 168);
             this.lblTheLoai.Name = "lblTheLoai";
-            this.lblTheLoai.Size = new System.Drawing.Size(89, 25);
+            this.lblTheLoai.Size = new System.Drawing.Size(70, 20);
             this.lblTheLoai.TabIndex = 14;
             this.lblTheLoai.Text = "Thể Loại";
             // 
@@ -258,9 +259,9 @@
             // 
             // FrmSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1693, 823);
+            this.ClientSize = new System.Drawing.Size(1390, 823);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
