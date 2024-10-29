@@ -23,5 +23,15 @@ namespace QuanLyMuaBanSach
             this.list_SachTableAdapter.Fill(this.qLSachDataSet.list_Sach);
 
         }
+
+        private void btnQLTheLoai_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnQLNXB_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

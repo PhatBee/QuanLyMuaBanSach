@@ -116,11 +116,23 @@
     <Compile Include="frmQuanLyNhanVien.Designer.cs">
       <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQuanLyNXB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyNXB.Designer.cs">
+      <DependentUpon>frmQuanLyNXB.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuanLyPhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmQuanLyPhieuNhap.Designer.cs">
       <DependentUpon>frmQuanLyPhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyTheLoai.Designer.cs">
+      <DependentUpon>frmQuanLyTheLoai.cs</DependentUpon>
     </Compile>
     <Compile Include="MyDB.cs" />
     <Compile Include="QLNhanVienDataSet.cs">
