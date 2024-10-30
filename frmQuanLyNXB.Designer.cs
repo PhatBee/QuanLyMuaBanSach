@@ -60,11 +60,14 @@
             // 
             // dataNXB
             // 
+            this.dataNXB.AllowUserToAddRows = false;
+            this.dataNXB.AllowUserToDeleteRows = false;
             this.dataNXB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataNXB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataNXB.Location = new System.Drawing.Point(11, 74);
             this.dataNXB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataNXB.Name = "dataNXB";
+            this.dataNXB.ReadOnly = true;
             this.dataNXB.RowHeadersWidth = 62;
             this.dataNXB.RowTemplate.Height = 28;
             this.dataNXB.Size = new System.Drawing.Size(841, 282);

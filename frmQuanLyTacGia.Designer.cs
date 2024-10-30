@@ -59,11 +59,14 @@
             // 
             // dataTacGia
             // 
+            this.dataTacGia.AllowUserToAddRows = false;
+            this.dataTacGia.AllowUserToDeleteRows = false;
             this.dataTacGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataTacGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataTacGia.Location = new System.Drawing.Point(12, 45);
             this.dataTacGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataTacGia.Name = "dataTacGia";
+            this.dataTacGia.ReadOnly = true;
             this.dataTacGia.RowHeadersWidth = 62;
             this.dataTacGia.RowTemplate.Height = 28;
             this.dataTacGia.Size = new System.Drawing.Size(884, 340);

@@ -136,11 +136,14 @@
             // 
             // dataTheLoai
             // 
+            this.dataTheLoai.AllowUserToAddRows = false;
+            this.dataTheLoai.AllowUserToDeleteRows = false;
             this.dataTheLoai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataTheLoai.Location = new System.Drawing.Point(100, 54);
             this.dataTheLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataTheLoai.Name = "dataTheLoai";
+            this.dataTheLoai.ReadOnly = true;
             this.dataTheLoai.RowHeadersWidth = 62;
             this.dataTheLoai.RowTemplate.Height = 28;
             this.dataTheLoai.Size = new System.Drawing.Size(884, 340);
