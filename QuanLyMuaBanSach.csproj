@@ -98,6 +98,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBanSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBanSach.Designer.cs">
+      <DependentUpon>frmBanSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,12 @@
     <Compile Include="frmQuanLyTheLoai.Designer.cs">
       <DependentUpon>frmQuanLyTheLoai.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKe.Designer.cs">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyDB.cs" />
     <Compile Include="QLNhanVienDataSet.cs">
       <DependentUpon>QLNhanVienDataSet.xsd</DependentUpon>
@@ -179,6 +191,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBanSach.resx">
+      <DependentUpon>frmBanSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChinh.resx">
       <DependentUpon>frmChinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyTheLoai.resx">
       <DependentUpon>frmQuanLyTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKe.resx">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sach\FrmSach.resx">
       <DependentUpon>FrmSach.cs</DependentUpon>

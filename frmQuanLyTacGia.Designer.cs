@@ -59,6 +59,7 @@
             // 
             // dataTacGia
             // 
+            this.dataTacGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataTacGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataTacGia.Location = new System.Drawing.Point(12, 45);
             this.dataTacGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -169,6 +170,7 @@
             // 
             // txtBoxMaTG
             // 
+            this.txtBoxMaTG.Enabled = false;
             this.txtBoxMaTG.Location = new System.Drawing.Point(379, 11);
             this.txtBoxMaTG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxMaTG.Name = "txtBoxMaTG";

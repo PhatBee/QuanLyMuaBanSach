@@ -224,6 +224,7 @@
             // 
             // txtbxMaNV
             // 
+            this.txtbxMaNV.Enabled = false;
             this.txtbxMaNV.Location = new System.Drawing.Point(155, 11);
             this.txtbxMaNV.Name = "txtbxMaNV";
             this.txtbxMaNV.Size = new System.Drawing.Size(208, 28);
@@ -277,9 +278,9 @@
             // btnXacNhanNV
             // 
             this.btnXacNhanNV.AutoSize = true;
-            this.btnXacNhanNV.Location = new System.Drawing.Point(420, 627);
+            this.btnXacNhanNV.Location = new System.Drawing.Point(947, 49);
             this.btnXacNhanNV.Name = "btnXacNhanNV";
-            this.btnXacNhanNV.Size = new System.Drawing.Size(114, 36);
+            this.btnXacNhanNV.Size = new System.Drawing.Size(106, 32);
             this.btnXacNhanNV.TabIndex = 5;
             this.btnXacNhanNV.Text = "Xác nhận";
             this.btnXacNhanNV.UseVisualStyleBackColor = true;
@@ -296,6 +297,7 @@
             // dataNV
             // 
             this.dataNV.AutoGenerateColumns = false;
+            this.dataNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataNV.DataSource = this.qLNhanVienDataSetBindingSource;
             this.dataNV.Location = new System.Drawing.Point(3, 3);
@@ -347,7 +349,7 @@
             // 
             this.txtBoxTimKiem.Location = new System.Drawing.Point(514, 52);
             this.txtBoxTimKiem.Name = "txtBoxTimKiem";
-            this.txtBoxTimKiem.Size = new System.Drawing.Size(540, 28);
+            this.txtBoxTimKiem.Size = new System.Drawing.Size(427, 28);
             this.txtBoxTimKiem.TabIndex = 7;
             // 
             // frmQuanLyNhanVien

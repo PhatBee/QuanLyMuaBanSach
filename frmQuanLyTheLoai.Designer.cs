@@ -29,29 +29,31 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.lblTenTheLoai = new System.Windows.Forms.Label();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.lblMaTheLoai = new System.Windows.Forms.Label();
+            this.lblTenTheLoai = new System.Windows.Forms.Label();
+            this.txtBoxMaTheLoai = new System.Windows.Forms.TextBox();
             this.txtBoxTenTheLoai = new System.Windows.Forms.TextBox();
             this.dataTheLoai = new System.Windows.Forms.DataGridView();
             this.lblThongTinTheLoai = new System.Windows.Forms.Label();
-            this.txtBoxTheLoai = new System.Windows.Forms.TextBox();
-            this.lblMaTheLoai = new System.Windows.Forms.Label();
             this.txtBoxTimKiem = new System.Windows.Forms.TextBox();
             this.lblTimKiem = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataTheLoai)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnSua);
+            this.panel1.Controls.Add(this.btnXoa);
+            this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.lblMaTheLoai);
             this.panel1.Controls.Add(this.lblTenTheLoai);
-            this.panel1.Controls.Add(this.btnXoa);
-            this.panel1.Controls.Add(this.txtBoxTheLoai);
+            this.panel1.Controls.Add(this.txtBoxMaTheLoai);
             this.panel1.Controls.Add(this.txtBoxTenTheLoai);
             this.panel1.Location = new System.Drawing.Point(100, 398);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -59,10 +61,34 @@
             this.panel1.Size = new System.Drawing.Size(884, 143);
             this.panel1.TabIndex = 17;
             // 
+            // btnSua
+            // 
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Location = new System.Drawing.Point(400, 108);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(86, 34);
+            this.btnSua.TabIndex = 15;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Location = new System.Drawing.Point(552, 108);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(86, 34);
+            this.btnXoa.TabIndex = 14;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(261, 78);
+            this.btnThem.Location = new System.Drawing.Point(259, 108);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(86, 34);
@@ -71,23 +97,38 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            
+            // lblMaTheLoai
+            // 
+            this.lblMaTheLoai.AutoSize = true;
+            this.lblMaTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaTheLoai.Location = new System.Drawing.Point(235, 28);
+            this.lblMaTheLoai.Name = "lblMaTheLoai";
+            this.lblMaTheLoai.Size = new System.Drawing.Size(101, 24);
+            this.lblMaTheLoai.TabIndex = 13;
+            this.lblMaTheLoai.Text = "Mã thể loại";
             // 
             // lblTenTheLoai
             // 
             this.lblTenTheLoai.AutoSize = true;
             this.lblTenTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenTheLoai.Location = new System.Drawing.Point(243, 33);
+            this.lblTenTheLoai.Location = new System.Drawing.Point(235, 67);
             this.lblTenTheLoai.Name = "lblTenTheLoai";
             this.lblTenTheLoai.Size = new System.Drawing.Size(109, 24);
             this.lblTenTheLoai.TabIndex = 13;
             this.lblTenTheLoai.Text = "Tên thể loại";
             // 
-            
+            // txtBoxMaTheLoai
+            // 
+            this.txtBoxMaTheLoai.Enabled = false;
+            this.txtBoxMaTheLoai.Location = new System.Drawing.Point(373, 28);
+            this.txtBoxMaTheLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxMaTheLoai.Name = "txtBoxMaTheLoai";
+            this.txtBoxMaTheLoai.Size = new System.Drawing.Size(265, 22);
+            this.txtBoxMaTheLoai.TabIndex = 10;
             // 
             // txtBoxTenTheLoai
             // 
-            this.txtBoxTenTheLoai.Location = new System.Drawing.Point(373, 34);
+            this.txtBoxTenTheLoai.Location = new System.Drawing.Point(373, 67);
             this.txtBoxTenTheLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxTenTheLoai.Name = "txtBoxTenTheLoai";
             this.txtBoxTenTheLoai.Size = new System.Drawing.Size(265, 22);
@@ -95,6 +136,7 @@
             // 
             // dataTheLoai
             // 
+            this.dataTheLoai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataTheLoai.Location = new System.Drawing.Point(100, 54);
             this.dataTheLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -103,39 +145,23 @@
             this.dataTheLoai.RowTemplate.Height = 28;
             this.dataTheLoai.Size = new System.Drawing.Size(884, 340);
             this.dataTheLoai.TabIndex = 16;
+            this.dataTheLoai.DoubleClick += new System.EventHandler(this.dataTheLoai_DoubleClick);
             // 
             // lblThongTinTheLoai
             // 
             this.lblThongTinTheLoai.AutoSize = true;
             this.lblThongTinTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongTinTheLoai.Location = new System.Drawing.Point(396, 22);
+            this.lblThongTinTheLoai.Location = new System.Drawing.Point(101, 23);
             this.lblThongTinTheLoai.Name = "lblThongTinTheLoai";
             this.lblThongTinTheLoai.Size = new System.Drawing.Size(248, 31);
             this.lblThongTinTheLoai.TabIndex = 15;
             this.lblThongTinTheLoai.Text = "Thông Tin Thể Loại";
             // 
-            // txtBoxTheLoai
-            // 
-            this.txtBoxTheLoai.Location = new System.Drawing.Point(420, 29);
-            this.txtBoxTheLoai.Name = "txtBoxTheLoai";
-            this.txtBoxTheLoai.Size = new System.Drawing.Size(298, 26);
-            this.txtBoxTheLoai.TabIndex = 10;
-            // 
-            // lblMaTheLoai
-            // 
-            this.lblMaTheLoai.AutoSize = true;
-            this.lblMaTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaTheLoai.Location = new System.Drawing.Point(273, 27);
-            this.lblMaTheLoai.Name = "lblMaTheLoai";
-            this.lblMaTheLoai.Size = new System.Drawing.Size(118, 26);
-            this.lblMaTheLoai.TabIndex = 13;
-            this.lblMaTheLoai.Text = "Mã thể loại";
-            // 
             // txtBoxTimKiem
             // 
             this.txtBoxTimKiem.Location = new System.Drawing.Point(796, 34);
             this.txtBoxTimKiem.Name = "txtBoxTimKiem";
-            this.txtBoxTimKiem.Size = new System.Drawing.Size(311, 26);
+            this.txtBoxTimKiem.Size = new System.Drawing.Size(311, 22);
             this.txtBoxTimKiem.TabIndex = 19;
             // 
             // lblTimKiem
@@ -148,11 +174,31 @@
             this.lblTimKiem.TabIndex = 18;
             this.lblTimKiem.Text = "Tìm kiếm";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(655, 30);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(328, 22);
+            this.textBox1.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(549, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 25);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Tìm kiếm";
+            // 
             // frmQuanLyTheLoai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1078, 558);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataTheLoai);
             this.Controls.Add(this.lblThongTinTheLoai);
@@ -172,15 +218,17 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Label lblTenTheLoai;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.TextBox txtBoxTenTheLoai;
         private System.Windows.Forms.DataGridView dataTheLoai;
         private System.Windows.Forms.Label lblThongTinTheLoai;
-        private System.Windows.Forms.Label lblMaTheLoai;
-        private System.Windows.Forms.TextBox txtBoxTheLoai;
         private System.Windows.Forms.TextBox txtBoxTimKiem;
         private System.Windows.Forms.Label lblTimKiem;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMaTheLoai;
+        private System.Windows.Forms.TextBox txtBoxMaTheLoai;
     }
 }

@@ -241,6 +241,7 @@ namespace QuanLyMuaBanSach
             this.panelBanSach.Name = "panelBanSach";
             this.panelBanSach.Size = new System.Drawing.Size(282, 84);
             this.panelBanSach.TabIndex = 3;
+            this.panelBanSach.Click += new System.EventHandler(this.panelBanSach_Click);
             // 
             // lblBanSach
             // 
@@ -308,6 +309,7 @@ namespace QuanLyMuaBanSach
             this.panelThongKe.Name = "panelThongKe";
             this.panelThongKe.Size = new System.Drawing.Size(282, 84);
             this.panelThongKe.TabIndex = 5;
+            this.panelThongKe.Click += new System.EventHandler(this.panelThongKe_Click);
             // 
             // lblThongKe
             // 
