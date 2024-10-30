@@ -52,6 +52,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -61,6 +63,7 @@
             this.colThanhTien});
             this.dataGridView1.Location = new System.Drawing.Point(12, 44);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(941, 381);
@@ -93,6 +96,38 @@
             this.colThanhTien.HeaderText = "Thành tiền";
             this.colThanhTien.MinimumWidth = 6;
             this.colThanhTien.Name = "colThanhTien";
+            // 
+            // colTenSach
+            // 
+            this.colTenSach.DataPropertyName = "tenSach";
+            this.colTenSach.HeaderText = "Tên sách";
+            this.colTenSach.MinimumWidth = 6;
+            this.colTenSach.Name = "colTenSach";
+            this.colTenSach.ReadOnly = true;
+            // 
+            // colSoLuong
+            // 
+            this.colSoLuong.DataPropertyName = "soLuongBan";
+            this.colSoLuong.HeaderText = "Số lượng";
+            this.colSoLuong.MinimumWidth = 6;
+            this.colSoLuong.Name = "colSoLuong";
+            this.colSoLuong.ReadOnly = true;
+            // 
+            // GiaNhap
+            // 
+            this.GiaNhap.DataPropertyName = "giaBan";
+            this.GiaNhap.HeaderText = "Giá bán";
+            this.GiaNhap.MinimumWidth = 6;
+            this.GiaNhap.Name = "GiaNhap";
+            this.GiaNhap.ReadOnly = true;
+            // 
+            // colThanhTien
+            // 
+            this.colThanhTien.DataPropertyName = "thanhTien";
+            this.colThanhTien.HeaderText = "Thành tiền";
+            this.colThanhTien.MinimumWidth = 6;
+            this.colThanhTien.Name = "colThanhTien";
+            this.colThanhTien.ReadOnly = true;
             // 
             // label1
             // 
