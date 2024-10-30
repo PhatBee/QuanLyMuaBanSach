@@ -296,12 +296,15 @@
             // 
             // dataNV
             // 
+            this.dataNV.AllowUserToAddRows = false;
+            this.dataNV.AllowUserToDeleteRows = false;
             this.dataNV.AutoGenerateColumns = false;
             this.dataNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataNV.DataSource = this.qLNhanVienDataSetBindingSource;
             this.dataNV.Location = new System.Drawing.Point(3, 3);
             this.dataNV.Name = "dataNV";
+            this.dataNV.ReadOnly = true;
             this.dataNV.RowHeadersWidth = 51;
             this.dataNV.RowTemplate.Height = 24;
             this.dataNV.Size = new System.Drawing.Size(627, 527);
