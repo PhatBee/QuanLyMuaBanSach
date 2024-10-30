@@ -151,5 +151,13 @@ namespace QuanLyMuaBanSach
             }
             finally { myDB.closeConection(); }
         }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            int parsedInt = int.Parse(lblTongTien.Text.Split('.')[0]);
+
+            Form thanhtoan = new frmThanhToan(parsedInt, maHD);
+            thanhtoan.ShowDialog();
+        }
     }
 }
