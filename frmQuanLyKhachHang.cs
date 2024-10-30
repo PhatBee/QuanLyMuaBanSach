@@ -152,6 +152,25 @@ namespace QuanLyMuaBanSach
             }
             frmQuanLyKhachHang_Load(sender, e);
         }
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            string tenKH = txtBoxTimKiem.Text;
+            dataKhachHang.DataSource = timKiemKH(tenKH);
+        }
+
+        private DataTable timKiemKH(string text)
+        {
+            mydb.openConection();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("proc_TimKiemKhachHangTheoTen", mydb.getConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@tenKH", text);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            mydb.closeConection();
+            return dt;
+        }
     }
 
 }
