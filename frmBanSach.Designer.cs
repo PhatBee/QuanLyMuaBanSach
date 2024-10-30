@@ -105,7 +105,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 22);
+            this.label1.Size = new System.Drawing.Size(70, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bán sách";
             // 
@@ -114,7 +114,7 @@
             this.cboKH.FormattingEnabled = true;
             this.cboKH.Location = new System.Drawing.Point(371, 6);
             this.cboKH.Name = "cboKH";
-            this.cboKH.Size = new System.Drawing.Size(331, 30);
+            this.cboKH.Size = new System.Drawing.Size(331, 25);
             this.cboKH.TabIndex = 2;
             // 
             // label2
@@ -122,7 +122,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(248, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 22);
+            this.label2.Size = new System.Drawing.Size(86, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "Khách hàng";
             // 
@@ -131,7 +131,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 437);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 22);
+            this.label3.Size = new System.Drawing.Size(73, 18);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tên sách:";
             // 
@@ -140,7 +140,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(601, 437);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 22);
+            this.label4.Size = new System.Drawing.Size(71, 18);
             this.label4.TabIndex = 6;
             this.label4.Text = "Số lượng:";
             // 
@@ -148,8 +148,9 @@
             // 
             this.numSoLuongNhap.Location = new System.Drawing.Point(738, 435);
             this.numSoLuongNhap.Name = "numSoLuongNhap";
-            this.numSoLuongNhap.Size = new System.Drawing.Size(83, 28);
+            this.numSoLuongNhap.Size = new System.Drawing.Size(83, 24);
             this.numSoLuongNhap.TabIndex = 7;
+            this.numSoLuongNhap.ValueChanged += new System.EventHandler(this.numSoLuongNhap_ValueChanged);
             // 
             // btnThem
             // 
@@ -177,7 +178,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(669, 494);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 22);
+            this.label6.Size = new System.Drawing.Size(73, 18);
             this.label6.TabIndex = 12;
             this.label6.Text = "Tổng tiền:";
             // 
@@ -186,7 +187,7 @@
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Location = new System.Drawing.Point(772, 494);
             this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(15, 22);
+            this.lblTongTien.Size = new System.Drawing.Size(12, 18);
             this.lblTongTien.TabIndex = 13;
             this.lblTongTien.Text = ".";
             // 
@@ -206,12 +207,12 @@
             this.cboSach.FormattingEnabled = true;
             this.cboSach.Location = new System.Drawing.Point(180, 437);
             this.cboSach.Name = "cboSach";
-            this.cboSach.Size = new System.Drawing.Size(231, 30);
+            this.cboSach.Size = new System.Drawing.Size(231, 25);
             this.cboSach.TabIndex = 15;
             // 
             // frmBanSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 619);
             this.Controls.Add(this.cboSach);

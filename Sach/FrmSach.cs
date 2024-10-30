@@ -135,26 +135,6 @@ namespace QuanLyMuaBanSach
             comboBoxTacGia.ValueMember = "maTG";
         }
 
-        private void dataSach_DoubleClick(object sender, EventArgs e)
-        {
-            try
-            {
-                txtboxMaSach.Text = dataSach.CurrentRow.Cells[0].Value.ToString();
-                txtboxTenSach.Text = dataSach.CurrentRow.Cells[1].Value.ToString();
-                comboBoxTheLoai.Text = dataSach.CurrentRow.Cells[4].Value.ToString() ;
-                txtboxMoTa.Text = dataSach.CurrentRow.Cells[5].Value.ToString();
-                comboBoxNXB.Text = dataSach.CurrentRow.Cells[6].Value.ToString();
-                chiTietSangTacSach();
-
-                tonsua = Convert.ToInt32(dataSach.CurrentRow.Cells[2].Value.ToString());
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         public DataTable layDanhSachChiTietSangTacSach()
         {
             string masach = txtboxMaSach.Text;
@@ -335,6 +315,26 @@ namespace QuanLyMuaBanSach
         {
             string tenSach = txtBoxTimKiem.Text;
             dataSach.DataSource = timKiemSach(tenSach);
+        }
+
+        private void dataSach_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtboxMaSach.Text = dataSach.CurrentRow.Cells[0].Value.ToString();
+                txtboxTenSach.Text = dataSach.CurrentRow.Cells[1].Value.ToString();
+                comboBoxTheLoai.Text = dataSach.CurrentRow.Cells[4].Value.ToString();
+                txtboxMoTa.Text = dataSach.CurrentRow.Cells[5].Value.ToString();
+                comboBoxNXB.Text = dataSach.CurrentRow.Cells[6].Value.ToString();
+                chiTietSangTacSach();
+
+                tonsua = Convert.ToInt32(dataSach.CurrentRow.Cells[2].Value.ToString());
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

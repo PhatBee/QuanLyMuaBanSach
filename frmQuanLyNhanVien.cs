@@ -157,7 +157,26 @@ namespace QuanLyMuaBanSach
             return dt;
         }
 
-        private void dataNV_DoubleClick(object sender, EventArgs e)
+        private void btnXacNhanNV_Click(object sender, EventArgs e)
+        {
+            string tenNV = txtBoxTimKiem.Text;
+            dataNV.DataSource = timKiemNhanVien(tenNV);
+        }
+
+        private DataTable timKiemNhanVien(string text)
+        {
+            mydb.openConection();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("proc_TimKiemNhanVienTheoTen", mydb.getConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@tenNV",text);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            mydb.closeConection();
+            return dt;
+        }
+
+        private void dataNV_CellClick(object sender, DataGridViewCellEventArgs e)
         { // MaNV, TenNV, GioiTinh, NgaySinh, SDT, DiaChi
             try
             {
@@ -187,25 +206,5 @@ namespace QuanLyMuaBanSach
             }
 
         }
-
-        private void btnXacNhanNV_Click(object sender, EventArgs e)
-        {
-            string tenNV = txtBoxTimKiem.Text;
-            dataNV.DataSource = timKiemNhanVien(tenNV);
-        }
-
-        private DataTable timKiemNhanVien(string text)
-        {
-            mydb.openConection();
-            DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand("proc_TimKiemNhanVienTheoTen", mydb.getConnection);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@tenNV",text);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(dt);
-            mydb.closeConection();
-            return dt;
-        }
-
     }
 }

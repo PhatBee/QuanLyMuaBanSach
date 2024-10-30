@@ -75,21 +75,6 @@ namespace QuanLyMuaBanSach
             frmQuanLyNXB_Load(sender, e);
         }
 
-        private void dataNXB_DoubleClick(object sender, EventArgs e)
-        { // MaNXB, TenNXB, SDT, DiaChi
-            try
-            {
-                txtBoxMaNXB.Text = dataNXB.CurrentRow.Cells[0].Value.ToString();
-                txtBoxTenNXB.Text = dataNXB.CurrentRow.Cells[1].Value.ToString();
-                txtBoxSDT.Text = dataNXB.CurrentRow.Cells[2].Value.ToString();
-                txtBoxNXB.Text = dataNXB.CurrentRow.Cells[3].Value.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         private void btnSua_Click(object sender, EventArgs e)
         {
             try
@@ -157,6 +142,22 @@ namespace QuanLyMuaBanSach
                 MessageBox.Show("Xoá nhà xuất bản thất bại, do nhà xuất bản đang được dùng trên hệ thống. Mã lỗi: " + ex.Message, "Xoá nhà xuất bản", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             frmQuanLyNXB_Load(sender, e);
+        }
+
+        private void dataNXB_CellClick(object sender, DataGridViewCellEventArgs e)
+        { // MaNXB, TenNXB, SDT, DiaChi
+            try
+            {
+                txtBoxMaNXB.Text = dataNXB.CurrentRow.Cells[0].Value.ToString();
+                txtBoxTenNXB.Text = dataNXB.CurrentRow.Cells[1].Value.ToString();
+                txtBoxSDT.Text = dataNXB.CurrentRow.Cells[2].Value.ToString();
+                txtBoxNXB.Text = dataNXB.CurrentRow.Cells[3].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

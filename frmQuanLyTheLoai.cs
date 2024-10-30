@@ -135,7 +135,7 @@ namespace QuanLyMuaBanSach
             frmQuanLyTheLoai_Load(sender, e);
         }
 
-        private void dataTheLoai_DoubleClick(object sender, EventArgs e)
+        private void dataTheLoai_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // MaTL, tenTL
             try
@@ -147,6 +147,7 @@ namespace QuanLyMuaBanSach
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
     }
 }

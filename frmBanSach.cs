@@ -151,5 +151,10 @@ namespace QuanLyMuaBanSach
             }
             finally { myDB.closeConection(); }
         }
+
+        private void numSoLuongNhap_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
