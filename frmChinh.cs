@@ -73,7 +73,7 @@ namespace QuanLyMuaBanSach
 
         private void frmChinh_Load(object sender, EventArgs e)
         {
-
+            label1.Text = maNV.ToString();
         }
 
         private void panelBanSach_Click(object sender, EventArgs e)

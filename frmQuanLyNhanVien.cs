@@ -138,8 +138,6 @@ namespace QuanLyMuaBanSach
             dataNV.AutoGenerateColumns = true;
             dataNV.DataSource = LayDanhSachNhanVien();
 
-            
-
         }
 
         public DataTable LayDanhSachNhanVien()
