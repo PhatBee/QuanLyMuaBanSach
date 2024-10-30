@@ -37,7 +37,7 @@ namespace QuanLyMuaBanSach
                 {
                     string maSach = cboTenSach.SelectedValue.ToString();
                     mydb.openConection();
-                    SqlCommand cmd = new SqlCommand("proc_themChiTietPhieuNhap1", mydb.getConnection);
+                    SqlCommand cmd = new SqlCommand("proc_themChiTietPhieuNhapVoiMaSach", mydb.getConnection);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@maSach", maSach);
                     cmd.Parameters.AddWithValue("@soPN", maPN);
@@ -51,7 +51,7 @@ namespace QuanLyMuaBanSach
                 {
                     string tenSach = txtTenSach.Text;
                     mydb.openConection();
-                    SqlCommand cmd = new SqlCommand("proc_themChiTietPhieuNhap2", mydb.getConnection);
+                    SqlCommand cmd = new SqlCommand("proc_themChiTietPhieuNhapVoiTenSach", mydb.getConnection);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@maNXB", maNXB);
                     cmd.Parameters.AddWithValue("@tenSach", tenSach);
