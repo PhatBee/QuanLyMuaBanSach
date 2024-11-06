@@ -45,6 +45,7 @@
             this.lblTongTien = new System.Windows.Forms.Label();
             this.btnThemHD = new System.Windows.Forms.Button();
             this.cboSach = new System.Windows.Forms.ComboBox();
+            this.btnThanhToan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuongNhap)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +68,34 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(941, 381);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // colTenSach
+            // 
+            this.colTenSach.DataPropertyName = "tenSach";
+            this.colTenSach.HeaderText = "Tên sách";
+            this.colTenSach.MinimumWidth = 6;
+            this.colTenSach.Name = "colTenSach";
+            // 
+            // colSoLuong
+            // 
+            this.colSoLuong.DataPropertyName = "soLuongBan";
+            this.colSoLuong.HeaderText = "Số lượng";
+            this.colSoLuong.MinimumWidth = 6;
+            this.colSoLuong.Name = "colSoLuong";
+            // 
+            // GiaNhap
+            // 
+            this.GiaNhap.DataPropertyName = "giaBan";
+            this.GiaNhap.HeaderText = "Giá bán";
+            this.GiaNhap.MinimumWidth = 6;
+            this.GiaNhap.Name = "GiaNhap";
+            // 
+            // colThanhTien
+            // 
+            this.colThanhTien.DataPropertyName = "thanhTien";
+            this.colThanhTien.HeaderText = "Thành tiền";
+            this.colThanhTien.MinimumWidth = 6;
+            this.colThanhTien.Name = "colThanhTien";
             // 
             // colTenSach
             // 
@@ -210,11 +239,23 @@
             this.cboSach.Size = new System.Drawing.Size(231, 25);
             this.cboSach.TabIndex = 15;
             // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnThanhToan.Location = new System.Drawing.Point(16, 561);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(127, 46);
+            this.btnThanhToan.TabIndex = 16;
+            this.btnThanhToan.Text = "Thanh toán ";
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
+            // 
             // frmBanSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 619);
+            this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.cboSach);
             this.Controls.Add(this.btnThemHD);
             this.Controls.Add(this.lblTongTien);
@@ -260,5 +301,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn colThanhTien;
+        private System.Windows.Forms.Button btnThanhToan;
     }
 }

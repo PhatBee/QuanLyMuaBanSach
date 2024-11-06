@@ -92,6 +92,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiRequest.cs" />
+    <Compile Include="Bank.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +153,12 @@
     </Compile>
     <Compile Include="frmQuanLyTheLoai.Designer.cs">
       <DependentUpon>frmQuanLyTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThanhToan.Designer.cs">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThongKe.cs">
       <SubType>Form</SubType>
@@ -217,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanLyTheLoai.resx">
       <DependentUpon>frmQuanLyTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThanhToan.resx">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongKe.resx">
       <DependentUpon>frmThongKe.cs</DependentUpon>

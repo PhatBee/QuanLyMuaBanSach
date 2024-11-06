@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace QuanLyMuaBanSach
@@ -15,31 +16,53 @@ namespace QuanLyMuaBanSach
     {
 
         private string maNV;
+        private string maNXB;
+        MyDB mydb = new MyDB();
+        private string maPN;
+        private bool coSan;
         public frmNhapSach(string maNV)
         {
             InitializeComponent();
             this.maNV = maNV;
         }
-        MyDB mydb = new MyDB();
-        string maPN = "PN0014";
-
+        
         private void btnThem_Click(object sender, EventArgs e)
         {
-            string maSach = cboTenSach.SelectedValue.ToString();
+            
             int soLuong = Convert.ToInt32(numSoLuongNhap.Value);
             int gia = Convert.ToInt32(txtGiaNhap.Text);
             try
             {
-                mydb.openConection();
-                SqlCommand cmd = new SqlCommand("ThemChiTietPhieuNhap", mydb.getConnection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@maSach", maSach);
-                cmd.Parameters.AddWithValue("@soPN", maPN);
-                cmd.Parameters.AddWithValue("@soLuong", soLuong);
-                cmd.Parameters.AddWithValue("@donGia", gia);
+                if (!coSan)
+                {
+                    string maSach = cboTenSach.SelectedValue.ToString();
+                    mydb.openConection();
+                    SqlCommand cmd = new SqlCommand("proc_themChiTietPhieuNhapVoiMaSach", mydb.getConnection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@maSach", maSach);
+                    cmd.Parameters.AddWithValue("@soPN", maPN);
+                    cmd.Parameters.AddWithValue("@soLuong", soLuong);
+                    cmd.Parameters.AddWithValue("@donGia", gia);
 
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Thêm Thành công");
+                    if (cmd.ExecuteNonQuery() > 0)
+                        MessageBox.Show("Thêm Thành công");
+                }
+                else
+                {
+                    string tenSach = txtTenSach.Text;
+                    mydb.openConection();
+                    SqlCommand cmd = new SqlCommand("proc_themChiTietPhieuNhapVoiTenSach", mydb.getConnection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@maNXB", maNXB);
+                    cmd.Parameters.AddWithValue("@tenSach", tenSach);
+                    cmd.Parameters.AddWithValue("@soPN", maPN);
+                    cmd.Parameters.AddWithValue("@soLuong", soLuong);
+                    cmd.Parameters.AddWithValue("@donGia", gia);
+
+                    if (cmd.ExecuteNonQuery() > 0)
+                        MessageBox.Show("Thêm Thành công");
+                }
+                
                 
                 LoadChiTiet();
 
@@ -58,17 +81,18 @@ namespace QuanLyMuaBanSach
 
         private void frmNhapSach_Load(object sender, EventArgs e)
         {
-            LoadSach();
             LoadNXB();
         }
 
-        private void LoadSach() 
+        private void LoadSach(string maNXB) 
         {
-            string sql = "Select * from list_Sach";
             try
             {
                 mydb.openConection();
-                SqlDataAdapter adapter = new SqlDataAdapter(sql, mydb.getConnection);
+                SqlCommand cmd = new SqlCommand("proc_laySachTheoNXB", mydb.getConnection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maNXB", maNXB);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
                 cboTenSach.DataSource = dataTable;
@@ -126,7 +150,7 @@ namespace QuanLyMuaBanSach
 
         private void btnThemPN_Click(object sender, EventArgs e)
         {
-            string maNXB = cboNXB.SelectedValue.ToString();
+            maNXB = cboNXB.SelectedValue.ToString();
             try
             {
                 mydb.openConection();
@@ -154,6 +178,20 @@ namespace QuanLyMuaBanSach
                 MessageBox.Show(ex.Message);
             }
             finally { mydb.closeConection(); }
+        }
+
+        private void cboNXB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string maNXB = cboNXB.SelectedValue.ToString();
+            LoadSach(maNXB);
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            coSan = checkBox1.Checked;
+            txtTenSach.Visible = true;
+            //MessageBox.Show(coSan.ToString());
         }
     }
 }

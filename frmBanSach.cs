@@ -152,9 +152,12 @@ namespace QuanLyMuaBanSach
             finally { myDB.closeConection(); }
         }
 
-        private void numSoLuongNhap_ValueChanged(object sender, EventArgs e)
+        private void btnThanhToan_Click(object sender, EventArgs e)
         {
+            int parsedInt = int.Parse(lblTongTien.Text.Split('.')[0]);
 
+            Form thanhtoan = new frmThanhToan(parsedInt, maHD);
+            thanhtoan.ShowDialog();
         }
     }
 }
