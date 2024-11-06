@@ -212,14 +212,14 @@ namespace QuanLyMuaBanSach
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 sqlCommand.Parameters.AddWithValue("@maNV", manv);
-                sqlCommand.
-            }
-            catch
-            {
+                sqlCommand.ExecuteNonQuery();
 
+                MessageBox.Show("Ngừng hoạt động nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }
-}
     }
 }
