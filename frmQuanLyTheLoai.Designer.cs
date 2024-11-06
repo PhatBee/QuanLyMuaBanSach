@@ -37,6 +37,8 @@
             this.txtBoxMaTheLoai = new System.Windows.Forms.TextBox();
             this.txtBoxTenTheLoai = new System.Windows.Forms.TextBox();
             this.dataTheLoai = new System.Windows.Forms.DataGridView();
+            this.maTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblThongTinTheLoai = new System.Windows.Forms.Label();
             this.txtBoxTimKiem = new System.Windows.Forms.TextBox();
             this.lblTimKiem = new System.Windows.Forms.Label();
@@ -55,19 +57,19 @@
             this.panel1.Controls.Add(this.lblTenTheLoai);
             this.panel1.Controls.Add(this.txtBoxMaTheLoai);
             this.panel1.Controls.Add(this.txtBoxTenTheLoai);
-            this.panel1.Location = new System.Drawing.Point(100, 398);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(75, 323);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(884, 143);
+            this.panel1.Size = new System.Drawing.Size(663, 116);
             this.panel1.TabIndex = 17;
             // 
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(400, 108);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSua.Location = new System.Drawing.Point(300, 88);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(86, 34);
+            this.btnSua.Size = new System.Drawing.Size(64, 28);
             this.btnSua.TabIndex = 15;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -76,10 +78,10 @@
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Location = new System.Drawing.Point(552, 108);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXoa.Location = new System.Drawing.Point(414, 88);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(86, 34);
+            this.btnXoa.Size = new System.Drawing.Size(64, 28);
             this.btnXoa.TabIndex = 14;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -88,10 +90,10 @@
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(259, 108);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThem.Location = new System.Drawing.Point(194, 88);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(86, 34);
+            this.btnThem.Size = new System.Drawing.Size(64, 28);
             this.btnThem.TabIndex = 7;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -101,9 +103,10 @@
             // 
             this.lblMaTheLoai.AutoSize = true;
             this.lblMaTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaTheLoai.Location = new System.Drawing.Point(235, 28);
+            this.lblMaTheLoai.Location = new System.Drawing.Point(176, 23);
+            this.lblMaTheLoai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaTheLoai.Name = "lblMaTheLoai";
-            this.lblMaTheLoai.Size = new System.Drawing.Size(101, 24);
+            this.lblMaTheLoai.Size = new System.Drawing.Size(80, 18);
             this.lblMaTheLoai.TabIndex = 13;
             this.lblMaTheLoai.Text = "Mã thể loại";
             // 
@@ -111,27 +114,28 @@
             // 
             this.lblTenTheLoai.AutoSize = true;
             this.lblTenTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenTheLoai.Location = new System.Drawing.Point(235, 67);
+            this.lblTenTheLoai.Location = new System.Drawing.Point(176, 54);
+            this.lblTenTheLoai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenTheLoai.Name = "lblTenTheLoai";
-            this.lblTenTheLoai.Size = new System.Drawing.Size(109, 24);
+            this.lblTenTheLoai.Size = new System.Drawing.Size(84, 18);
             this.lblTenTheLoai.TabIndex = 13;
             this.lblTenTheLoai.Text = "Tên thể loại";
             // 
             // txtBoxMaTheLoai
             // 
             this.txtBoxMaTheLoai.Enabled = false;
-            this.txtBoxMaTheLoai.Location = new System.Drawing.Point(373, 28);
-            this.txtBoxMaTheLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxMaTheLoai.Location = new System.Drawing.Point(280, 23);
+            this.txtBoxMaTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxMaTheLoai.Name = "txtBoxMaTheLoai";
-            this.txtBoxMaTheLoai.Size = new System.Drawing.Size(265, 22);
+            this.txtBoxMaTheLoai.Size = new System.Drawing.Size(200, 20);
             this.txtBoxMaTheLoai.TabIndex = 10;
             // 
             // txtBoxTenTheLoai
             // 
-            this.txtBoxTenTheLoai.Location = new System.Drawing.Point(373, 67);
-            this.txtBoxTenTheLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBoxTenTheLoai.Location = new System.Drawing.Point(280, 54);
+            this.txtBoxTenTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxTenTheLoai.Name = "txtBoxTenTheLoai";
-            this.txtBoxTenTheLoai.Size = new System.Drawing.Size(265, 22);
+            this.txtBoxTenTheLoai.Size = new System.Drawing.Size(200, 20);
             this.txtBoxTenTheLoai.TabIndex = 10;
             // 
             // dataTheLoai
@@ -140,23 +144,41 @@
             this.dataTheLoai.AllowUserToDeleteRows = false;
             this.dataTheLoai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataTheLoai.Location = new System.Drawing.Point(100, 54);
-            this.dataTheLoai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataTheLoai.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maTL,
+            this.tenTL});
+            this.dataTheLoai.Location = new System.Drawing.Point(75, 44);
+            this.dataTheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.dataTheLoai.Name = "dataTheLoai";
             this.dataTheLoai.ReadOnly = true;
             this.dataTheLoai.RowHeadersWidth = 62;
             this.dataTheLoai.RowTemplate.Height = 28;
-            this.dataTheLoai.Size = new System.Drawing.Size(884, 340);
+            this.dataTheLoai.Size = new System.Drawing.Size(663, 276);
             this.dataTheLoai.TabIndex = 16;
-            this.dataTheLoai.DoubleClick += new System.EventHandler(this.dataTheLoai_DoubleClick);
+            this.dataTheLoai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTheLoai_CellClick);
+            // 
+            // maTL
+            // 
+            this.maTL.DataPropertyName = "maTL";
+            this.maTL.HeaderText = "Mã Thể Loại";
+            this.maTL.Name = "maTL";
+            this.maTL.ReadOnly = true;
+            // 
+            // tenTL
+            // 
+            this.tenTL.DataPropertyName = "tenTL";
+            this.tenTL.HeaderText = "Tên Thể Loại";
+            this.tenTL.Name = "tenTL";
+            this.tenTL.ReadOnly = true;
             // 
             // lblThongTinTheLoai
             // 
             this.lblThongTinTheLoai.AutoSize = true;
             this.lblThongTinTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThongTinTheLoai.Location = new System.Drawing.Point(101, 23);
+            this.lblThongTinTheLoai.Location = new System.Drawing.Point(76, 19);
+            this.lblThongTinTheLoai.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblThongTinTheLoai.Name = "lblThongTinTheLoai";
-            this.lblThongTinTheLoai.Size = new System.Drawing.Size(248, 31);
+            this.lblThongTinTheLoai.Size = new System.Drawing.Size(196, 26);
             this.lblThongTinTheLoai.TabIndex = 15;
             this.lblThongTinTheLoai.Text = "Thông Tin Thể Loại";
             // 
@@ -164,7 +186,7 @@
             // 
             this.txtBoxTimKiem.Location = new System.Drawing.Point(796, 34);
             this.txtBoxTimKiem.Name = "txtBoxTimKiem";
-            this.txtBoxTimKiem.Size = new System.Drawing.Size(311, 22);
+            this.txtBoxTimKiem.Size = new System.Drawing.Size(311, 20);
             this.txtBoxTimKiem.TabIndex = 19;
             // 
             // lblTimKiem
@@ -179,33 +201,34 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(655, 30);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(491, 24);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(328, 22);
+            this.textBox1.Size = new System.Drawing.Size(247, 20);
             this.textBox1.TabIndex = 19;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(549, 27);
+            this.label1.Location = new System.Drawing.Point(412, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 25);
+            this.label1.Size = new System.Drawing.Size(71, 20);
             this.label1.TabIndex = 18;
             this.label1.Text = "Tìm kiếm";
             // 
             // frmQuanLyTheLoai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1078, 558);
+            this.ClientSize = new System.Drawing.Size(808, 453);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataTheLoai);
             this.Controls.Add(this.lblThongTinTheLoai);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmQuanLyTheLoai";
             this.Text = "frmQuanLyTheLoai";
             this.Load += new System.EventHandler(this.frmQuanLyTheLoai_Load);
@@ -233,5 +256,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblMaTheLoai;
         private System.Windows.Forms.TextBox txtBoxMaTheLoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maTL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenTL;
     }
 }

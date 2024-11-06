@@ -135,26 +135,6 @@ namespace QuanLyMuaBanSach
             comboBoxTacGia.ValueMember = "maTG";
         }
 
-        private void dataSach_DoubleClick(object sender, EventArgs e)
-        {
-            try
-            {
-                txtboxMaSach.Text = dataSach.CurrentRow.Cells[0].Value.ToString();
-                txtboxTenSach.Text = dataSach.CurrentRow.Cells[1].Value.ToString();
-                comboBoxTheLoai.Text = dataSach.CurrentRow.Cells[4].Value.ToString() ;
-                txtboxMoTa.Text = dataSach.CurrentRow.Cells[5].Value.ToString();
-                comboBoxNXB.Text = dataSach.CurrentRow.Cells[6].Value.ToString();
-                chiTietSangTacSach();
-
-                tonsua = Convert.ToInt32(dataSach.CurrentRow.Cells[2].Value.ToString());
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         public DataTable layDanhSachChiTietSangTacSach()
         {
             string masach = txtboxMaSach.Text;
@@ -317,6 +297,44 @@ namespace QuanLyMuaBanSach
             }
             mydb.closeConection();
             FrmSach_Load(sender, e);
+        }
+
+        private DataTable timKiemSach(string text)
+        {
+            mydb.openConection();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("proc_timKiemSachTheoTen", mydb.getConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@tenSach", text);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            mydb.closeConection();
+            return dt;
+        }
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            string tenSach = txtBoxTimKiem.Text;
+            dataSach.DataSource = timKiemSach(tenSach);
+        }
+
+        private void dataSach_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                txtboxMaSach.Text = dataSach.CurrentRow.Cells[0].Value.ToString();
+                txtboxTenSach.Text = dataSach.CurrentRow.Cells[1].Value.ToString();
+                comboBoxTheLoai.Text = dataSach.CurrentRow.Cells[4].Value.ToString();
+                txtboxMoTa.Text = dataSach.CurrentRow.Cells[5].Value.ToString();
+                comboBoxNXB.Text = dataSach.CurrentRow.Cells[6].Value.ToString();
+                chiTietSangTacSach();
+
+                tonsua = Convert.ToInt32(dataSach.CurrentRow.Cells[2].Value.ToString());
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

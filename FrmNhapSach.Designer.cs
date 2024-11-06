@@ -47,6 +47,8 @@
             this.lblTongTien = new System.Windows.Forms.Label();
             this.btnThemPN = new System.Windows.Forms.Button();
             this.txtGiaNhap = new System.Windows.Forms.TextBox();
+            this.txtTenSach = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuongNhap)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +78,6 @@
             this.colTenSach.HeaderText = "Tên sách";
             this.colTenSach.MinimumWidth = 6;
             this.colTenSach.Name = "colTenSach";
-            this.colTenSach.ReadOnly = true;
             // 
             // colSoLuong
             // 
@@ -84,7 +85,6 @@
             this.colSoLuong.HeaderText = "Số lượng";
             this.colSoLuong.MinimumWidth = 6;
             this.colSoLuong.Name = "colSoLuong";
-            this.colSoLuong.ReadOnly = true;
             // 
             // GiaNhap
             // 
@@ -92,7 +92,6 @@
             this.GiaNhap.HeaderText = "Giá nhập";
             this.GiaNhap.MinimumWidth = 6;
             this.GiaNhap.Name = "GiaNhap";
-            this.GiaNhap.ReadOnly = true;
             // 
             // colThanhTien
             // 
@@ -100,7 +99,6 @@
             this.colThanhTien.HeaderText = "Thành tiền";
             this.colThanhTien.MinimumWidth = 6;
             this.colThanhTien.Name = "colThanhTien";
-            this.colThanhTien.ReadOnly = true;
             // 
             // label1
             // 
@@ -118,6 +116,7 @@
             this.cboNXB.Name = "cboNXB";
             this.cboNXB.Size = new System.Drawing.Size(331, 30);
             this.cboNXB.TabIndex = 2;
+            this.cboNXB.SelectedIndexChanged += new System.EventHandler(this.cboNXB_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -142,7 +141,7 @@
             this.cboTenSach.FormattingEnabled = true;
             this.cboTenSach.Location = new System.Drawing.Point(148, 434);
             this.cboTenSach.Name = "cboTenSach";
-            this.cboTenSach.Size = new System.Drawing.Size(164, 30);
+            this.cboTenSach.Size = new System.Drawing.Size(217, 30);
             this.cboTenSach.TabIndex = 5;
             // 
             // label4
@@ -173,7 +172,7 @@
             // btnThem
             // 
             this.btnThem.AutoSize = true;
-            this.btnThem.Location = new System.Drawing.Point(16, 489);
+            this.btnThem.Location = new System.Drawing.Point(16, 527);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(80, 36);
             this.btnThem.TabIndex = 10;
@@ -184,7 +183,7 @@
             // btnXoa
             // 
             this.btnXoa.AutoSize = true;
-            this.btnXoa.Location = new System.Drawing.Point(148, 489);
+            this.btnXoa.Location = new System.Drawing.Point(148, 527);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(80, 36);
             this.btnXoa.TabIndex = 11;
@@ -228,11 +227,32 @@
             this.txtGiaNhap.Size = new System.Drawing.Size(166, 28);
             this.txtGiaNhap.TabIndex = 15;
             // 
+            // txtTenSach
+            // 
+            this.txtTenSach.Location = new System.Drawing.Point(207, 488);
+            this.txtTenSach.Name = "txtTenSach";
+            this.txtTenSach.Size = new System.Drawing.Size(217, 28);
+            this.txtTenSach.TabIndex = 16;
+            this.txtTenSach.Visible = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(16, 490);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(185, 26);
+            this.checkBox1.TabIndex = 18;
+            this.checkBox1.Text = "Không có sẵn sách";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // frmNhapSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 619);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.txtTenSach);
             this.Controls.Add(this.txtGiaNhap);
             this.Controls.Add(this.btnThemPN);
             this.Controls.Add(this.lblTongTien);
@@ -282,5 +302,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn colThanhTien;
         private System.Windows.Forms.TextBox txtGiaNhap;
+        private System.Windows.Forms.TextBox txtTenSach;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

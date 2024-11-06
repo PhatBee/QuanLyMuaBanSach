@@ -43,20 +43,6 @@ namespace QuanLyMuaBanSach
             return dt;
         }
 
-        private void dataKhachHang_DoubleClick(object sender, EventArgs e)
-        {
-            //MaKH, tenKH, sdt
-            try
-            {
-                txtBoxMaKhanhHang.Text = dataKhachHang.CurrentRow.Cells[0].Value.ToString();
-                txtBoxTenKhachHang.Text = dataKhachHang.CurrentRow.Cells[1].Value.ToString();
-                txtBoxSDT.Text = dataKhachHang.CurrentRow.Cells[2].Value.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             try
@@ -151,6 +137,40 @@ namespace QuanLyMuaBanSach
                 MessageBox.Show("Xoá khách hàng thất bại, do khách hàng đang được dùng trên hệ thống. Mã lỗi: " + ex.Message, "Xoá khách hàng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             frmQuanLyKhachHang_Load(sender, e);
+        }
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            string tenKH = txtBoxTimKiem.Text;
+            dataKhachHang.DataSource = timKiemKH(tenKH);
+        }
+
+        private DataTable timKiemKH(string text)
+        {
+            mydb.openConection();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("proc_TimKiemKhachHangTheoTen", mydb.getConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@tenKH", text);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            mydb.closeConection();
+            return dt;
+        }
+
+        private void dataKhachHang_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            //MaKH, tenKH, sdt
+            try
+            {
+                txtBoxMaKhanhHang.Text = dataKhachHang.CurrentRow.Cells[0].Value.ToString();
+                txtBoxTenKhachHang.Text = dataKhachHang.CurrentRow.Cells[1].Value.ToString();
+                txtBoxSDT.Text = dataKhachHang.CurrentRow.Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 
