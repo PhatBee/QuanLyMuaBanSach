@@ -318,5 +318,23 @@ namespace QuanLyMuaBanSach
             mydb.closeConection();
             FrmSach_Load(sender, e);
         }
+
+        private DataTable timKiemSach(string text)
+        {
+            mydb.openConection();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("proc_timKiemSachTheoTen", mydb.getConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@tenSach", text);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            mydb.closeConection();
+            return dt;
+        }
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            string tenSach = txtBoxTimKiem.Text;
+            dataSach.DataSource = timKiemSach(tenSach);
+        }
     }
 }

@@ -72,6 +72,7 @@
             this.dataGridView1.DataSource = this.listPhieuNhapBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(8, 34);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(976, 280);
@@ -83,6 +84,7 @@
             this.soPNDataGridViewTextBoxColumn.HeaderText = "Số phiếu nhập";
             this.soPNDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.soPNDataGridViewTextBoxColumn.Name = "soPNDataGridViewTextBoxColumn";
+            this.soPNDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ngayNhapDataGridViewTextBoxColumn
             // 
@@ -90,6 +92,7 @@
             this.ngayNhapDataGridViewTextBoxColumn.HeaderText = "Ngày nhập";
             this.ngayNhapDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ngayNhapDataGridViewTextBoxColumn.Name = "ngayNhapDataGridViewTextBoxColumn";
+            this.ngayNhapDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tenNVDataGridViewTextBoxColumn
             // 
@@ -97,6 +100,7 @@
             this.tenNVDataGridViewTextBoxColumn.HeaderText = "Tên nhân viên";
             this.tenNVDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tenNVDataGridViewTextBoxColumn.Name = "tenNVDataGridViewTextBoxColumn";
+            this.tenNVDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tenNXBDataGridViewTextBoxColumn
             // 
@@ -104,6 +108,7 @@
             this.tenNXBDataGridViewTextBoxColumn.HeaderText = "Nhà xuất bản";
             this.tenNXBDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.tenNXBDataGridViewTextBoxColumn.Name = "tenNXBDataGridViewTextBoxColumn";
+            this.tenNXBDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // listPhieuNhapBindingSource
             // 
@@ -120,7 +125,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 26);
+            this.label1.Size = new System.Drawing.Size(180, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin phiếu nhập";
             // 
@@ -143,7 +148,7 @@
             // 
             this.txtBoxTimKiem.Location = new System.Drawing.Point(454, 48);
             this.txtBoxTimKiem.Name = "txtBoxTimKiem";
-            this.txtBoxTimKiem.Size = new System.Drawing.Size(540, 32);
+            this.txtBoxTimKiem.Size = new System.Drawing.Size(540, 28);
             this.txtBoxTimKiem.TabIndex = 9;
             // 
             // lblTimKiem
@@ -151,13 +156,13 @@
             this.lblTimKiem.AutoSize = true;
             this.lblTimKiem.Location = new System.Drawing.Point(347, 51);
             this.lblTimKiem.Name = "lblTimKiem";
-            this.lblTimKiem.Size = new System.Drawing.Size(101, 26);
+            this.lblTimKiem.Size = new System.Drawing.Size(82, 22);
             this.lblTimKiem.TabIndex = 8;
             this.lblTimKiem.Text = "Tìm kiếm";
             // 
             // frmQuanLyPhieuNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 619);
             this.Controls.Add(this.txtBoxTimKiem);

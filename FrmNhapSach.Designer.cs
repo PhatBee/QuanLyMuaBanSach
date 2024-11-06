@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.colTenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.cboNXB = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,17 +46,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.btnThemPN = new System.Windows.Forms.Button();
-            this.colTenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtGiaNhap = new System.Windows.Forms.TextBox();
+            this.txtTenSach = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuongNhap)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -62,10 +66,39 @@
             this.colThanhTien});
             this.dataGridView1.Location = new System.Drawing.Point(12, 44);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(941, 381);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // colTenSach
+            // 
+            this.colTenSach.DataPropertyName = "tenSach";
+            this.colTenSach.HeaderText = "Tên sách";
+            this.colTenSach.MinimumWidth = 6;
+            this.colTenSach.Name = "colTenSach";
+            // 
+            // colSoLuong
+            // 
+            this.colSoLuong.DataPropertyName = "soLuongNhap";
+            this.colSoLuong.HeaderText = "Số lượng";
+            this.colSoLuong.MinimumWidth = 6;
+            this.colSoLuong.Name = "colSoLuong";
+            // 
+            // GiaNhap
+            // 
+            this.GiaNhap.DataPropertyName = "giaNhap";
+            this.GiaNhap.HeaderText = "Giá nhập";
+            this.GiaNhap.MinimumWidth = 6;
+            this.GiaNhap.Name = "GiaNhap";
+            // 
+            // colThanhTien
+            // 
+            this.colThanhTien.DataPropertyName = "thanhTien";
+            this.colThanhTien.HeaderText = "Thành tiền";
+            this.colThanhTien.MinimumWidth = 6;
+            this.colThanhTien.Name = "colThanhTien";
             // 
             // label1
             // 
@@ -83,6 +116,7 @@
             this.cboNXB.Name = "cboNXB";
             this.cboNXB.Size = new System.Drawing.Size(331, 30);
             this.cboNXB.TabIndex = 2;
+            this.cboNXB.SelectedIndexChanged += new System.EventHandler(this.cboNXB_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -107,7 +141,7 @@
             this.cboTenSach.FormattingEnabled = true;
             this.cboTenSach.Location = new System.Drawing.Point(148, 434);
             this.cboTenSach.Name = "cboTenSach";
-            this.cboTenSach.Size = new System.Drawing.Size(164, 30);
+            this.cboTenSach.Size = new System.Drawing.Size(217, 30);
             this.cboTenSach.TabIndex = 5;
             // 
             // label4
@@ -138,7 +172,7 @@
             // btnThem
             // 
             this.btnThem.AutoSize = true;
-            this.btnThem.Location = new System.Drawing.Point(16, 489);
+            this.btnThem.Location = new System.Drawing.Point(16, 527);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(80, 36);
             this.btnThem.TabIndex = 10;
@@ -149,7 +183,7 @@
             // btnXoa
             // 
             this.btnXoa.AutoSize = true;
-            this.btnXoa.Location = new System.Drawing.Point(148, 489);
+            this.btnXoa.Location = new System.Drawing.Point(148, 527);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(80, 36);
             this.btnXoa.TabIndex = 11;
@@ -186,34 +220,6 @@
             this.btnThemPN.UseVisualStyleBackColor = true;
             this.btnThemPN.Click += new System.EventHandler(this.btnThemPN_Click);
             // 
-            // colTenSach
-            // 
-            this.colTenSach.DataPropertyName = "tenSach";
-            this.colTenSach.HeaderText = "Tên sách";
-            this.colTenSach.MinimumWidth = 6;
-            this.colTenSach.Name = "colTenSach";
-            // 
-            // colSoLuong
-            // 
-            this.colSoLuong.DataPropertyName = "soLuongNhap";
-            this.colSoLuong.HeaderText = "Số lượng";
-            this.colSoLuong.MinimumWidth = 6;
-            this.colSoLuong.Name = "colSoLuong";
-            // 
-            // GiaNhap
-            // 
-            this.GiaNhap.DataPropertyName = "giaNhap";
-            this.GiaNhap.HeaderText = "Giá nhập";
-            this.GiaNhap.MinimumWidth = 6;
-            this.GiaNhap.Name = "GiaNhap";
-            // 
-            // colThanhTien
-            // 
-            this.colThanhTien.DataPropertyName = "thanhTien";
-            this.colThanhTien.HeaderText = "Thành tiền";
-            this.colThanhTien.MinimumWidth = 6;
-            this.colThanhTien.Name = "colThanhTien";
-            // 
             // txtGiaNhap
             // 
             this.txtGiaNhap.Location = new System.Drawing.Point(787, 436);
@@ -221,11 +227,32 @@
             this.txtGiaNhap.Size = new System.Drawing.Size(166, 28);
             this.txtGiaNhap.TabIndex = 15;
             // 
+            // txtTenSach
+            // 
+            this.txtTenSach.Location = new System.Drawing.Point(207, 488);
+            this.txtTenSach.Name = "txtTenSach";
+            this.txtTenSach.Size = new System.Drawing.Size(217, 28);
+            this.txtTenSach.TabIndex = 16;
+            this.txtTenSach.Visible = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(16, 490);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(185, 26);
+            this.checkBox1.TabIndex = 18;
+            this.checkBox1.Text = "Không có sẵn sách";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // frmNhapSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 619);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.txtTenSach);
             this.Controls.Add(this.txtGiaNhap);
             this.Controls.Add(this.btnThemPN);
             this.Controls.Add(this.lblTongTien);
@@ -275,5 +302,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn colThanhTien;
         private System.Windows.Forms.TextBox txtGiaNhap;
+        private System.Windows.Forms.TextBox txtTenSach;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
