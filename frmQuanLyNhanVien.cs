@@ -24,11 +24,6 @@ namespace QuanLyMuaBanSach
             InitializeComponent();
         }
 
-        private void btnXoaNV_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnThemNV_Click(object sender, EventArgs e)
         {
             try
@@ -207,5 +202,22 @@ namespace QuanLyMuaBanSach
             return dt;
         }
 
+        private void btnVoHieuNV_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string manv = dataNV.CurrentRow.Cells[0].Value.ToString();
+                mydb.openConection();
+                sqlCommand = new SqlCommand("proc_NgungHoatDongNhanVien", mydb.getConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                sqlCommand.Parameters.AddWithValue("@maNV", manv);
+                sqlCommand.
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnThemNV = new System.Windows.Forms.Button();
             this.btnSuaNV = new System.Windows.Forms.Button();
-            this.btnXoaNV = new System.Windows.Forms.Button();
+            this.btnVoHieuNV = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.datipikrNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -71,7 +71,7 @@
             // 
             this.panel1.Controls.Add(this.btnThemNV);
             this.panel1.Controls.Add(this.btnSuaNV);
-            this.panel1.Controls.Add(this.btnXoaNV);
+            this.panel1.Controls.Add(this.btnVoHieuNV);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.datipikrNgaySinh);
             this.panel1.Controls.Add(this.panel3);
@@ -112,16 +112,16 @@
             this.btnSuaNV.UseVisualStyleBackColor = true;
             this.btnSuaNV.Click += new System.EventHandler(this.btnSuaNV_Click);
             // 
-            // btnXoaNV
+            // btnVoHieuNV
             // 
-            this.btnXoaNV.AutoSize = true;
-            this.btnXoaNV.Location = new System.Drawing.Point(24, 556);
-            this.btnXoaNV.Name = "btnXoaNV";
-            this.btnXoaNV.Size = new System.Drawing.Size(80, 36);
-            this.btnXoaNV.TabIndex = 5;
-            this.btnXoaNV.Text = "Xoá";
-            this.btnXoaNV.UseVisualStyleBackColor = true;
-            this.btnXoaNV.Click += new System.EventHandler(this.btnXoaNV_Click);
+            this.btnVoHieuNV.AutoSize = true;
+            this.btnVoHieuNV.Location = new System.Drawing.Point(24, 556);
+            this.btnVoHieuNV.Name = "btnVoHieuNV";
+            this.btnVoHieuNV.Size = new System.Drawing.Size(81, 36);
+            this.btnVoHieuNV.TabIndex = 5;
+            this.btnVoHieuNV.Text = "Vô hiệu";
+            this.btnVoHieuNV.UseVisualStyleBackColor = true;
+            this.btnVoHieuNV.Click += new System.EventHandler(this.btnVoHieuNV_Click);
             // 
             // label7
             // 
@@ -408,7 +408,7 @@
         private System.Windows.Forms.TextBox txtbxDiaChi;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSuaNV;
-        private System.Windows.Forms.Button btnXoaNV;
+        private System.Windows.Forms.Button btnVoHieuNV;
         private System.Windows.Forms.Button btnXacNhanNV;
         private System.Windows.Forms.Button btnThemNV;
         private System.Windows.Forms.TextBox txtbxUsernameMoi;
