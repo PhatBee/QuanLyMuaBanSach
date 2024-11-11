@@ -34,14 +34,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtDoanhThu = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.maSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongSachBanRa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongSachNhapVao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongDoanhThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDoanhThu = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,46 +103,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(819, 294);
             this.dataGridView1.TabIndex = 5;
             // 
-            // maSach
-            // 
-            this.maSach.DataPropertyName = "maSach";
-            this.maSach.HeaderText = "Mã Sách";
-            this.maSach.MinimumWidth = 6;
-            this.maSach.Name = "maSach";
-            this.maSach.Width = 125;
-            // 
-            // tenSach
-            // 
-            this.tenSach.DataPropertyName = "tenSach";
-            this.tenSach.HeaderText = "Tên Sách";
-            this.tenSach.MinimumWidth = 6;
-            this.tenSach.Name = "tenSach";
-            this.tenSach.Width = 125;
-            // 
-            // TongSachBanRa
-            // 
-            this.TongSachBanRa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TongSachBanRa.DataPropertyName = "TongSachBanRa";
-            this.TongSachBanRa.HeaderText = "Tổng số Sách bán ra";
-            this.TongSachBanRa.MinimumWidth = 6;
-            this.TongSachBanRa.Name = "TongSachBanRa";
-            // 
-            // TongSachNhapVao
-            // 
-            this.TongSachNhapVao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TongSachNhapVao.DataPropertyName = "TongSachNhapVao";
-            this.TongSachNhapVao.HeaderText = "Tổng số Sách nhập vào";
-            this.TongSachNhapVao.MinimumWidth = 6;
-            this.TongSachNhapVao.Name = "TongSachNhapVao";
-            // 
-            // TongDoanhThu
-            // 
-            this.TongDoanhThu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TongDoanhThu.DataPropertyName = "DoanhThuSach";
-            this.TongDoanhThu.HeaderText = "Doanh Thu";
-            this.TongDoanhThu.MinimumWidth = 6;
-            this.TongDoanhThu.Name = "TongDoanhThu";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -168,6 +128,46 @@
             this.label4.Size = new System.Drawing.Size(36, 16);
             this.label4.TabIndex = 8;
             this.label4.Text = "VND";
+            // 
+            // maSach
+            // 
+            this.maSach.DataPropertyName = "maSach";
+            this.maSach.HeaderText = "Mã Sách";
+            this.maSach.MinimumWidth = 6;
+            this.maSach.Name = "maSach";
+            this.maSach.Width = 125;
+            // 
+            // tenSach
+            // 
+            this.tenSach.DataPropertyName = "tenSach";
+            this.tenSach.HeaderText = "Tên Sách";
+            this.tenSach.MinimumWidth = 6;
+            this.tenSach.Name = "tenSach";
+            this.tenSach.Width = 125;
+            // 
+            // TongSachBanRa
+            // 
+            this.TongSachBanRa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TongSachBanRa.DataPropertyName = "TongSachBanRa";
+            this.TongSachBanRa.HeaderText = "Tổng số sách bán ra";
+            this.TongSachBanRa.MinimumWidth = 6;
+            this.TongSachBanRa.Name = "TongSachBanRa";
+            // 
+            // TongSachNhapVao
+            // 
+            this.TongSachNhapVao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TongSachNhapVao.DataPropertyName = "TongSachNhapVao";
+            this.TongSachNhapVao.HeaderText = "Tổng số sách nhập vào";
+            this.TongSachNhapVao.MinimumWidth = 6;
+            this.TongSachNhapVao.Name = "TongSachNhapVao";
+            // 
+            // TongDoanhThu
+            // 
+            this.TongDoanhThu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TongDoanhThu.DataPropertyName = "DoanhThuSach";
+            this.TongDoanhThu.HeaderText = "Doanh Thu";
+            this.TongDoanhThu.MinimumWidth = 6;
+            this.TongDoanhThu.Name = "TongDoanhThu";
             // 
             // frmThongKe
             // 
@@ -200,13 +200,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtDoanhThu;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn maSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongSachBanRa;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongSachNhapVao;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongDoanhThu;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDoanhThu;
-        private System.Windows.Forms.Label label4;
     }
 }

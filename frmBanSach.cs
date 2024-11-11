@@ -16,6 +16,7 @@ namespace QuanLyMuaBanSach
         MyDB myDB = new MyDB();
         private string maNV;
         private string maHD;
+        private bool cosan;
         public frmBanSach(string maNV)
         {
             InitializeComponent();
@@ -73,23 +74,47 @@ namespace QuanLyMuaBanSach
             string maKH = cboKH.SelectedValue.ToString();
             try
             {
-                myDB.openConection();
-                SqlCommand cmd = new SqlCommand("proc_themHoaDon", myDB.getConnection);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@ngayLap", SqlDbType.Date) { Value = DateTime.Now });
-                cmd.Parameters.Add(new SqlParameter("@maKH", SqlDbType.NVarChar, 10) { Value = maKH });
-                cmd.Parameters.Add(new SqlParameter("@maNV", SqlDbType.NVarChar, 10) { Value = maNV });
-
-                SqlParameter soHDParam = new SqlParameter("@soHD", SqlDbType.NVarChar, 10)
+                if (!cosan)
                 {
-                    Direction = ParameterDirection.Output
-                };
-                cmd.Parameters.Add(soHDParam);
+                    myDB.openConection();
+                    SqlCommand cmd = new SqlCommand("proc_themHoaDonVoiMaKH", myDB.getConnection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@ngayLap", SqlDbType.Date) { Value = DateTime.Now });
+                    cmd.Parameters.Add(new SqlParameter("@maKH", SqlDbType.NVarChar, 10) { Value = maKH });
+                    cmd.Parameters.Add(new SqlParameter("@maNV", SqlDbType.NVarChar, 10) { Value = maNV });
+
+                    SqlParameter soHDParam = new SqlParameter("@soHD", SqlDbType.NVarChar, 10)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd.Parameters.Add(soHDParam);
 
 
-                if (cmd.ExecuteNonQuery() > 0)
-                    MessageBox.Show("Thêm Phiếu nhập thành công");
-                maHD = soHDParam.Value.ToString();
+                    if (cmd.ExecuteNonQuery() > 0)
+                        MessageBox.Show("Thêm Phiếu nhập thành công");
+                    maHD = soHDParam.Value.ToString();
+                }
+                else
+                {
+                    myDB.openConection();
+                    SqlCommand cmd = new SqlCommand("proc_themHoaDon", myDB.getConnection);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@ngayLap", SqlDbType.Date) { Value = DateTime.Now });
+                    cmd.Parameters.Add(new SqlParameter("@maKH", SqlDbType.NVarChar, 10) { Value = maKH });
+                    cmd.Parameters.Add(new SqlParameter("@maNV", SqlDbType.NVarChar, 10) { Value = maNV });
+
+                    SqlParameter soHDParam = new SqlParameter("@soHD", SqlDbType.NVarChar, 10)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+                    cmd.Parameters.Add(soHDParam);
+
+
+                    if (cmd.ExecuteNonQuery() > 0)
+                        MessageBox.Show("Thêm Phiếu nhập thành công");
+                    maHD = soHDParam.Value.ToString();
+                }
+                
                 label1.Text = "Nhập sách: " + maHD;
 
             }
@@ -158,6 +183,12 @@ namespace QuanLyMuaBanSach
 
             Form thanhtoan = new frmThanhToan(parsedInt, maHD);
             thanhtoan.ShowDialog();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            panelKH.Visible = true;
+            cosan = checkBox1.Checked;
         }
     }
 }
