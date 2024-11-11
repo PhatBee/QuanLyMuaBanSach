@@ -30,6 +30,8 @@
         {
             this.lblThongTinKhachHang = new System.Windows.Forms.Label();
             this.dataKhachHang = new System.Windows.Forms.DataGridView();
+            this.maKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblSDT = new System.Windows.Forms.Label();
             this.lblMaKhachHang = new System.Windows.Forms.Label();
@@ -64,6 +66,9 @@
             this.dataKhachHang.AllowUserToDeleteRows = false;
             this.dataKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maKH,
+            this.tenKH});
             this.dataKhachHang.Location = new System.Drawing.Point(8, 49);
             this.dataKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.dataKhachHang.Name = "dataKhachHang";
@@ -72,7 +77,21 @@
             this.dataKhachHang.RowTemplate.Height = 28;
             this.dataKhachHang.Size = new System.Drawing.Size(766, 255);
             this.dataKhachHang.TabIndex = 1;
-            this.dataKhachHang.DoubleClick += new System.EventHandler(this.dataKhachHang_DoubleClick);
+            this.dataKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataKhachHang_CellClick_1);
+            // 
+            // maKH
+            // 
+            this.maKH.DataPropertyName = "maKH";
+            this.maKH.HeaderText = "Mã Khách Hàng";
+            this.maKH.Name = "maKH";
+            this.maKH.ReadOnly = true;
+            // 
+            // tenKH
+            // 
+            this.tenKH.DataPropertyName = "tenKH";
+            this.tenKH.HeaderText = "Tên Khách Hàng";
+            this.tenKH.Name = "tenKH";
+            this.tenKH.ReadOnly = true;
             // 
             // panel1
             // 
@@ -254,5 +273,7 @@
         private System.Windows.Forms.TextBox txtBoxTimKiem;
         private System.Windows.Forms.Label lblTimKiem;
         private System.Windows.Forms.Button btn_TimKiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenKH;
     }
 }

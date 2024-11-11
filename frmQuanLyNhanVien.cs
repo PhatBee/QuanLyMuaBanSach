@@ -24,11 +24,6 @@ namespace QuanLyMuaBanSach
             InitializeComponent();
         }
 
-        private void btnXoaNV_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnThemNV_Click(object sender, EventArgs e)
         {
             try
@@ -157,7 +152,26 @@ namespace QuanLyMuaBanSach
             return dt;
         }
 
-        private void dataNV_DoubleClick(object sender, EventArgs e)
+        private void btnXacNhanNV_Click(object sender, EventArgs e)
+        {
+            string tenNV = txtBoxTimKiem.Text;
+            dataNV.DataSource = timKiemNhanVien(tenNV);
+        }
+
+        private DataTable timKiemNhanVien(string text)
+        {
+            mydb.openConection();
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand("proc_TimKiemNhanVienTheoTen", mydb.getConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@tenNV",text);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(dt);
+            mydb.closeConection();
+            return dt;
+        }
+
+        private void dataNV_CellClick(object sender, DataGridViewCellEventArgs e)
         { // MaNV, TenNV, GioiTinh, NgaySinh, SDT, DiaChi
             try
             {
@@ -188,24 +202,24 @@ namespace QuanLyMuaBanSach
 
         }
 
-        private void btnXacNhanNV_Click(object sender, EventArgs e)
+        private void btnVoHieuNV_Click(object sender, EventArgs e)
         {
-            string tenNV = txtBoxTimKiem.Text;
-            dataNV.DataSource = timKiemNhanVien(tenNV);
-        }
+            try
+            {
+                string manv = dataNV.CurrentRow.Cells[0].Value.ToString();
+                mydb.openConection();
+                sqlCommand = new SqlCommand("proc_NgungHoatDongNhanVien", mydb.getConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
 
-        private DataTable timKiemNhanVien(string text)
-        {
-            mydb.openConection();
-            DataTable dt = new DataTable();
-            SqlCommand cmd = new SqlCommand("proc_TimKiemNhanVienTheoTen", mydb.getConnection);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@tenNV",text);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            adapter.Fill(dt);
-            mydb.closeConection();
-            return dt;
-        }
+                sqlCommand.Parameters.AddWithValue("@maNV", manv);
+                sqlCommand.ExecuteNonQuery();
 
+                MessageBox.Show("Ngừng hoạt động nhân viên thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

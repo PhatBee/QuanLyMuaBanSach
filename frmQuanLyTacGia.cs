@@ -76,17 +76,7 @@ namespace QuanLyMuaBanSach
 
         private void dataTacGia_DoubleClick(object sender, EventArgs e)
         {
-            // MaTG, TenTG, SDT
-            try
-            {
-                txtBoxMaTG.Text = dataTacGia.CurrentRow.Cells[0].Value.ToString();
-                txtBoxTenTG.Text = dataTacGia.CurrentRow.Cells[1].Value.ToString();
-                txtBoxSDT.Text = dataTacGia.CurrentRow.Cells[2].Value.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -173,6 +163,22 @@ namespace QuanLyMuaBanSach
             adapter.Fill(dt);
             mydb.closeConection();
             return dt;
+        }
+
+        private void dataTacGia_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // MaTG, TenTG, SDT
+            try
+            {
+                txtBoxMaTG.Text = dataTacGia.CurrentRow.Cells[0].Value.ToString();
+                txtBoxTenTG.Text = dataTacGia.CurrentRow.Cells[1].Value.ToString();
+                txtBoxSDT.Text = dataTacGia.CurrentRow.Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

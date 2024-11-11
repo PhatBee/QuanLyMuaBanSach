@@ -43,20 +43,6 @@ namespace QuanLyMuaBanSach
             return dt;
         }
 
-        private void dataKhachHang_DoubleClick(object sender, EventArgs e)
-        {
-            //MaKH, tenKH, sdt
-            try
-            {
-                txtBoxMaKhanhHang.Text = dataKhachHang.CurrentRow.Cells[0].Value.ToString();
-                txtBoxTenKhachHang.Text = dataKhachHang.CurrentRow.Cells[1].Value.ToString();
-                txtBoxSDT.Text = dataKhachHang.CurrentRow.Cells[2].Value.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             try
@@ -170,6 +156,21 @@ namespace QuanLyMuaBanSach
             adapter.Fill(dt);
             mydb.closeConection();
             return dt;
+        }
+
+        private void dataKhachHang_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            //MaKH, tenKH, sdt
+            try
+            {
+                txtBoxMaKhanhHang.Text = dataKhachHang.CurrentRow.Cells[0].Value.ToString();
+                txtBoxTenKhachHang.Text = dataKhachHang.CurrentRow.Cells[1].Value.ToString();
+                txtBoxSDT.Text = dataKhachHang.CurrentRow.Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 

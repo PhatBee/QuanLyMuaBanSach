@@ -30,6 +30,8 @@
         {
             this.lblThongTinTG = new System.Windows.Forms.Label();
             this.dataTacGia = new System.Windows.Forms.DataGridView();
+            this.maTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenTG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSDT = new System.Windows.Forms.Label();
             this.lblTenTG = new System.Windows.Forms.Label();
             this.txtBoxSDT = new System.Windows.Forms.TextBox();
@@ -64,15 +66,32 @@
             this.dataTacGia.AllowUserToDeleteRows = false;
             this.dataTacGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataTacGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTacGia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maTG,
+            this.tenTG});
             this.dataTacGia.Location = new System.Drawing.Point(9, 37);
-            this.dataTacGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataTacGia.Margin = new System.Windows.Forms.Padding(2);
             this.dataTacGia.Name = "dataTacGia";
             this.dataTacGia.ReadOnly = true;
             this.dataTacGia.RowHeadersWidth = 62;
             this.dataTacGia.RowTemplate.Height = 28;
             this.dataTacGia.Size = new System.Drawing.Size(663, 276);
             this.dataTacGia.TabIndex = 1;
-            this.dataTacGia.DoubleClick += new System.EventHandler(this.dataTacGia_DoubleClick);
+            this.dataTacGia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTacGia_CellClick);
+            // 
+            // maTG
+            // 
+            this.maTG.DataPropertyName = "maTG";
+            this.maTG.HeaderText = "Mã Tác Giả";
+            this.maTG.Name = "maTG";
+            this.maTG.ReadOnly = true;
+            // 
+            // tenTG
+            // 
+            this.tenTG.DataPropertyName = "tenTG";
+            this.tenTG.HeaderText = "Tên Tác Giả";
+            this.tenTG.Name = "tenTG";
+            this.tenTG.ReadOnly = true;
             // 
             // lblSDT
             // 
@@ -99,15 +118,15 @@
             // txtBoxSDT
             // 
             this.txtBoxSDT.Location = new System.Drawing.Point(285, 72);
-            this.txtBoxSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxSDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxSDT.Name = "txtBoxSDT";
             this.txtBoxSDT.Size = new System.Drawing.Size(200, 20);
             this.txtBoxSDT.TabIndex = 8;
             // 
             // txtBoxTenTG
             // 
-            this.txtBoxTenTG.Location = new System.Drawing.Point(292, 41);
-            this.txtBoxTenTG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxTenTG.Location = new System.Drawing.Point(285, 39);
+            this.txtBoxTenTG.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxTenTG.Name = "txtBoxTenTG";
             this.txtBoxTenTG.Size = new System.Drawing.Size(200, 20);
             this.txtBoxTenTG.TabIndex = 10;
@@ -116,7 +135,7 @@
             // 
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Location = new System.Drawing.Point(418, 109);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(64, 28);
             this.btnXoa.TabIndex = 5;
@@ -128,7 +147,7 @@
             // 
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Location = new System.Drawing.Point(304, 109);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(64, 28);
             this.btnSua.TabIndex = 6;
@@ -140,7 +159,7 @@
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Location = new System.Drawing.Point(201, 109);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(64, 28);
             this.btnThem.TabIndex = 7;
@@ -160,7 +179,7 @@
             this.panel1.Controls.Add(this.txtBoxSDT);
             this.panel1.Controls.Add(this.txtBoxTenTG);
             this.panel1.Location = new System.Drawing.Point(9, 317);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(663, 151);
             this.panel1.TabIndex = 14;
@@ -180,7 +199,7 @@
             // 
             this.txtBoxMaTG.Enabled = false;
             this.txtBoxMaTG.Location = new System.Drawing.Point(284, 9);
-            this.txtBoxMaTG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxMaTG.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxMaTG.Name = "txtBoxMaTG";
             this.txtBoxMaTG.Size = new System.Drawing.Size(200, 20);
             this.txtBoxMaTG.TabIndex = 14;
@@ -188,7 +207,7 @@
             // txtBoxTimKiem
             // 
             this.txtBoxTimKiem.Location = new System.Drawing.Point(320, 14);
-            this.txtBoxTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBoxTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxTimKiem.Name = "txtBoxTimKiem";
             this.txtBoxTimKiem.Size = new System.Drawing.Size(247, 20);
             this.txtBoxTimKiem.TabIndex = 16;
@@ -207,7 +226,7 @@
             // btn_TimKiem
             // 
             this.btn_TimKiem.Location = new System.Drawing.Point(571, 15);
-            this.btn_TimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_TimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btn_TimKiem.Name = "btn_TimKiem";
             this.btn_TimKiem.Size = new System.Drawing.Size(56, 19);
             this.btn_TimKiem.TabIndex = 17;
@@ -226,7 +245,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataTacGia);
             this.Controls.Add(this.lblThongTinTG);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmQuanLyTacGia";
             this.Text = "frmQuanLyTacGia";
             this.Load += new System.EventHandler(this.frmQuanLyTacGia_Load);
@@ -255,5 +274,7 @@
         private System.Windows.Forms.TextBox txtBoxTimKiem;
         private System.Windows.Forms.Label lblTimKiem;
         private System.Windows.Forms.Button btn_TimKiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maTG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenTG;
     }
 }
