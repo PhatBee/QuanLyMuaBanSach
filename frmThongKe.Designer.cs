@@ -42,6 +42,10 @@
             this.TongSachBanRa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongSachNhapVao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongDoanhThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoiNhuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtLoiNhuan = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,7 +99,8 @@
             this.tenSach,
             this.TongSachBanRa,
             this.TongSachNhapVao,
-            this.TongDoanhThu});
+            this.TongDoanhThu,
+            this.LoiNhuan});
             this.dataGridView1.Location = new System.Drawing.Point(79, 135);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -106,7 +111,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(545, 458);
+            this.label3.Location = new System.Drawing.Point(545, 454);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 6;
@@ -148,7 +153,7 @@
             // TongSachBanRa
             // 
             this.TongSachBanRa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TongSachBanRa.DataPropertyName = "TongSachBanRa";
+            this.TongSachBanRa.DataPropertyName = "tongSoLuongBan";
             this.TongSachBanRa.HeaderText = "Tổng số sách bán ra";
             this.TongSachBanRa.MinimumWidth = 6;
             this.TongSachBanRa.Name = "TongSachBanRa";
@@ -156,7 +161,7 @@
             // TongSachNhapVao
             // 
             this.TongSachNhapVao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TongSachNhapVao.DataPropertyName = "TongSachNhapVao";
+            this.TongSachNhapVao.DataPropertyName = "tongSoLuongNhap";
             this.TongSachNhapVao.HeaderText = "Tổng số sách nhập vào";
             this.TongSachNhapVao.MinimumWidth = 6;
             this.TongSachNhapVao.Name = "TongSachNhapVao";
@@ -164,16 +169,53 @@
             // TongDoanhThu
             // 
             this.TongDoanhThu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TongDoanhThu.DataPropertyName = "DoanhThuSach";
+            this.TongDoanhThu.DataPropertyName = "DoanhThu";
             this.TongDoanhThu.HeaderText = "Doanh Thu";
             this.TongDoanhThu.MinimumWidth = 6;
             this.TongDoanhThu.Name = "TongDoanhThu";
+            // 
+            // LoiNhuan
+            // 
+            this.LoiNhuan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.LoiNhuan.DataPropertyName = "LoiNhuan";
+            this.LoiNhuan.HeaderText = "Lợi nhuận";
+            this.LoiNhuan.MinimumWidth = 6;
+            this.LoiNhuan.Name = "LoiNhuan";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(861, 495);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(36, 16);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "VND";
+            // 
+            // txtLoiNhuan
+            // 
+            this.txtLoiNhuan.Location = new System.Drawing.Point(666, 492);
+            this.txtLoiNhuan.Name = "txtLoiNhuan";
+            this.txtLoiNhuan.ReadOnly = true;
+            this.txtLoiNhuan.Size = new System.Drawing.Size(189, 22);
+            this.txtLoiNhuan.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(545, 495);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 16);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Tổng lợi nhuận";
             // 
             // frmThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 619);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtLoiNhuan);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtDoanhThu);
             this.Controls.Add(this.label3);
@@ -208,5 +250,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TongSachBanRa;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongSachNhapVao;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongDoanhThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LoiNhuan;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtLoiNhuan;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -32,8 +32,10 @@ namespace QuanLyMuaBanSach
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
 
-                txtDoanhThu.Text = dataTable.Rows[0]["DoanhThuTong"].ToString();
-                dataTable.Columns.Remove("DoanhThuTong");
+                txtDoanhThu.Text = dataTable.Rows[0]["TongDoanhThu"].ToString();
+                txtLoiNhuan.Text = dataTable.Rows[0]["TongLoiNhuan"].ToString();
+                dataTable.Columns.Remove("TongDoanhThu");
+                dataTable.Columns.Remove("TongLoiNhuan");
 
                 dataGridView1.DataSource = dataTable;
             }

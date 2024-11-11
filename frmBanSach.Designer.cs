@@ -158,7 +158,6 @@
             this.numSoLuongNhap.Name = "numSoLuongNhap";
             this.numSoLuongNhap.Size = new System.Drawing.Size(83, 24);
             this.numSoLuongNhap.TabIndex = 7;
-            this.numSoLuongNhap.ValueChanged += new System.EventHandler(this.numSoLuongNhap_ValueChanged);
             // 
             // btnThem
             // 
