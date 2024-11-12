@@ -30,6 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataSach = new System.Windows.Forms.DataGridView();
+            this.maSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.doTuoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenTL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listSachBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLSachDataSet = new QuanLyMuaBanSach.QLSachDataSet();
             this.list_SachTableAdapter = new QuanLyMuaBanSach.QLSachDataSetTableAdapters.list_SachTableAdapter();
@@ -72,13 +79,63 @@
             // 
             this.dataSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maSach,
+            this.tenSach,
+            this.soLuongTon,
+            this.doTuoi,
+            this.tenTL,
+            this.moTa,
+            this.tenNXB});
             this.dataSach.Location = new System.Drawing.Point(11, 54);
             this.dataSach.Name = "dataSach";
             this.dataSach.RowHeadersWidth = 51;
             this.dataSach.RowTemplate.Height = 24;
             this.dataSach.Size = new System.Drawing.Size(1061, 273);
             this.dataSach.TabIndex = 0;
-            this.dataSach.DoubleClick += new System.EventHandler(this.dataSach_DoubleClick);
+            this.dataSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataSach_CellClick);
+            // 
+            // maSach
+            // 
+            this.maSach.DataPropertyName = "maSach";
+            this.maSach.HeaderText = "Mã Sách";
+            this.maSach.Name = "maSach";
+            // 
+            // tenSach
+            // 
+            this.tenSach.DataPropertyName = "tenSach";
+            this.tenSach.HeaderText = "Tên Sách";
+            this.tenSach.Name = "tenSach";
+            // 
+            // soLuongTon
+            // 
+            this.soLuongTon.DataPropertyName = "soLuongTon";
+            this.soLuongTon.HeaderText = "Số Lượng Tồn";
+            this.soLuongTon.Name = "soLuongTon";
+            // 
+            // doTuoi
+            // 
+            this.doTuoi.DataPropertyName = "doTuoi";
+            this.doTuoi.HeaderText = "Độ Tuổi";
+            this.doTuoi.Name = "doTuoi";
+            // 
+            // tenTL
+            // 
+            this.tenTL.DataPropertyName = "tenTL";
+            this.tenTL.HeaderText = "Tên Thể Loại";
+            this.tenTL.Name = "tenTL";
+            // 
+            // moTa
+            // 
+            this.moTa.DataPropertyName = "moTa";
+            this.moTa.HeaderText = "Mô Tả";
+            this.moTa.Name = "moTa";
+            // 
+            // tenNXB
+            // 
+            this.tenNXB.DataPropertyName = "tenNXB";
+            this.tenNXB.HeaderText = "Tên NXB";
+            this.tenNXB.Name = "tenNXB";
             // 
             // listSachBindingSource
             // 
@@ -443,5 +500,12 @@
         private System.Windows.Forms.Label lbl_timKiem;
         private System.Windows.Forms.Button btn_TimKiem;
         private System.Windows.Forms.TextBox txtBoxTimKiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongTon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn doTuoi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenTL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn moTa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenNXB;
     }
 }
