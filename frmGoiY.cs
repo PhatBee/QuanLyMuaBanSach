@@ -26,7 +26,7 @@ namespace QuanLyMuaBanSach
         private void frmGoiY_Load(object sender, EventArgs e)
         {
             myDB.openConection();
-            SqlCommand cmd = new SqlCommand("select * from dbo.GetBookSuggestionsForCustomer(@maKH)", myDB.getConnection);
+            SqlCommand cmd = new SqlCommand("select * from dbo.func_GoiY(@maKH)", myDB.getConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             cmd.Parameters.AddWithValue("@maKH", maKH);
             DataTable dataTable = new DataTable();
