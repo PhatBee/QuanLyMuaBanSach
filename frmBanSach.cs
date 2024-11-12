@@ -15,6 +15,7 @@ namespace QuanLyMuaBanSach
     {
        
         private string maNV;
+        private string maKH;
         private string maHD;
         private bool cosan;
         private string sqlcon;
@@ -76,7 +77,7 @@ namespace QuanLyMuaBanSach
 
         private void btnThemHD_Click(object sender, EventArgs e)
         {
-            string maKH = cboKH.SelectedValue.ToString();
+            maKH = cboKH.SelectedValue.ToString();
             try
             {
                 if (!cosan)
@@ -194,6 +195,13 @@ namespace QuanLyMuaBanSach
         {
             panelKH.Visible = true;
             cosan = checkBox1.Checked;
+        }
+
+        private void btnGoiY_Click(object sender, EventArgs e)
+        {
+            maKH = cboKH.SelectedValue.ToString();
+            Form frmGoiY = new frmGoiY(sqlcon, maKH);
+            frmGoiY.ShowDialog();
         }
     }
 }

@@ -23,7 +23,7 @@ namespace QuanLyMuaBanSach
             this.maNV = maNV;
             this.sqlcon = sqlcon;
             this.myDB = new MyDB(sqlcon);
-            moChucNang();
+            //moChucNang();
             
         }
 
@@ -60,6 +60,7 @@ namespace QuanLyMuaBanSach
                 panelHoaDon.Visible = false;
             }
             label1.Text = tenNV.ToString();
+            myDB.closeConection();
 
 
         }
