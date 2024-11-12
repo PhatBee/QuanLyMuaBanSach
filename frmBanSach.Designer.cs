@@ -1,4 +1,6 @@
-﻿namespace QuanLyMuaBanSach
+﻿using System;
+
+namespace QuanLyMuaBanSach
 {
     partial class frmBanSach
     {
@@ -280,6 +282,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void numSoLuongNhap_ValueChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

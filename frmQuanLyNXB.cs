@@ -119,6 +119,7 @@ namespace QuanLyMuaBanSach
 
                 mydb.openConection();
 
+
                 sqlCommand = new SqlCommand("proc_XoaNXB", mydb.getConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
@@ -145,13 +146,14 @@ namespace QuanLyMuaBanSach
         }
 
         private void dataNXB_CellClick(object sender, DataGridViewCellEventArgs e)
-        { // MaNXB, TenNXB, SDT, DiaChi
+        { 
+            // MaNXB, TenNXB, DiaChi, SDT
             try
             {
                 txtBoxMaNXB.Text = dataNXB.CurrentRow.Cells[0].Value.ToString();
                 txtBoxTenNXB.Text = dataNXB.CurrentRow.Cells[1].Value.ToString();
-                txtBoxSDT.Text = dataNXB.CurrentRow.Cells[2].Value.ToString();
-                txtBoxNXB.Text = dataNXB.CurrentRow.Cells[3].Value.ToString();
+                txtBoxSDT.Text = dataNXB.CurrentRow.Cells[3].Value.ToString();
+                txtBoxNXB.Text = dataNXB.CurrentRow.Cells[2].Value.ToString();
             }
             catch (Exception ex)
             {

@@ -125,7 +125,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(4, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 22);
+            this.label1.Size = new System.Drawing.Size(144, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin phiếu nhập";
             // 
@@ -148,7 +148,7 @@
             // 
             this.txtBoxTimKiem.Location = new System.Drawing.Point(454, 48);
             this.txtBoxTimKiem.Name = "txtBoxTimKiem";
-            this.txtBoxTimKiem.Size = new System.Drawing.Size(540, 28);
+            this.txtBoxTimKiem.Size = new System.Drawing.Size(540, 24);
             this.txtBoxTimKiem.TabIndex = 9;
             // 
             // lblTimKiem
@@ -156,13 +156,13 @@
             this.lblTimKiem.AutoSize = true;
             this.lblTimKiem.Location = new System.Drawing.Point(347, 51);
             this.lblTimKiem.Name = "lblTimKiem";
-            this.lblTimKiem.Size = new System.Drawing.Size(82, 22);
+            this.lblTimKiem.Size = new System.Drawing.Size(69, 18);
             this.lblTimKiem.TabIndex = 8;
             this.lblTimKiem.Text = "Tìm kiếm";
             // 
             // frmQuanLyPhieuNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 619);
             this.Controls.Add(this.txtBoxTimKiem);
