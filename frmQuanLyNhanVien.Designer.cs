@@ -444,6 +444,7 @@
             this.btnKichHoatNV.TabIndex = 6;
             this.btnKichHoatNV.Text = "Kích hoạt";
             this.btnKichHoatNV.UseVisualStyleBackColor = true;
+            this.btnKichHoatNV.Click += new System.EventHandler(this.btnKichHoatNV_Click);
             // 
             // frmQuanLyNhanVien
             // 
