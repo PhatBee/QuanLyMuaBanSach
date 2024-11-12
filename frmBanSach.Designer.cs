@@ -52,8 +52,9 @@ namespace QuanLyMuaBanSach
             this.panelKH = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtTenKH = new System.Windows.Forms.TextBox();
+            this.btnGoiY = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuongNhap)).BeginInit();
             this.panelKH.SuspendLayout();
@@ -115,24 +116,24 @@ namespace QuanLyMuaBanSach
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 18);
+            this.label1.Size = new System.Drawing.Size(85, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bán sách";
             // 
             // cboKH
             // 
             this.cboKH.FormattingEnabled = true;
-            this.cboKH.Location = new System.Drawing.Point(371, 6);
+            this.cboKH.Location = new System.Drawing.Point(293, 6);
             this.cboKH.Name = "cboKH";
-            this.cboKH.Size = new System.Drawing.Size(331, 25);
+            this.cboKH.Size = new System.Drawing.Size(331, 30);
             this.cboKH.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(248, 9);
+            this.label2.Location = new System.Drawing.Point(181, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 18);
+            this.label2.Size = new System.Drawing.Size(106, 22);
             this.label2.TabIndex = 3;
             this.label2.Text = "Khách hàng";
             // 
@@ -141,7 +142,7 @@ namespace QuanLyMuaBanSach
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 495);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 18);
+            this.label3.Size = new System.Drawing.Size(90, 22);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tên sách:";
             // 
@@ -150,7 +151,7 @@ namespace QuanLyMuaBanSach
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(600, 490);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 18);
+            this.label4.Size = new System.Drawing.Size(86, 22);
             this.label4.TabIndex = 6;
             this.label4.Text = "Số lượng:";
             // 
@@ -158,7 +159,7 @@ namespace QuanLyMuaBanSach
             // 
             this.numSoLuongNhap.Location = new System.Drawing.Point(738, 484);
             this.numSoLuongNhap.Name = "numSoLuongNhap";
-            this.numSoLuongNhap.Size = new System.Drawing.Size(83, 24);
+            this.numSoLuongNhap.Size = new System.Drawing.Size(83, 28);
             this.numSoLuongNhap.TabIndex = 7;
             // 
             // btnThem
@@ -187,7 +188,7 @@ namespace QuanLyMuaBanSach
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(600, 546);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 18);
+            this.label6.Size = new System.Drawing.Size(91, 22);
             this.label6.TabIndex = 12;
             this.label6.Text = "Tổng tiền:";
             // 
@@ -196,14 +197,14 @@ namespace QuanLyMuaBanSach
             this.lblTongTien.AutoSize = true;
             this.lblTongTien.Location = new System.Drawing.Point(687, 546);
             this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(12, 18);
+            this.lblTongTien.Size = new System.Drawing.Size(15, 22);
             this.lblTongTien.TabIndex = 13;
             this.lblTongTien.Text = ".";
             // 
             // btnThemHD
             // 
             this.btnThemHD.AutoSize = true;
-            this.btnThemHD.Location = new System.Drawing.Point(756, 2);
+            this.btnThemHD.Location = new System.Drawing.Point(641, 2);
             this.btnThemHD.Name = "btnThemHD";
             this.btnThemHD.Size = new System.Drawing.Size(162, 36);
             this.btnThemHD.TabIndex = 14;
@@ -216,7 +217,7 @@ namespace QuanLyMuaBanSach
             this.cboSach.FormattingEnabled = true;
             this.cboSach.Location = new System.Drawing.Point(149, 487);
             this.cboSach.Name = "cboSach";
-            this.cboSach.Size = new System.Drawing.Size(231, 25);
+            this.cboSach.Size = new System.Drawing.Size(231, 30);
             this.cboSach.TabIndex = 15;
             // 
             // btnThanhToan
@@ -245,8 +246,8 @@ namespace QuanLyMuaBanSach
             // 
             this.panelKH.Controls.Add(this.label7);
             this.panelKH.Controls.Add(this.label5);
-            this.panelKH.Controls.Add(this.textBox2);
-            this.panelKH.Controls.Add(this.textBox1);
+            this.panelKH.Controls.Add(this.txtSDT);
+            this.panelKH.Controls.Add(this.txtTenKH);
             this.panelKH.Location = new System.Drawing.Point(252, 45);
             this.panelKH.Name = "panelKH";
             this.panelKH.Size = new System.Drawing.Size(683, 33);
@@ -271,25 +272,37 @@ namespace QuanLyMuaBanSach
             this.label5.TabIndex = 24;
             this.label5.Text = "Tên KH";
             // 
-            // textBox2
+            // txtSDT
             // 
-            this.textBox2.Location = new System.Drawing.Point(494, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 28);
-            this.textBox2.TabIndex = 23;
+            this.txtSDT.Location = new System.Drawing.Point(494, 2);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(180, 28);
+            this.txtSDT.TabIndex = 23;
             // 
-            // textBox1
+            // txtTenKH
             // 
-            this.textBox1.Location = new System.Drawing.Point(89, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 28);
-            this.textBox1.TabIndex = 22;
+            this.txtTenKH.Location = new System.Drawing.Point(89, 2);
+            this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.Size = new System.Drawing.Size(265, 28);
+            this.txtTenKH.TabIndex = 22;
+            // 
+            // btnGoiY
+            // 
+            this.btnGoiY.AutoSize = true;
+            this.btnGoiY.Location = new System.Drawing.Point(850, 2);
+            this.btnGoiY.Name = "btnGoiY";
+            this.btnGoiY.Size = new System.Drawing.Size(85, 36);
+            this.btnGoiY.TabIndex = 19;
+            this.btnGoiY.Text = "Gợi ý";
+            this.btnGoiY.UseVisualStyleBackColor = true;
+            this.btnGoiY.Click += new System.EventHandler(this.btnGoiY_Click);
             // 
             // frmBanSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 619);
+            this.ClientSize = new System.Drawing.Size(1000, 656);
+            this.Controls.Add(this.btnGoiY);
             this.Controls.Add(this.panelKH);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnThanhToan);
@@ -350,7 +363,8 @@ namespace QuanLyMuaBanSach
         private System.Windows.Forms.Panel panelKH;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.TextBox txtTenKH;
+        private System.Windows.Forms.Button btnGoiY;
     }
 }
