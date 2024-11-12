@@ -56,17 +56,27 @@ namespace QuanLyMuaBanSach
 
         public DataTable LayDanhSachNhanVien()
         {
-            DataTable dt = new DataTable();
-            mydb.openConection();
-            sqlCommand = new SqlCommand("proc_LayDanhSachNhanVien", mydb.getConnection);
-            sqlCommand.CommandType = CommandType.StoredProcedure;
-
-            using (SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand))
+            try
             {
-                adapter.Fill(dt);
+                DataTable dt = new DataTable();
+                mydb.openConection();
+                sqlCommand = new SqlCommand("proc_LayDanhSachNhanVien", mydb.getConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                using (SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand))
+                {
+                    adapter.Fill(dt);
+                }
+                mydb.closeConection();
+                return dt;
             }
-            mydb.closeConection();
-            return dt;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+                
+            
         }
 
         private void btnXacNhanNV_Click(object sender, EventArgs e)

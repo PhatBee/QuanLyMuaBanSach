@@ -96,7 +96,7 @@ namespace QuanLyMuaBanSach
 
 
                     if (cmd.ExecuteNonQuery() > 0)
-                        MessageBox.Show("Thêm Phiếu nhập thành công");
+                        MessageBox.Show("Thêm Hóa Đơn thành công");
                     maHD = soHDParam.Value.ToString();
                 }
                 else
@@ -116,11 +116,11 @@ namespace QuanLyMuaBanSach
 
 
                     if (cmd.ExecuteNonQuery() > 0)
-                        MessageBox.Show("Thêm Phiếu nhập thành công");
+                        MessageBox.Show("Thêm Hóa Đơn thành công");
                     maHD = soHDParam.Value.ToString();
                 }
                 
-                label1.Text = "Nhập sách: " + maHD;
+                label1.Text = "Hóa đơn: " + maHD;
 
             }
             catch (Exception ex)

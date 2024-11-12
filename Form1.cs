@@ -28,7 +28,7 @@ namespace QuanLyMuaBanSach
             MyDB mydb = new MyDB(sqlcon);
             mydb.openConection();
             DataTable dt = new DataTable();
-            SqlCommand command = new SqlCommand("proc_login", mydb.getConnection);
+            SqlCommand command = new SqlCommand("proc_KiemTraDangNhap", mydb.getConnection);
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@username", username);
             command.Parameters.AddWithValue("@password", password);
