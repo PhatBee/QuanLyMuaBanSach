@@ -29,6 +29,9 @@ namespace QuanLyMuaBanSach
             enableTextBox();
             txtbxUsernameMoi.Enabled = true;
             btnXacNhan.Enabled = true;
+            btnThemNV.Enabled = false;
+            btnSuaNV.Enabled = true;
+
         }
 
         private void btnSuaNV_Click(object sender, EventArgs e)
@@ -36,6 +39,8 @@ namespace QuanLyMuaBanSach
             enableTextBox();
             txtbxUsernameMoi.Enabled = false;
             btnXacNhan.Enabled = true;
+            btnThemNV.Enabled = true;
+            btnSuaNV.Enabled = false;
         }
 
         private void frmQuanLyNhanVien_Load(object sender, EventArgs e)
@@ -166,7 +171,7 @@ namespace QuanLyMuaBanSach
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            if (btnSuaNV.Enabled && !btnThemNV.Enabled)
+            if (!btnSuaNV.Enabled && btnThemNV.Enabled)
             {
                 try
                 {
@@ -217,7 +222,7 @@ namespace QuanLyMuaBanSach
                 }
 
                 frmQuanLyNhanVien_Load(sender, e);
-            } else if(btnThemNV.Enabled && !btnSuaNV.Enabled)
+            } else if(!btnThemNV.Enabled && btnSuaNV.Enabled)
             {
                 try
                 {
@@ -226,15 +231,15 @@ namespace QuanLyMuaBanSach
                     string gioiTinh = "";
                     if (rdobtnNam.Checked)
                     {
-                        gioiTinh = "male";
+                        gioiTinh = "Nam";
                     }
                     else if (rdobtnNu.Checked)
                     {
-                        gioiTinh = "female";
+                        gioiTinh = "Nữ";
                     }
                     else
                     {
-                        gioiTinh = "other";
+                        gioiTinh = "Khác";
                     }
 
                     DateTime ngaySinh = datipikrNgaySinh.Value;
@@ -276,7 +281,7 @@ namespace QuanLyMuaBanSach
             {
                 string manv = dataNV.CurrentRow.Cells[0].Value.ToString();
                 mydb.openConection();
-                sqlCommand = new SqlCommand("pro_KichHoatNhanVien", mydb.getConnection);
+                sqlCommand = new SqlCommand("pro000_KichHoatNhanVien", mydb.getConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 sqlCommand.Parameters.AddWithValue("@maNV", manv);
