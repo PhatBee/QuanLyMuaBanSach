@@ -1,6 +1,6 @@
 ﻿namespace QuanLyMuaBanSach
 {
-    partial class frmThongKe
+    partial class frmHoaDon
     {
         /// <summary>
         /// Required designer variable.
@@ -37,15 +37,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtDoanhThu = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.maSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongSachBanRa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongSachNhapVao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongDoanhThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoiNhuan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.txtLoiNhuan = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.soHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,12 +95,12 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maSach,
+            this.soHD,
+            this.tenKH,
             this.tenSach,
-            this.TongSachBanRa,
-            this.TongSachNhapVao,
-            this.TongDoanhThu,
-            this.LoiNhuan});
+            this.soLuongBan,
+            this.giaBan,
+            this.ngayBan});
             this.dataGridView1.Location = new System.Drawing.Point(79, 135);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -134,54 +134,6 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "VND";
             // 
-            // maSach
-            // 
-            this.maSach.DataPropertyName = "maSach";
-            this.maSach.HeaderText = "Mã Sách";
-            this.maSach.MinimumWidth = 6;
-            this.maSach.Name = "maSach";
-            this.maSach.Width = 125;
-            // 
-            // tenSach
-            // 
-            this.tenSach.DataPropertyName = "tenSach";
-            this.tenSach.HeaderText = "Tên Sách";
-            this.tenSach.MinimumWidth = 6;
-            this.tenSach.Name = "tenSach";
-            this.tenSach.Width = 125;
-            // 
-            // TongSachBanRa
-            // 
-            this.TongSachBanRa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TongSachBanRa.DataPropertyName = "tongSoLuongBan";
-            this.TongSachBanRa.HeaderText = "Tổng số sách bán ra";
-            this.TongSachBanRa.MinimumWidth = 6;
-            this.TongSachBanRa.Name = "TongSachBanRa";
-            // 
-            // TongSachNhapVao
-            // 
-            this.TongSachNhapVao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TongSachNhapVao.DataPropertyName = "tongSoLuongNhap";
-            this.TongSachNhapVao.HeaderText = "Tổng số sách nhập vào";
-            this.TongSachNhapVao.MinimumWidth = 6;
-            this.TongSachNhapVao.Name = "TongSachNhapVao";
-            // 
-            // TongDoanhThu
-            // 
-            this.TongDoanhThu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TongDoanhThu.DataPropertyName = "DoanhThu";
-            this.TongDoanhThu.HeaderText = "Doanh Thu";
-            this.TongDoanhThu.MinimumWidth = 6;
-            this.TongDoanhThu.Name = "TongDoanhThu";
-            // 
-            // LoiNhuan
-            // 
-            this.LoiNhuan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.LoiNhuan.DataPropertyName = "LoiNhuan";
-            this.LoiNhuan.HeaderText = "Lợi nhuận";
-            this.LoiNhuan.MinimumWidth = 6;
-            this.LoiNhuan.Name = "LoiNhuan";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -208,7 +160,55 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Tổng lợi nhuận";
             // 
-            // frmThongKe
+            // soHD
+            // 
+            this.soHD.DataPropertyName = "soHD";
+            this.soHD.HeaderText = "Mã hóa đơn";
+            this.soHD.MinimumWidth = 6;
+            this.soHD.Name = "soHD";
+            this.soHD.Width = 125;
+            // 
+            // tenKH
+            // 
+            this.tenKH.DataPropertyName = "tenKH";
+            this.tenKH.HeaderText = "Tên khách hàng";
+            this.tenKH.MinimumWidth = 6;
+            this.tenKH.Name = "tenKH";
+            this.tenKH.Width = 125;
+            // 
+            // tenSach
+            // 
+            this.tenSach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenSach.DataPropertyName = "tenSach";
+            this.tenSach.HeaderText = "Tên sách";
+            this.tenSach.MinimumWidth = 6;
+            this.tenSach.Name = "tenSach";
+            // 
+            // soLuongBan
+            // 
+            this.soLuongBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.soLuongBan.DataPropertyName = "soLuongBan";
+            this.soLuongBan.HeaderText = "Số lượng bán";
+            this.soLuongBan.MinimumWidth = 6;
+            this.soLuongBan.Name = "soLuongBan";
+            // 
+            // giaBan
+            // 
+            this.giaBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.giaBan.DataPropertyName = "giaBan";
+            this.giaBan.HeaderText = "Giá bán";
+            this.giaBan.MinimumWidth = 6;
+            this.giaBan.Name = "giaBan";
+            // 
+            // ngayBan
+            // 
+            this.ngayBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ngayBan.DataPropertyName = "ngayBan";
+            this.ngayBan.HeaderText = "Ngày bán";
+            this.ngayBan.MinimumWidth = 6;
+            this.ngayBan.Name = "ngayBan";
+            // 
+            // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -226,7 +226,7 @@
             this.Controls.Add(this.den);
             this.Controls.Add(this.tungay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmThongKe";
+            this.Name = "frmHoaDon";
             this.Text = "frmThongKe";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -245,14 +245,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDoanhThu;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TongSachBanRa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TongSachNhapVao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TongDoanhThu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LoiNhuan;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtLoiNhuan;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soHD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenSach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giaBan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayBan;
     }
 }

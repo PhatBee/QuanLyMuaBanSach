@@ -11,32 +11,25 @@ using System.Windows.Forms;
 
 namespace QuanLyMuaBanSach
 {
-    public partial class frmThongKe : Form
+    public partial class frmHoaDon : Form
     {
-        public frmThongKe()
+        public frmHoaDon()
         {
             InitializeComponent();
         }
         MyDB myDB = new MyDB();
-
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             DateTime dateA = tungay.Value;
             DateTime dateB = den.Value;
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.fn_ThongKeSachVaDoanhThuTong(@dateA, @dateB)", myDB.getConnection);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.func_ThongKeHoaDon(@dateA, @dateB)", myDB.getConnection);
                 cmd.Parameters.AddWithValue("@dateA", dateA);
                 cmd.Parameters.AddWithValue("@dateB", dateB);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable dataTable = new DataTable();
                 adapter.Fill(dataTable);
-
-                txtDoanhThu.Text = dataTable.Rows[0]["TongDoanhThu"].ToString();
-                txtLoiNhuan.Text = dataTable.Rows[0]["TongLoiNhuan"].ToString();
-                dataTable.Columns.Remove("TongDoanhThu");
-                dataTable.Columns.Remove("TongLoiNhuan");
-
                 dataGridView1.DataSource = dataTable;
             }
             catch (Exception ex)
@@ -48,6 +41,5 @@ namespace QuanLyMuaBanSach
                 myDB.closeConection();
             }
         }
-
     }
 }
