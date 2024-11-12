@@ -65,6 +65,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblTimKiem = new System.Windows.Forms.Label();
             this.txtBoxTimKiem = new System.Windows.Forms.TextBox();
+            this.btnXacNhan = new System.Windows.Forms.Button();
+            this.btnKichHoatNV = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -134,7 +136,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(13, 256);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 18);
+            this.label7.Size = new System.Drawing.Size(90, 22);
             this.label7.TabIndex = 4;
             this.label7.Text = "Ngày sinh";
             // 
@@ -143,7 +145,7 @@
             this.datipikrNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datipikrNgaySinh.Location = new System.Drawing.Point(155, 256);
             this.datipikrNgaySinh.Name = "datipikrNgaySinh";
-            this.datipikrNgaySinh.Size = new System.Drawing.Size(200, 24);
+            this.datipikrNgaySinh.Size = new System.Drawing.Size(200, 28);
             this.datipikrNgaySinh.TabIndex = 3;
             // 
             // panel3
@@ -162,7 +164,7 @@
             this.rdobtnKhac.AutoSize = true;
             this.rdobtnKhac.Location = new System.Drawing.Point(226, 49);
             this.rdobtnKhac.Name = "rdobtnKhac";
-            this.rdobtnKhac.Size = new System.Drawing.Size(60, 22);
+            this.rdobtnKhac.Size = new System.Drawing.Size(72, 26);
             this.rdobtnKhac.TabIndex = 2;
             this.rdobtnKhac.TabStop = true;
             this.rdobtnKhac.Text = "Khác";
@@ -173,7 +175,7 @@
             this.rdobtnNu.AutoSize = true;
             this.rdobtnNu.Location = new System.Drawing.Point(132, 49);
             this.rdobtnNu.Name = "rdobtnNu";
-            this.rdobtnNu.Size = new System.Drawing.Size(45, 22);
+            this.rdobtnNu.Size = new System.Drawing.Size(54, 26);
             this.rdobtnNu.TabIndex = 2;
             this.rdobtnNu.TabStop = true;
             this.rdobtnNu.Text = "Nữ";
@@ -184,7 +186,7 @@
             this.rdobtnNam.AutoSize = true;
             this.rdobtnNam.Location = new System.Drawing.Point(13, 49);
             this.rdobtnNam.Name = "rdobtnNam";
-            this.rdobtnNam.Size = new System.Drawing.Size(58, 22);
+            this.rdobtnNam.Size = new System.Drawing.Size(68, 26);
             this.rdobtnNam.TabIndex = 2;
             this.rdobtnNam.TabStop = true;
             this.rdobtnNam.Text = "Nam";
@@ -195,7 +197,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(128, 14);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 18);
+            this.label6.Size = new System.Drawing.Size(81, 22);
             this.label6.TabIndex = 1;
             this.label6.Text = "Giới tính:";
             // 
@@ -211,21 +213,21 @@
             // 
             this.txtbxUsernameMoi.Location = new System.Drawing.Point(156, 493);
             this.txtbxUsernameMoi.Name = "txtbxUsernameMoi";
-            this.txtbxUsernameMoi.Size = new System.Drawing.Size(208, 24);
+            this.txtbxUsernameMoi.Size = new System.Drawing.Size(208, 28);
             this.txtbxUsernameMoi.TabIndex = 1;
             // 
             // txtbxSDT
             // 
             this.txtbxSDT.Location = new System.Drawing.Point(155, 319);
             this.txtbxSDT.Name = "txtbxSDT";
-            this.txtbxSDT.Size = new System.Drawing.Size(208, 24);
+            this.txtbxSDT.Size = new System.Drawing.Size(208, 28);
             this.txtbxSDT.TabIndex = 1;
             // 
             // txtbxTenNV
             // 
             this.txtbxTenNV.Location = new System.Drawing.Point(155, 60);
             this.txtbxTenNV.Name = "txtbxTenNV";
-            this.txtbxTenNV.Size = new System.Drawing.Size(208, 24);
+            this.txtbxTenNV.Size = new System.Drawing.Size(208, 28);
             this.txtbxTenNV.TabIndex = 1;
             // 
             // txtbxMaNV
@@ -233,7 +235,7 @@
             this.txtbxMaNV.Enabled = false;
             this.txtbxMaNV.Location = new System.Drawing.Point(155, 11);
             this.txtbxMaNV.Name = "txtbxMaNV";
-            this.txtbxMaNV.Size = new System.Drawing.Size(208, 24);
+            this.txtbxMaNV.Size = new System.Drawing.Size(208, 28);
             this.txtbxMaNV.TabIndex = 1;
             // 
             // label8
@@ -241,7 +243,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(19, 412);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 18);
+            this.label8.Size = new System.Drawing.Size(70, 22);
             this.label8.TabIndex = 0;
             this.label8.Text = "Địa chỉ:";
             // 
@@ -250,7 +252,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(-3, 496);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 18);
+            this.label9.Size = new System.Drawing.Size(130, 22);
             this.label9.TabIndex = 0;
             this.label9.Text = "Username mới:";
             // 
@@ -259,7 +261,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(13, 322);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 18);
+            this.label5.Size = new System.Drawing.Size(120, 22);
             this.label5.TabIndex = 0;
             this.label5.Text = "Số điện thoại:";
             // 
@@ -268,7 +270,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(13, 63);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 18);
+            this.label4.Size = new System.Drawing.Size(130, 22);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tên nhân viên:";
             // 
@@ -277,7 +279,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 18);
+            this.label3.Size = new System.Drawing.Size(122, 22);
             this.label3.TabIndex = 0;
             this.label3.Text = "Mã nhân viên:";
             // 
@@ -329,6 +331,7 @@
             this.maNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.maNV.DataPropertyName = "maNV";
             this.maNV.HeaderText = "Mã NV";
+            this.maNV.MinimumWidth = 6;
             this.maNV.Name = "maNV";
             this.maNV.ReadOnly = true;
             // 
@@ -337,6 +340,7 @@
             this.tenNV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tenNV.DataPropertyName = "tenNV";
             this.tenNV.HeaderText = "Tên NV";
+            this.tenNV.MinimumWidth = 6;
             this.tenNV.Name = "tenNV";
             this.tenNV.ReadOnly = true;
             // 
@@ -345,6 +349,7 @@
             this.gioiTinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.gioiTinh.DataPropertyName = "gioiTinh";
             this.gioiTinh.HeaderText = "Giới tính";
+            this.gioiTinh.MinimumWidth = 6;
             this.gioiTinh.Name = "gioiTinh";
             this.gioiTinh.ReadOnly = true;
             // 
@@ -353,6 +358,7 @@
             this.ngaySinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ngaySinh.DataPropertyName = "ngaySinh";
             this.ngaySinh.HeaderText = "Ngày sinh";
+            this.ngaySinh.MinimumWidth = 6;
             this.ngaySinh.Name = "ngaySinh";
             this.ngaySinh.ReadOnly = true;
             // 
@@ -361,6 +367,7 @@
             this.SDT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.SDT.DataPropertyName = "SDT";
             this.SDT.HeaderText = "SDT";
+            this.SDT.MinimumWidth = 6;
             this.SDT.Name = "SDT";
             this.SDT.ReadOnly = true;
             // 
@@ -369,6 +376,7 @@
             this.diaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.diaChi.DataPropertyName = "diaChi";
             this.diaChi.HeaderText = "Địa chỉ";
+            this.diaChi.MinimumWidth = 6;
             this.diaChi.Name = "diaChi";
             this.diaChi.ReadOnly = true;
             // 
@@ -387,7 +395,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(108, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 18);
+            this.label1.Size = new System.Drawing.Size(169, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "Thông tin nhân viên";
             // 
@@ -396,7 +404,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(644, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 18);
+            this.label2.Size = new System.Drawing.Size(179, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "Danh sách nhân viên";
             // 
@@ -405,7 +413,7 @@
             this.lblTimKiem.AutoSize = true;
             this.lblTimKiem.Location = new System.Drawing.Point(484, 55);
             this.lblTimKiem.Name = "lblTimKiem";
-            this.lblTimKiem.Size = new System.Drawing.Size(69, 18);
+            this.lblTimKiem.Size = new System.Drawing.Size(82, 22);
             this.lblTimKiem.TabIndex = 6;
             this.lblTimKiem.Text = "Tìm kiếm";
             // 
@@ -413,14 +421,38 @@
             // 
             this.txtBoxTimKiem.Location = new System.Drawing.Point(559, 52);
             this.txtBoxTimKiem.Name = "txtBoxTimKiem";
-            this.txtBoxTimKiem.Size = new System.Drawing.Size(427, 24);
+            this.txtBoxTimKiem.Size = new System.Drawing.Size(427, 28);
             this.txtBoxTimKiem.TabIndex = 7;
+            // 
+            // btnXacNhan
+            // 
+            this.btnXacNhan.AutoSize = true;
+            this.btnXacNhan.Location = new System.Drawing.Point(423, 627);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(96, 36);
+            this.btnXacNhan.TabIndex = 6;
+            this.btnXacNhan.Text = "Xác nhận";
+            this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
+            // 
+            // btnKichHoatNV
+            // 
+            this.btnKichHoatNV.AutoSize = true;
+            this.btnKichHoatNV.Location = new System.Drawing.Point(525, 627);
+            this.btnKichHoatNV.Name = "btnKichHoatNV";
+            this.btnKichHoatNV.Size = new System.Drawing.Size(95, 36);
+            this.btnKichHoatNV.TabIndex = 6;
+            this.btnKichHoatNV.Text = "Kích hoạt";
+            this.btnKichHoatNV.UseVisualStyleBackColor = true;
+            this.btnKichHoatNV.Click += new System.EventHandler(this.btnKichHoatNV_Click);
             // 
             // frmQuanLyNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1113, 669);
+            this.Controls.Add(this.btnKichHoatNV);
+            this.Controls.Add(this.btnXacNhan);
             this.Controls.Add(this.txtBoxTimKiem);
             this.Controls.Add(this.lblTimKiem);
             this.Controls.Add(this.btnXacNhanNV);
@@ -484,5 +516,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
+        private System.Windows.Forms.Button btnXacNhan;
+        private System.Windows.Forms.Button btnKichHoatNV;
     }
 }
