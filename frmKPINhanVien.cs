@@ -13,10 +13,13 @@ namespace QuanLyMuaBanSach
 {
     public partial class frmKPINhanVien : Form
     {
-        MyDB mydb = new MyDB();
-        public frmKPINhanVien()
+        MyDB mydb;
+        string sqlcon;
+        public frmKPINhanVien(string sqlcon)
         {
             InitializeComponent();
+            this.sqlcon = sqlcon;
+            mydb = new MyDB(sqlcon);
         }
 
         private void frmKPINhanVien_Load(object sender, EventArgs e)
