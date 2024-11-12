@@ -78,9 +78,10 @@ namespace QuanLyMuaBanSach
         private void btnThemHD_Click(object sender, EventArgs e)
         {
             maKH = cboKH.SelectedValue.ToString();
+            
             try
             {
-                if (!cosan)
+                if (cosan == false)
                 {
                     myDB.openConection();
                     SqlCommand cmd = new SqlCommand("proc_themHoaDonVoiMaKH", myDB.getConnection);
@@ -97,17 +98,21 @@ namespace QuanLyMuaBanSach
 
 
                     if (cmd.ExecuteNonQuery() > 0)
-                        MessageBox.Show("Thêm Phiếu nhập thành công");
+                        MessageBox.Show("Thêm Hóa đơn thành công");
                     maHD = soHDParam.Value.ToString();
                 }
                 else
                 {
+                    string tenKH = txtTenKH.Text;
+                    string SDT = txtSDT.Text;
                     myDB.openConection();
-                    SqlCommand cmd = new SqlCommand("proc_themHoaDon", myDB.getConnection);
+                    SqlCommand cmd = new SqlCommand("proc_themHoaDonVoiTenKH", myDB.getConnection);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("@ngayLap", SqlDbType.Date) { Value = DateTime.Now });
-                    cmd.Parameters.Add(new SqlParameter("@maKH", SqlDbType.NVarChar, 10) { Value = maKH });
+                    cmd.Parameters.Add(new SqlParameter("@tenKH", SqlDbType.NVarChar, 250) { Value = tenKH });
+                    cmd.Parameters.Add(new SqlParameter("@SDT", SqlDbType.NVarChar, 250) { Value = SDT });
                     cmd.Parameters.Add(new SqlParameter("@maNV", SqlDbType.NVarChar, 10) { Value = maNV });
+                    cmd.Parameters.Add(new SqlParameter("@ngayLap", SqlDbType.Date) { Value = DateTime.Now });
+                    
 
                     SqlParameter soHDParam = new SqlParameter("@soHD", SqlDbType.NVarChar, 10)
                     {
@@ -117,11 +122,11 @@ namespace QuanLyMuaBanSach
 
 
                     if (cmd.ExecuteNonQuery() > 0)
-                        MessageBox.Show("Thêm Phiếu nhập thành công");
+                        MessageBox.Show("Thêm Hóa đơn thành công");
                     maHD = soHDParam.Value.ToString();
                 }
                 
-                label1.Text = "Nhập sách: " + maHD;
+                label1.Text = "Hóa đơn" + maHD;
 
             }
             catch (Exception ex)
@@ -193,8 +198,17 @@ namespace QuanLyMuaBanSach
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            panelKH.Visible = true;
             cosan = checkBox1.Checked;
+            if (cosan == true)
+            {
+                panelKH.Visible = true;
+                btnGoiY.Visible = false;
+            }
+            else if(cosan == false)
+            {
+                panelKH.Visible = false;
+                btnGoiY.Visible = true;
+            }
         }
 
         private void btnGoiY_Click(object sender, EventArgs e)

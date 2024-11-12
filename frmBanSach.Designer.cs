@@ -52,8 +52,8 @@ namespace QuanLyMuaBanSach
             this.panelKH = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtTenKH = new System.Windows.Forms.TextBox();
             this.btnGoiY = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSoLuongNhap)).BeginInit();
@@ -246,8 +246,8 @@ namespace QuanLyMuaBanSach
             // 
             this.panelKH.Controls.Add(this.label7);
             this.panelKH.Controls.Add(this.label5);
-            this.panelKH.Controls.Add(this.textBox2);
-            this.panelKH.Controls.Add(this.textBox1);
+            this.panelKH.Controls.Add(this.txtSDT);
+            this.panelKH.Controls.Add(this.txtTenKH);
             this.panelKH.Location = new System.Drawing.Point(252, 45);
             this.panelKH.Name = "panelKH";
             this.panelKH.Size = new System.Drawing.Size(683, 33);
@@ -272,19 +272,19 @@ namespace QuanLyMuaBanSach
             this.label5.TabIndex = 24;
             this.label5.Text = "Tên KH";
             // 
-            // textBox2
+            // txtSDT
             // 
-            this.textBox2.Location = new System.Drawing.Point(494, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 28);
-            this.textBox2.TabIndex = 23;
+            this.txtSDT.Location = new System.Drawing.Point(494, 2);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(180, 28);
+            this.txtSDT.TabIndex = 23;
             // 
-            // textBox1
+            // txtTenKH
             // 
-            this.textBox1.Location = new System.Drawing.Point(89, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 28);
-            this.textBox1.TabIndex = 22;
+            this.txtTenKH.Location = new System.Drawing.Point(89, 2);
+            this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.Size = new System.Drawing.Size(265, 28);
+            this.txtTenKH.TabIndex = 22;
             // 
             // btnGoiY
             // 
@@ -301,7 +301,7 @@ namespace QuanLyMuaBanSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 619);
+            this.ClientSize = new System.Drawing.Size(1000, 656);
             this.Controls.Add(this.btnGoiY);
             this.Controls.Add(this.panelKH);
             this.Controls.Add(this.checkBox1);
@@ -363,8 +363,8 @@ namespace QuanLyMuaBanSach
         private System.Windows.Forms.Panel panelKH;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.TextBox txtTenKH;
         private System.Windows.Forms.Button btnGoiY;
     }
 }

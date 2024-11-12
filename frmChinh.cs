@@ -23,7 +23,7 @@ namespace QuanLyMuaBanSach
             this.maNV = maNV;
             this.sqlcon = sqlcon;
             this.myDB = new MyDB(sqlcon);
-            //moChucNang();
+            moChucNang();
             
         }
 
@@ -51,7 +51,7 @@ namespace QuanLyMuaBanSach
             // Retrieve the output parameter values
             int roleId = (int)roleIdParam.Value;
             string tenNV = (string)tenNVParam.Value;
-            if (roleId == 1)
+            if (roleId == 2)
             {
                 panelNhanVien.Visible = false;
                 panelKhachHang.Visible = false;
