@@ -15,13 +15,15 @@ namespace QuanLyMuaBanSach
     public partial class frmQuanLyNhanVien : Form
     {
 
-        MyDB mydb = new MyDB();
+        MyDB mydb;
         SqlCommand sqlCommand = new SqlCommand();
-        SqlConnection sqlcon = null;
+        string sqlcon;
 
-        public frmQuanLyNhanVien()
+        public frmQuanLyNhanVien(string sqlcon)
         {
             InitializeComponent();
+            this.sqlcon = sqlcon;
+            mydb = new MyDB(sqlcon);
         }
 
         private void btnThemNV_Click(object sender, EventArgs e)

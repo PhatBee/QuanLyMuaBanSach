@@ -13,10 +13,12 @@ namespace QuanLyMuaBanSach
     public partial class frmChinh : Form
     {
         private string maNV;
-        public frmChinh(string maNV)
+        private string sqlcon;
+        public frmChinh(string maNV, string sqlcon)
         {
             InitializeComponent();
             this.maNV = maNV;
+            this.sqlcon = sqlcon;
         }
 
         private void linkLabelDangXuat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -53,22 +55,22 @@ namespace QuanLyMuaBanSach
 
         private void panelNhanVien_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmQuanLyNhanVien());
+            OpenChildForm(new frmQuanLyNhanVien(sqlcon));
         }
 
         private void panelNhapSach_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmNhapSach(this.maNV));
+            OpenChildForm(new frmNhapSach(this.maNV,sqlcon));
         }
 
         private void panelQlSach_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FrmSach());
+            OpenChildForm(new FrmSach(sqlcon));
         }
 
         private void panelKhachHang_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmQuanLyKhachHang());
+            OpenChildForm(new frmQuanLyKhachHang(sqlcon));
         }
 
         private void frmChinh_Load(object sender, EventArgs e)
@@ -78,17 +80,17 @@ namespace QuanLyMuaBanSach
 
         private void panelBanSach_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmBanSach("NV001"));
+            OpenChildForm(new frmBanSach("NV001",sqlcon));
         }
 
         private void panelThongKe_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmThongKe());
+            OpenChildForm(new frmThongKe(sqlcon));
         }
 
         private void panelHoaDon_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmHoaDon());
+            OpenChildForm(new frmHoaDon(sqlcon));
         }
     }
 }

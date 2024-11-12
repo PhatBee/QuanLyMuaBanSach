@@ -13,13 +13,15 @@ namespace QuanLyMuaBanSach
 {
     public partial class FrmSach : Form
     {
-        MyDB mydb = new MyDB();
+        MyDB mydb;
         SqlCommand sqlCommand = new SqlCommand();
-        SqlConnection sqlcon = null;
+        private string sqlcon;
         int tonsua = 0;
-        public FrmSach()
+        public FrmSach(string sqlcon)
         {
             InitializeComponent();
+            this.sqlcon = sqlcon;
+            mydb = new MyDB(sqlcon);
         }
 
         private void FrmSach_Load(object sender, EventArgs e)
@@ -32,19 +34,19 @@ namespace QuanLyMuaBanSach
 
         private void btnQLTheLoai_Click(object sender, EventArgs e)
         {
-            frmQuanLyTheLoai qlTheLoai = new frmQuanLyTheLoai();
+            frmQuanLyTheLoai qlTheLoai = new frmQuanLyTheLoai(sqlcon);
             qlTheLoai.Show();
         }
 
         private void btnQLNXB_Click(object sender, EventArgs e)
         {
-            frmQuanLyNXB qlNXB = new frmQuanLyNXB();
+            frmQuanLyNXB qlNXB = new frmQuanLyNXB(sqlcon);
             qlNXB.Show();
         }
 
         private void btnQLTacGia_Click(object sender, EventArgs e)
         {
-            frmQuanLyTacGia quanLyTacGia = new frmQuanLyTacGia();
+            frmQuanLyTacGia quanLyTacGia = new frmQuanLyTacGia(sqlcon);
             quanLyTacGia.Show();
         }
 

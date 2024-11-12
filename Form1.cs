@@ -14,17 +14,18 @@ namespace QuanLyMuaBanSach
     public partial class Form1 : Form
     {
         private string maNV;
-        MyDB mydb = new MyDB();
+        string sqlcon;
+        
         public Form1()
         {
             InitializeComponent();
         }
-
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             string username = tbxUser.Text.ToString();
             string password = tbxPass.Text.ToString();
-
+            sqlcon = $"Data Source=LAPTOP-GVFN6A4F;Initial Catalog=QLNhaSach;Persist Security Info=True;User ID={username};Password={password};TrustServerCertificate=True";
+            MyDB mydb = new MyDB(sqlcon);
             mydb.openConection();
             DataTable dt = new DataTable();
             SqlCommand command = new SqlCommand("proc_login", mydb.getConnection);
@@ -38,7 +39,7 @@ namespace QuanLyMuaBanSach
             if(dt.Rows.Count > 0)
             {
                 maNV = dt.Rows[0][0].ToString();
-                frmChinh frmChinh = new frmChinh(this.maNV);
+                frmChinh frmChinh = new frmChinh(this.maNV,sqlcon);
                 frmChinh.Show();
             }
             else

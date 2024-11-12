@@ -19,14 +19,17 @@ namespace QuanLyMuaBanSach
     {
         DataTable _tbDichVu = new DataTable();
         DataTable dt = new DataTable();
-        MyDB mydb = new MyDB();
+        MyDB mydb;
         private int soTien;
         private string soHD;
-        public frmThanhToan(int soTien, string soHD)
+        string sqlcon;
+        public frmThanhToan(int soTien, string soHD,string sqlcon)
         {
             InitializeComponent();
             this.soTien = soTien;
             this.soHD = soHD;
+            this.sqlcon = sqlcon;
+            mydb = new MyDB(sqlcon);
         }
         public Image Base64ToImage(string base64String)
         {

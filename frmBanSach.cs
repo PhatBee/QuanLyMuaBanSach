@@ -13,15 +13,20 @@ namespace QuanLyMuaBanSach
 {
     public partial class frmBanSach : Form
     {
-        MyDB myDB = new MyDB();
+       
         private string maNV;
         private string maHD;
         private bool cosan;
-        public frmBanSach(string maNV)
+        private string sqlcon;
+        MyDB myDB;
+        public frmBanSach(string maNV, string sqlcon)
         {
             InitializeComponent();
             this.maNV = maNV;
+            this.sqlcon = sqlcon;
+            myDB = new MyDB(sqlcon);
         }
+       
 
         private void frmBanSach_Load(object sender, EventArgs e)
         {
@@ -181,7 +186,7 @@ namespace QuanLyMuaBanSach
         {
             int parsedInt = int.Parse(lblTongTien.Text.Split('.')[0]);
 
-            Form thanhtoan = new frmThanhToan(parsedInt, maHD);
+            Form thanhtoan = new frmThanhToan(parsedInt, maHD,sqlcon);
             thanhtoan.ShowDialog();
         }
 

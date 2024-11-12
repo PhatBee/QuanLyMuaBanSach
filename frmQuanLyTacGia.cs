@@ -14,12 +14,14 @@ namespace QuanLyMuaBanSach
 {
     public partial class frmQuanLyTacGia : Form
     {
-        MyDB mydb = new MyDB();
+        MyDB mydb;
         SqlCommand sqlCommand = new SqlCommand();
-        SqlConnection sqlcon = null;
-        public frmQuanLyTacGia()
+        string sqlcon;
+        public frmQuanLyTacGia(string sqlcon)
         {
             InitializeComponent();
+            this.sqlcon = sqlcon;
+            mydb = new MyDB(sqlcon);
         }
 
         private void frmQuanLyTacGia_Load(object sender, EventArgs e)

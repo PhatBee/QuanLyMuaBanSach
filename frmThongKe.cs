@@ -13,11 +13,15 @@ namespace QuanLyMuaBanSach
 {
     public partial class frmThongKe : Form
     {
-        public frmThongKe()
+        private string sqlcon;
+        MyDB myDB;
+        public frmThongKe(string sqlcon)
         {
             InitializeComponent();
+            this.sqlcon = sqlcon;
+            myDB = new MyDB(sqlcon);
         }
-        MyDB myDB = new MyDB();
+        
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {

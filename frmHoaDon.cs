@@ -13,11 +13,15 @@ namespace QuanLyMuaBanSach
 {
     public partial class frmHoaDon : Form
     {
-        public frmHoaDon()
+        string sqlcon;
+        MyDB myDB;
+        public frmHoaDon(string sqlcon)
         {
             InitializeComponent();
+            this.sqlcon = sqlcon;
+            myDB = new MyDB(sqlcon);
         }
-        MyDB myDB = new MyDB();
+        
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             DateTime dateA = tungay.Value;

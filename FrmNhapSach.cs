@@ -17,13 +17,16 @@ namespace QuanLyMuaBanSach
 
         private string maNV;
         private string maNXB;
-        MyDB mydb = new MyDB();
+        MyDB mydb;
+        private string sqlcon;
         private string maPN;
         private bool coSan;
-        public frmNhapSach(string maNV)
+        public frmNhapSach(string maNV,string sqlcon)
         {
             InitializeComponent();
+            this.sqlcon = sqlcon;
             this.maNV = maNV;
+            mydb = new MyDB(sqlcon);
         }
         
         private void btnThem_Click(object sender, EventArgs e)

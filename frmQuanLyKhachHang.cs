@@ -13,13 +13,15 @@ namespace QuanLyMuaBanSach
 {
     public partial class frmQuanLyKhachHang : Form
     {
-        MyDB mydb = new MyDB();
+        MyDB mydb;
         SqlCommand sqlCommand = new SqlCommand();
-        SqlConnection sqlcon = null;
+        string sqlcon;
 
-        public frmQuanLyKhachHang()
+        public frmQuanLyKhachHang(string sqlcon)
         {
             InitializeComponent();
+            this.sqlcon = sqlcon;
+            mydb = new MyDB(sqlcon);
         }
 
         private void frmQuanLyKhachHang_Load(object sender, EventArgs e)
