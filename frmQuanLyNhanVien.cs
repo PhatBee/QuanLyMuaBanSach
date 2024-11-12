@@ -172,7 +172,7 @@ namespace QuanLyMuaBanSach
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
-        {
+        { // Sua
             if (!btnSuaNV.Enabled && btnThemNV.Enabled)
             {
                 try
@@ -224,8 +224,9 @@ namespace QuanLyMuaBanSach
                 }
 
                 frmQuanLyNhanVien_Load(sender, e);
-            } else if(!btnThemNV.Enabled && btnSuaNV.Enabled)
-            {
+            } 
+            else if(!btnThemNV.Enabled && btnSuaNV.Enabled)
+            {// Them
                 try
                 {
                     string maNV = txtbxMaNV.Text;
@@ -249,16 +250,6 @@ namespace QuanLyMuaBanSach
                     string sdt = txtbxSDT.Text;
                     string diaChi = txtbxDiaChi.Text;
                     string unameMoi = txtbxUsernameMoi.Text;
-            frmQuanLyNhanVien_Load(sender, e);
-        }
-
-        private void frmQuanLyNhanVien_Load(object sender, EventArgs e)
-        {
-            dataNV.AutoGenerateColumns = true;
-            dataNV.DataSource = LayDanhSachNhanVien();
-
-        }
-
                     mydb.openConection();
 
                     sqlCommand = new SqlCommand("proc_ThemNhanVien", mydb.getConnection);
@@ -282,7 +273,7 @@ namespace QuanLyMuaBanSach
                 {
                     MessageBox.Show("Thêm nhên viên thất bại. Mã lỗi: " + ex.Message, "Thêm nhân viên", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                frmQuanLyNhanVien_Load(sender, e);
+                    frmQuanLyNhanVien_Load(sender, e);
             }
         }
 
