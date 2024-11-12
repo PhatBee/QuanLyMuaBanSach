@@ -51,7 +51,7 @@ namespace QuanLyMuaBanSach
             // Retrieve the output parameter values
             int roleId = (int)roleIdParam.Value;
             string tenNV = (string)tenNVParam.Value;
-            if (roleId == 1)
+            if (roleId == 2)
             {
                 panelNhanVien.Visible = false;
                 panelKhachHang.Visible = false;
@@ -60,6 +60,7 @@ namespace QuanLyMuaBanSach
                 panelHoaDon.Visible = false;
             }
             label1.Text = tenNV.ToString();
+            myDB.closeConection();
 
 
         }
