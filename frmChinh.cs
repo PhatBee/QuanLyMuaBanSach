@@ -132,5 +132,10 @@ namespace QuanLyMuaBanSach
         {
             OpenChildForm(new frmHoaDon(sqlcon));
         }
+
+        private void frmChinh_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -293,7 +293,7 @@ namespace QuanLyMuaBanSach
             {
                 string manv = dataNV.CurrentRow.Cells[0].Value.ToString();
                 mydb.openConection();
-                sqlCommand = new SqlCommand("pro000_KichHoatNhanVien", mydb.getConnection);
+                sqlCommand = new SqlCommand("pro_KichHoatNhanVien", mydb.getConnection);
                 sqlCommand.CommandType = CommandType.StoredProcedure;
 
                 sqlCommand.Parameters.AddWithValue("@maNV", manv);

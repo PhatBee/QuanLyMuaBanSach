@@ -24,7 +24,9 @@ namespace QuanLyMuaBanSach
         {
             string username = tbxUser.Text.ToString();
             string password = tbxPass.Text.ToString();
-            sqlcon = $"Data Source=LAPTOP-GVFN6A4F;Initial Catalog=QLNhaSach;Persist Security Info=True;User ID={username};Password={password};TrustServerCertificate=True";
+            //private static string sqlcon = "Data Source=LAPTOP-1BLCIFVL\\PHATBEE;Initial Catalog=QLNhaSach;Integrated Security=True;Connect Timeout=30;Encrypt=True;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+            sqlcon = $"Data Source=LAPTOP-1BLCIFVL\\PHATBEE;Initial Catalog=QLNhaSach;Persist Security Info=True;User ID={username};Password={password};TrustServerCertificate=True";
             MyDB mydb = new MyDB(sqlcon);
             mydb.openConection();
             DataTable dt = new DataTable();

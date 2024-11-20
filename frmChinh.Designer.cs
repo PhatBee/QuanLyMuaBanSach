@@ -32,6 +32,7 @@ namespace QuanLyMuaBanSach
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChinh));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabelDangXuat = new System.Windows.Forms.LinkLabel();
             this.panelMenu = new System.Windows.Forms.FlowLayoutPanel();
@@ -57,7 +58,6 @@ namespace QuanLyMuaBanSach
             this.lblHoaDon = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelNhanVien.SuspendLayout();
@@ -88,6 +88,16 @@ namespace QuanLyMuaBanSach
             this.panel1.Size = new System.Drawing.Size(1708, 129);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(428, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(752, 69);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Cửa hàng sách New Happy";
             // 
             // label1
             // 
@@ -378,16 +388,6 @@ namespace QuanLyMuaBanSach
             this.mainPanel.Size = new System.Drawing.Size(1183, 734);
             this.mainPanel.TabIndex = 3;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(428, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(752, 69);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Cửa hàng sách New Happy";
-            // 
             // frmChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -402,6 +402,7 @@ namespace QuanLyMuaBanSach
             this.Name = "frmChinh";
             this.Text = "frmChinh";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmChinh_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelMenu.ResumeLayout(false);

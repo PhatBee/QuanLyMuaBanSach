@@ -55,8 +55,8 @@ namespace QuanLyMuaBanSach
 
         private void btnKPINhanVien_Click(object sender, EventArgs e)
         {
-            //frmkpinhanvien frm = new frmkpinhanvien(sqlcon);
-            //frm.showdialog();
+            frmKPINhanVien frm = new frmKPINhanVien(sqlcon);
+            frm.Show();
         }
 
         private void btnDuDoan_Click(object sender, EventArgs e)
